@@ -1,2 +1,2 @@
-# karan.gither.io
+# karan.github.io
 kult
