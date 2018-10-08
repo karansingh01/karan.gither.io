@@ -1,2 +1,0 @@
-# karan.github.io
-kult
