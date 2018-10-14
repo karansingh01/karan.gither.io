@@ -79,6 +79,9 @@ nav a:hover::before {
 
 	color: white;
 	background-color: blue;
-	margin-left: 500PX;
-	font-size: 45px;
+	margin: 250px;
+	font-size: 25px;
+	border-radius: 5px;
+	border-color: white;
+	padding: 10px;
 }
