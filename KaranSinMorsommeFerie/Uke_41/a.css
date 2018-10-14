@@ -76,9 +76,9 @@ nav a:hover::before {
   width: 100%;
 }
 #ola{
-	text-align: center;
+
 	color: white;
 	background-color: blue;
 	margin-left: 500PX;
-	font-size: 25px;
+	font-size: 45px;
 }
