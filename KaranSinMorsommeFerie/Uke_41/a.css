@@ -39,7 +39,7 @@ nav ul {
 
 nav li {
   display: inline-block;
-  margin-left: 110px;
+  margin-left: 80px;
   padding-top: 60px;
 
   position: relative;
@@ -65,7 +65,7 @@ nav a::before {
   background-color: #444;
 
   position: absolute;
-  top: 50px;
+  top: 40px;
   width: 0%;
 
   transition: all ease-in-out 250ms;
