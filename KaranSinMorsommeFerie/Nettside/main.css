@@ -174,12 +174,13 @@ padding:15px;
 }
 
 
-main>.nyhet{
+.nyhet{
 	display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap: 5px;
   grid-auto-rows: minmax(100px, auto);
   padding: 5px 70px;
+
 }
 img {
 	  width: 100%;
