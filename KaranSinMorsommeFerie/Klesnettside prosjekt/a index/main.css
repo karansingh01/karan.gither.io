@@ -24,7 +24,8 @@ header>.lang{
   color: black;
   text-transform: lowercase;
   text-decoration: underline;
-  font-style: italic;
+  font-style: normal;
+  font-weight: lighter;
 
 }
 
@@ -38,10 +39,11 @@ background-color:white;
 font-size: 13px;
 margin: 10px;
 border-radius: 5px;
-
-
-
+display: inline-block;
 }
+
+
+
 .logginnbilde{
   width: 30px;
 
@@ -137,5 +139,6 @@ nav>.søkemotor>[type=submit]{
  border: 1px solid;
  border-radius: 9px;
  padding: 5px;
+ margin-right: 0px;
 
 }
