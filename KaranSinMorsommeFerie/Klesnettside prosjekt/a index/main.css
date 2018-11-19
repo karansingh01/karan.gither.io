@@ -66,14 +66,13 @@ header>.lenke {
 header>.lenke>a {
   color: black;
   text-decoration: none;
-  overflow: scroll;
   padding: 4px;
 }
 
 header>.lenke>a:hover {
   color: darkgrey;
   text-decoration: underline;
-  transition: all ease-in-out 450ms;
+  transition: all ease-in-out 350ms;
 }
 
 header>.damherbar {
@@ -109,7 +108,7 @@ nav>.klesvalg>a {
 nav>.klesvalg>a:hover {
   color: darkgrey;
   text-decoration: underline;
-  transition: all ease-in-out 400ms;
+  transition: all ease-in-out 200ms;
 }
 
 nav>.denusynlig {
@@ -134,8 +133,29 @@ nav>.søkemotor>[type=submit] {
   margin-right: 0px;
 }
 
-.Hoved_grid{
-  background-color: red;
+
+main{
+  background-color:#fff2ea;
+
+}
+
+.reklame1 {
+  height: 400px;
+  background-image: url(../bilder/logo.psd);
+  transition: 0.4s;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 20px;
+  margin: 10px 0px;
+}
+
+.reklame1:hover {
+  background-image: url(../bilder/united.jpg);
+}
+
+.Hoved_grid {
+  background-color: white;
   text-align: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -143,24 +163,143 @@ nav>.søkemotor>[type=submit] {
   text-transform: uppercase;
   font-size: 28px;
   font-weight: bold;
-grid-column: span 1;
+  margin: 20px 50px;
+  background-color:#fff2ea;
 
 }
-.nr1{
-background-color: blue;
+
+.nr1 .nr2 .nr3 {
+
 }
-.nr2{
-background-color: green;
+
+
+
+main>h1 {
+  color: grey;
+  margin-left: 60px;
+  margin-top: 75px;
+  margin-bottom: 0px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: bold;
 }
-.nr3{
-background-color: yellow;
+
+main>h2 {
+  margin-left: 90px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  margin-bottom: 0px;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
 }
-.nr4{
-background-color: red;
+
+main>.nyheter_hoved {
+  background-color: white;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0px 50px;
+   background-color:#fff2ea;
+
+
 }
->.bilde1{
-  width: 30px;
-}
-.reklame1{
+
+.nyheter_index {
+  grid-column: span 1;
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  border-radius: 5px;
+  margin: 20px 15px;
   
+
+}
+
+.bilde {
+margin: 0px;
+  grid-column: span 1;
+  width: 100%;
+
+}
+
+.Merke {
+  font-style: normal;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-transform: lowercase;
+  font-size: 19px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.navn {
+  font-style: normal;
+  font-family: sans-serif;
+  font-weight: lighter;
+  text-transform: lowercase;
+  padding: 2px;
+  font-size: 18px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.pris {
+  font-style: normal;
+  font-family: sans-serif;
+  font-weight: lighter;
+  text-transform: lowercase;
+  font-size: 18px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.nåpris {
+  color: red;
+  background-color: white;
+}
+
+.førpris {
+  text-decoration: line-through;
+  color: grey;
+  background-color: white;
+}
+
+
+.reklame2 {
+  height: 300px;
+  background-image: url(../bilder/logo.psd);
+  transition: 0.4s;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 20px;
+  margin: 0px 0px;
+}
+
+.reklame2:hover {
+  background-image: url(../bilder/united.jpg);
+}
+
+
+.hele_footer {
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 30px 100px;
+}
+
+thead {
+  text-decoration: underline;
 }
