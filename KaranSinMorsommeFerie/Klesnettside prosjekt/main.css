@@ -3,8 +3,6 @@ body {
   top: 0px;
 }
 
-
-
 header {
   background-color: #c6e0de;
   text-align: center;
@@ -65,11 +63,14 @@ header>.lenke {
   margin-left: 50px;
 }
 
+
 header>.lenke>a {
   color: black;
   text-decoration: none;
   padding: 4px;
 }
+
+
 
 header>.lenke>a:hover {
   color: darkgrey;
@@ -82,14 +83,15 @@ header>.damherbar {
   font-size: 22px;
 }
 
-header{
- overflow: hidden;
+header {
+  overflow: hidden;
   position: fixed;
   top: 0px;
   width: 100%;
 }
-main{
-margin-top:100px;
+
+main {
+  margin-top: 100px;
 }
 
 .navigation a {
@@ -100,6 +102,7 @@ margin-top:100px;
   text-transform: uppercase;
   font-size: 20px;
   font-weight: bold;
+  color: black;
 }
 
 .dropned {
@@ -111,7 +114,6 @@ margin-top:100px;
   font-size: 16px;
   border: none;
   outline: none;
-  color: black;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
@@ -124,7 +126,8 @@ margin-top:100px;
 .dropned-content {
   display: none;
   position: absolute;
-  background-color: grey;
+  background-color: white;
+  border-radius: 15px;
 }
 
 .dropned-content a {
@@ -155,16 +158,13 @@ nav {
   padding-bottom: 20px;
 }
 
-
-
-
 nav>.klesvalg {
   grid-column: span 2;
 }
 
 nav>.klesvalg>a {
   padding: 12px;
-  color: black;
+  color: blue;
   text-decoration: none;
   text-transform: uppercase;
   font-style: normal;
@@ -174,7 +174,7 @@ nav>.klesvalg>a {
 }
 
 nav>.klesvalg>a:hover {
-  color: darkgrey;
+  color: red;
   text-decoration: underline;
   transition: all ease-in-out 200ms;
 }
@@ -205,12 +205,8 @@ nav>.søkemotor>[type=submit] {
 main {
   background-image: url(bilder/stj_bak.jpg);
   background-repeat: no-repeat;
-   background-attachment: fixed;
+  background-attachment: fixed;
 }
-
-
-
-
 
 .Hoved_grid {
   text-align: center;
@@ -221,10 +217,11 @@ main {
   font-size: 28px;
   font-weight: bold;
   margin: 20px 50px;
-
 }
 
-.nr1 .nr2 .nr3 {}
+.nr1 .nr2 .nr3 {
+  margin: 20px 50px;
+}
 
 .H1 {
   color: lightgrey;
@@ -258,8 +255,7 @@ main>.nyheter_hoved {
   font-size: 28px;
   font-weight: bold;
   margin: 10px 50px;
-  background-color:#fff2ea;
-
+  background-color: #fff2ea;
 }
 
 .nyheter_index {
@@ -275,7 +271,6 @@ main>.nyheter_hoved {
   margin: 0px;
   grid-column: span 1;
   width: 100%
-
 }
 
 .Merke {
@@ -345,7 +340,8 @@ main>.nyheter_hoved {
   font-weight: normal;
   padding: 30px 100px;
 }
-.sosbilder{
+
+.sosbilder {
   width: 40px;
   height: 40px;
   border-radius: 15px;
@@ -356,15 +352,14 @@ thead {
   text-decoration: underline;
   font-size: 18px;
 }
-tbody{
+
+tbody {
   font-style: normal;
   font-size: 12px;
   font-family: monospace;
   font-weight: lighter;
   text-transform: lowercase;
 }
-
-
 
 h3 {
   margin-left: 90px;
@@ -388,90 +383,87 @@ h3 {
   font-size: 28px;
   font-weight: bold;
   margin: 10px 50px;
-  background-color:#fff2ea;
+  background-color: #fff2ea;
 }
-._index{
+
+._index {
   margin-top: 20px;
 }
-._index:hover{
+
+._index:hover {
   margin-top: 15px
 }
-.valg{
-  background-color:#fff2ea;
+
+.valg {
+  background-color: #fff2ea;
   text-align: center;
 }
-.overskrift{
-  background-color:#fff2ea;
+
+.overskrift {
+  background-color: #fff2ea;
   text-align: center;
   margin-bottom: 0px;
   margin: 20px 50px;
 }
-.selve_overskrift{
-font-size: 80px;
-font-weight:bold;
-font-family:sans-serif;
-text-transform: uppercase;
+
+.selve_overskrift {
+  font-size: 80px;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-transform: uppercase;
 }
 
-.velge_ting>a{
-  background-color:#fff2ea;
+.velge_ting>a {
+  background-color: #fff2ea;
   color: black;
-  font-weight:bold;
-  font-family:sans-serif;
+  font-weight: bold;
+  font-family: sans-serif;
   text-transform: uppercase;
   font-size: 30px;
   margin: 0px 50px;
   text-decoration: none;
 }
 
-.velge_ting{
+.velge_ting {
   text-align: center;
 }
-.velge_ord:hover{
-text-decoration: underline;
 
+.velge_ord:hover {
+  text-decoration: underline;
 }
 
-.Det_meste_herre{
-    background-color:#fff2ea;
-    margin-left: 50px;
-    margin-right: 50px;
+.Det_meste_herre {
+  background-color: #fff2ea;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
-
-
-.tabell_full{
+.tabell_full {
   grid-row: span 4;
-
 }
 
-.Klær_tekst{
-color: black;
-text-decoration: none;
-padding-left: 10px;
+.Klær_tekst {
+  color: black;
+  text-decoration: none;
+  padding-left: 10px;
 }
 
-
-
-
-
-.tabell_halv{
-list-style-type: none;
-text-align: left;
-
-
+.tabell_halv {
+  list-style-type: none;
+  text-align: left;
 }
-.tabell_ord{
-text-decoration: none;
-color: black;
-padding-left: 30px;
-font-weight: normal;
-text-transform: lowercase;
-font-size: 14;
-font-style: normal;
 
+.tabell_ord {
+  text-decoration: none;
+  color: black;
+  padding-left: 30px;
+  font-weight: normal;
+  text-transform: lowercase;
+  font-size: 14;
+  font-style: normal;
 }
-.tabell_ord:hover{
+
+.tabell_ord:hover {
   text-decoration: underline;
   color: grey;
 }
