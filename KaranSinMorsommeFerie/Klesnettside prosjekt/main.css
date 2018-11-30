@@ -208,6 +208,49 @@ main {
   background-attachment: fixed;
 }
 
+
+
+.under_nav{
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+}
+.women_get {
+  background-color: salmon;
+color: white;
+padding:20px;
+}
+
+.women_get>a, .Men_get>a{
+  color: white;
+  text-decoration: none;
+}
+
+.Men_get{
+background-color:blue;
+color: white;
+padding: 20px;
+}
+.women_get:hover{
+  transition-duration: 500ms;
+  background-color: pink
+}
+
+.Men_get:hover{
+  transition-duration: 500ms;
+  background-color: lightblue;
+}
+
+.reklame1>a>img{
+  width: 100%;
+height: 400px;
+}
+
+
 .Hoved_grid {
   text-align: center;
   display: grid;
