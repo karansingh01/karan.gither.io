@@ -54,7 +54,7 @@ header>.lenke {
 }
 
 .logo {
-  width: 200px;
+  width: 300px;
   height: 80px;
   padding-top: 8px;
   padding-left: 25px;
@@ -89,60 +89,9 @@ header {
 
 main {
   margin-top: 100px;
-}
-
-.navigation a {
-  float: left;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: bold;
-  color: black;
-}
-
-.dropned {
-  float: left;
-  overflow: hidden;
-}
-
-.dropned .dropknapp {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.dropned-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  border-radius: 15px;
-}
-
-.dropned-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropned-content a:hover {
-  background-color: #ddd;
-  text-decoration: underline;
-}
-
-.dropned:hover .dropned-content {
-  display: block;
+  background-image: url(bilder/stj_bak.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /*Main*/
@@ -153,6 +102,7 @@ nav {
   grid-template-columns: repeat(4, 1fr);
   padding-top: 20px;
   padding-bottom: 20px;
+  padding-left: 30px;
 }
 
 nav>.klesvalg {
@@ -199,10 +149,62 @@ nav>.søkemotor>[type=submit] {
   margin-right: 0px;
 }
 
-main {
-  background-image: url(bilder/stj_bak.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+.navigation a {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.dropned {
+  float: left;
+  overflow: hidden;
+}
+
+.dropned .dropknapp {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.dropned-content {
+  display: none;
+  position: absolute;
+  background-color: #b8d0ce;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropned-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+}
+
+.dropned-content a:hover {
+  text-decoration: underline;
+  color: darkgrey;
+  text-decoration: underline;
+  transition: all ease-in-out 350ms;
+}
+
+.dropned:hover .dropned-content {
+  display: block;
 }
 
 .under_nav {
@@ -244,10 +246,23 @@ main {
 
 .reklame1>a>img {
   width: 100%;
-  height: 400px;
+  height: 500px;
 }
 
+.reklame1 {
+  margin-left: 60px;
+  margin-right: 60px;
+  height: 500px;
+  background-image: url(bilder/hoved_bilde_reklame.psd);
+  transition: 0.8s;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
+.reklame1:hover {
+  background-image: url(bilder/reklame1_numero2.psd);
+}
 
 .Hoved_grid {
   text-align: center;
@@ -364,6 +379,10 @@ main>.nyheter_hoved {
   margin: 5px 50px;
   padding: 25px;
 }
+.brand_enogalle:hover{
+padding-top: 5px;
+
+}
 
 .brand_overskrift {
   color: white;
@@ -375,19 +394,19 @@ main>.nyheter_hoved {
   font-weight: bold;
 }
 
-.reklame2 {
+.reklame2>a>img {
+  width: 100%;
   height: 300px;
-  background-image: url(bilder/logo.psd);
   transition: 0.8s;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
 }
 
-.reklame2:hover {
-  background-image: url(bilder/united.jpg);
-}
+
+
+
+
 
 .hele_footer {
   background-color: black;
@@ -399,7 +418,8 @@ main>.nyheter_hoved {
   font-weight: normal;
   padding: 30px 100px;
 }
-td>a{
+
+td>a {
   text-decoration: none;
   color: white;
 }
@@ -424,6 +444,10 @@ tbody {
   text-transform: lowercase;
 }
 
+<!--Index slutt-->
+
+<!--Herre start-->
+
 h3 {
   margin-left: 90px;
   margin-top: 5px;
@@ -436,8 +460,10 @@ h3 {
   font-weight: bold;
 }
 
-.herre_hoved {
 
+
+
+.herre_hoved {
   text-align: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -503,24 +529,18 @@ h3 {
 
 .tabell_full {
   grid-row: span 4;
-
 }
 
 .Klær_tekst {
   color: black;
   text-decoration: none;
   padding-left: 10px;
-
-
 }
 
 .tabell_halv {
   list-style-type: none;
   text-align: left;
-
-
 }
-
 
 .tabell_ord {
   text-decoration: none;
@@ -536,7 +556,11 @@ h3 {
   text-decoration: underline;
   color: grey;
 }
-.valg_klær{
+
+<!--Herre slutt-->
+<!--klær herre start-->
+
+.valg_klær1 {
   text-align: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -548,9 +572,65 @@ h3 {
   background-color: #fff2ea;
 }
 
-
-.knapp2{
+.knapp2 {
   border: 1px solid;
   border-radius: 5px;
-  padding:4px 20px;
+  padding: 4px 20px;
+  height: 100%
 }
+
+.custom-select {
+
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none;
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+.select-items div, .select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+<!--klær herre start-->
