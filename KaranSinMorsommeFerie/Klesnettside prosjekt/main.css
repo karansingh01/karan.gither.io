@@ -61,7 +61,6 @@ header>.lenke {
   padding-bottom: 2px;
   grid-column: span 1;
   margin-left: 50px;
-
 }
 
 header>.lenke>a {
@@ -146,7 +145,7 @@ nav>.søkemotor>[type=text] {
 nav>.søkemotor>[type=submit] {
   border: 1px solid;
   border-radius: 9px;
-  padding: 5px;
+  padding: 7px;
   margin-right: 0px;
 }
 
@@ -257,7 +256,7 @@ nav>.søkemotor>[type=submit] {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-    transition: all ease-in-out 1s;
+  transition: all ease-in-out 1s;
 }
 
 .reklame1:hover {
@@ -291,18 +290,17 @@ nav>.søkemotor>[type=submit] {
 }
 
 .H2 {
-  margin-bottom: 0px;
-  color: black;
+  color: white;
+  margin: 15px 50px;
+  margin-top: 20px;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: bold;
+  background-color: #4d4d4d;
   text-align: center;
-  background-color: #fff2ea;
-  margin: 0 50px;
-  padding-bottom: 10px;
+  padding: 30px;
 }
-
 
 main>.nyheter_hoved {
   text-align: center;
@@ -316,21 +314,19 @@ main>.nyheter_hoved {
   background-color: #fff2ea;
 }
 
-
-._index:hover , .nyheter_index:hover{
+.velge_klær:hover, .nyheter_index:hover {
   -moz-box-shadow: 0 0 20px black;
-  		-webkit-box-shadow: 0 0 10px black;
-  		box-shadow: 0 0 10px black;
-  	}
-
+  -webkit-box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px black;
+}
 
 .nyheter_index {
   grid-column: span 1;
-  margin: 20px 0px;
+  margin: 20px 10px;
 }
 
 .nyheter_index:hover {
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .bilde {
@@ -370,7 +366,6 @@ main>.nyheter_hoved {
   padding-left: 15px;
 }
 
-
 .nåpris {
   color: red;
   background-color: #fff2ea;
@@ -387,7 +382,7 @@ main>.nyheter_hoved {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   background-color: #fff2ea;
-  margin: 5px 50px;
+  margin: 0px 50px;
   padding: 25px;
 }
 
@@ -398,11 +393,14 @@ main>.nyheter_hoved {
 .brand_overskrift {
   color: white;
   margin: 10px 50px;
-  margin-top: 60px;
+  margin-top: 70px;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bold;
+  background-color: #4d4d4d;
+  text-align: center;
+  padding: 30px;
 }
 
 .reklame2>a>img {
@@ -425,7 +423,7 @@ main>.nyheter_hoved {
   padding: 30px 100px;
 }
 
-th>a{
+th>a {
   text-decoration: none;
   color: white;
 }
@@ -471,7 +469,6 @@ h3 {
 }
 
 .herre_hoved {
-
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-decoration: none;
@@ -482,11 +479,12 @@ h3 {
   background-color: #fff2ea;
 }
 
-._index {
+.velge_klær {
   margin-top: 20px;
+  margin-right: 40px;
 }
 
-._index:hover {
+.velge_klær:hover {
   margin-top: 15px
 }
 
@@ -565,26 +563,22 @@ h3 {
   color: grey;
 }
 
-.velge_herre_klær{
+.velge_herre_klær {
   text-align: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
-  margin: 5px 50px;
+  margin: 10px 50px;
   padding: 25px;
 }
 
-
-.alle_4>a>img{
-width: 95%;
-margin: 10px;
-align-items: center;
+.alle_4>a>img {
+  width: 95%;
+  align-items: center;
 }
-
 
 /*Herre slutt*/
 /*klær herre start*/
-.h1_over{
+.h1_over {
   background-color: #fff2ea;
   font-size: 50px;
   margin: 0px 50px;
@@ -597,11 +591,11 @@ align-items: center;
   text-transform: uppercase;
 }
 
-.valg_klær1 {
+.valg_klær1, #valg_klær1 {
   display: grid;
   background-color: #fff2ea;
   grid-template-columns: repeat(5, 1fr);
-    margin: 0px 50px;
+  margin: 0px 50px;
   padding: 25px;
 }
 
@@ -614,7 +608,6 @@ align-items: center;
 }
 
 .custom-select {
-
   font-family: Arial;
 }
 
@@ -656,85 +649,93 @@ align-items: center;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-/*klær herre slutt*/
+.dame_reklame{
+  margin:0px 50px;
+}
+.dame_reklame>a>img{
+width: 100%
+}
 
+/*klær herre/dame/barn slutt*/
 /*Plagg start*/
+.H1_klesplagg {
+  margin-bottom: 0px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
 
-
-.herre_hoved_plagg{
+.herre_hoved_plagg {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-padding-top: 30px;
+  padding-top: 30px;
   background-color: #fff2ea;
   padding-bottom: 50px;
 }
 
-.hoved_plagg{
-grid-column: span 2;
-grid-row: span 2;
+.hoved_plagg {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
-.Stort_bilde{
+.Stort_bilde {
   width: 80.5%;
   margin-left: 80px;
   margin-right: 0px;
-
-
 }
 
-.plaggbilde2{
-
-grid-row: span 1;
-grid-column: span 1;
-}
-
-.lite_bilde1{
-width: 80%;
-
-}
-
-
-
-.plaggbilde3{
-
+.plaggbilde2 {
   grid-row: span 1;
   grid-column: span 1;
-
 }
 
-.lite_bilde2{
-width: 80%;
-
+.lite_bilde1 {
+  width: 80%;
 }
-.velge_ting_plagg{
-width: 100%;
-background-color: #e6e6e6;
-grid-row: span 1;
-grid-column: span 1;
-text-align: center;
+
+.plaggbilde3 {
+  grid-row: span 1;
+  grid-column: span 1;
+}
+
+.lite_bilde2 {
+  width: 80%;
+}
+
+.velge_ting_plagg {
+  width: 95%;
+  background-color: #e6e6e6;
+  grid-row: span 1;
+  grid-column: span 1;
+  text-align: center;
 }
 
 /*logg inn del.loggg */
-
-.logginn_side{
+.logginn_side {
   background-color: grey;
   text-align: center;
-}
-.Merke2{
-font-size: 30px;
-padding-top: 50px;
-font-family: monospace;
-font-style: normal;
-text-decoration: underline;
-margin-bottom: 20px;
-}
-.navn2{
-padding: 5px;
-font-size: 20px;
-margin-bottom: 10px;
+  margin: 300px;
+  font-size: 30px;
 }
 
-.pris2, .nåpris2, .førpris2{
+.Merke2 {
+  font-size: 30px;
+  padding-top: 50px;
+  font-family: monospace;
+  font-style: normal;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.navn2 {
+  padding: 5px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.pris2, .nåpris2, .førpris2 {
   font-size: 28px;
   margin: 15px 10px;
 }
@@ -744,11 +745,9 @@ margin-bottom: 10px;
   font-family: sans-serif;
   font-weight: lighter;
   text-transform: lowercase;
-
   text-align: left;
   padding-left: 15px;
 }
-
 
 .nåpris2 {
   color: red;
@@ -760,33 +759,65 @@ margin-bottom: 10px;
   color: grey;
   background-color: #fff2ea;
 }
-.pris{
-    font-style: normal;
-    font-family: sans-serif;
-    font-weight: lighter;
-    text-transform: lowercase;
-    font-size: 18px;
-    text-align: left;
-    padding-left: 15px;
-  }
 
-
-.bokser{
-width: 80%;
-padding-top: 7px;
-margin: 10px;
-border-radius: 0px;
-height: 50px;
-font-size: 20px;
-
-}
-.handlekurv_knapp{
-border-radius: 0px;
-padding: 20px;
-margin-top: 10px;
-width: 80%;
-font-size: 20px;
-margin: 10px;
+.pris {
+  font-style: normal;
+  font-family: sans-serif;
+  font-weight: lighter;
+  text-transform: lowercase;
+  font-size: 18px;
+  text-align: left;
+  padding-left: 15px;
 }
 
-a:active  { color: purple; }
+.bokser {
+  width: 80%;
+  padding-top: 7px;
+  margin: 10px;
+  border-radius: 0px;
+  height: 50px;
+  font-size: 20px;
+}
+
+.handlekurv_knapp {
+  border-radius: 3px;
+  border-color: black;
+  padding: 20px;
+  margin-top: 10px;
+  width: 80%;
+  font-size: 20px;
+  margin: 10px;
+  background-color: #333333;
+  color: white;
+}
+
+a:active {
+  color: purple;
+}
+
+/*plagg slutt*/
+/*sko start*/
+.sko_kjønn {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 30px 50px;
+
+}
+.Sko_herre, .Sko_dame , .Sko_barn{
+  margin: 0px 10px;
+
+}
+
+a>p{
+
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #4d4d4d;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-right: 5px;
+  margin-top: 0px;
+}
