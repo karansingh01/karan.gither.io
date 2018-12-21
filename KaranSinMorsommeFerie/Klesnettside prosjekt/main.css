@@ -12,6 +12,8 @@ header {
   text-transform: uppercase;
   font-size: 20px;
   font-weight: bold;
+  position: absolute;
+  z-index: 2;
 }
 
 header>.lang {
@@ -103,6 +105,8 @@ nav {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 30px;
+  position: relative;
+  z-index: 1;
 }
 
 nav>.klesvalg {
@@ -252,7 +256,7 @@ nav>.søkemotor>[type=submit] {
   margin-left: 60px;
   margin-right: 60px;
   height: 500px;
-  background-image: url(bilder/hoved_bilde_reklame.psd);
+  background-image: url(bilder/reklame_women2.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -260,7 +264,7 @@ nav>.søkemotor>[type=submit] {
 }
 
 .reklame1:hover {
-  background-image: url(bilder/reklame1_numero2.psd);
+  background-image: url(bilder/reklame_men2.jpg);
 }
 
 .Hoved_grid {
@@ -297,7 +301,7 @@ nav>.søkemotor>[type=submit] {
   text-transform: uppercase;
   font-size: 35px;
   font-weight: bold;
-  background-color: #4d4d4d;
+  background-color: red;
   text-align: center;
   padding: 30px;
 }
@@ -323,6 +327,11 @@ main>.nyheter_hoved {
 .nyheter_index {
   grid-column: span 1;
   margin: 20px 10px;
+}
+
+.navn>a, .Merke>a, .pris>a {
+  color: black;
+  text-decoration: none;
 }
 
 .nyheter_index:hover {
@@ -387,7 +396,8 @@ main>.nyheter_hoved {
 }
 
 .brand_enogalle:hover {
-  padding-top: 5px;
+  margin-top: 8px;
+  filter: invert(33%);
 }
 
 .brand_overskrift {
@@ -420,7 +430,7 @@ main>.nyheter_hoved {
   text-decoration: none;
   font-size: 14px;
   font-weight: normal;
-  padding: 30px 100px;
+  padding: 40px 100px;
 }
 
 th>a {
@@ -442,20 +452,19 @@ td>a {
 
 thead {
   text-decoration: underline;
-  font-size: 28px;
+  font-size: 18px;
 }
 
 tbody {
   font-style: normal;
-  font-size: 18px;
+  font-size: 13px;
   font-family: monospace;
   font-weight: lighter;
   text-transform: lowercase;
 }
 
-< !--Index slutt-->
-
-/*Herre klær start*/
+/*ca index slutt*/
+/* ca Herre klær start*/
 h3 {
   margin-left: 90px;
   margin-top: 5px;
@@ -466,6 +475,12 @@ h3 {
   text-transform: uppercase;
   font-size: 20px;
   font-weight: bold;
+}
+
+.herre_img, .dame_img, .barn_img {
+  filter: invert(38%);
+  z-index: -1;
+  position: static;
 }
 
 .herre_hoved {
@@ -546,6 +561,9 @@ h3 {
 .tabell_halv {
   list-style-type: none;
   text-align: left;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 120px;
 }
 
 .tabell_ord {
@@ -589,6 +607,20 @@ h3 {
   text-align: center;
   border-color: black;
   text-transform: uppercase;
+}
+
+.h1_salg {
+  background-color: #fff2ea;
+  font-size: 50px;
+  margin-bottom: 0;
+  margin-top: 25px;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 25px;
+  text-align: center;
+  border-color: black;
+  text-transform: uppercase;
+  color: red;
 }
 
 .valg_klær1, #valg_klær1 {
@@ -649,15 +681,16 @@ h3 {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.dame_reklame{
-  margin:0px 50px;
+.dame_reklame {
+  margin: 0px 50px;
 }
-.dame_reklame>a>img{
-width: 100%
+
+.dame_reklame>a>img {
+  width: 100%
 }
 
 /*klær herre/dame/barn slutt*/
-/*Plagg start*/
+/*klesPlagg start*/
 .H1_klesplagg {
   margin-bottom: 0px;
   text-decoration: none;
@@ -712,14 +745,6 @@ width: 100%
   text-align: center;
 }
 
-/*logg inn del.loggg */
-.logginn_side {
-  background-color: grey;
-  text-align: center;
-  margin: 300px;
-  font-size: 30px;
-}
-
 .Merke2 {
   font-size: 30px;
   padding-top: 50px;
@@ -736,8 +761,8 @@ width: 100%
 }
 
 .pris2, .nåpris2, .førpris2 {
-  font-size: 28px;
-  margin: 15px 10px;
+  font-size: 25px;
+  margin: 12px 10px;
 }
 
 .pris2 {
@@ -751,13 +776,13 @@ width: 100%
 
 .nåpris2 {
   color: red;
-  background-color: #fff2ea;
+  background-color: #e6e6e6;
 }
 
 .førpris2 {
   text-decoration: line-through;
   color: grey;
-  background-color: #fff2ea;
+  background-color: #e6e6e6;
 }
 
 .pris {
@@ -788,28 +813,47 @@ width: 100%
   font-size: 20px;
   margin: 10px;
   background-color: #333333;
-  color: white;
 }
 
-a:active {
-  color: purple;
+.handlekurv_knapp>a {
+  color: white;
+  text-decoration: none;
+}
+
+.ønske_liste {
+  border-style: solid;
+  border-radius: 10px;
+  background-color: white;
+  margin: 0 120px;
+}
+
+.ønske_liste>a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.ønske_liste:hover {
+  background-color: salmon;
 }
 
 /*plagg slutt*/
+a:active {
+  color: white;
+}
+
 /*sko start*/
 .sko_kjønn {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 30px 50px;
-
 }
-.Sko_herre, .Sko_dame , .Sko_barn{
+
+.Sko_herre, .Sko_dame, .Sko_barn {
   margin: 0px 10px;
-
 }
 
-a>p{
-
+a>p {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 25px;
@@ -820,4 +864,56 @@ a>p{
   padding: 10px;
   margin-right: 5px;
   margin-top: 0px;
+}
+
+/*sko slutt*/
+/*utsolgt start*/
+.utsolgt {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 38px;
+  font-weight: bold;
+  margin: 0px 50px;
+  background-color: #fff2ea;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+/*utsolgt slutt*/
+/*loginn start*/
+.loginn_tekst {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 38px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 200px;
+  color: white;
+}
+
+.loginn_tilbake_til_forside {
+  color: white;
+  text-align: left;
+}
+
+.passord{
+  margin-left: 40px;
+}
+.logginn_alt {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  margin: 0px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.registrer_deg {
+  border-radius: 50px;
+  border-style: dotted;
+  margin: 30px 200px;
+  padding: 40px;
+  color: white;
+  text-decoration: underline;
+  background-color: salmon;
 }
