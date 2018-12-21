@@ -97,6 +97,8 @@ main {
 }
 
 /*Main*/
+
+
 nav {
   background-color: #b8d0ce;
   text-align: center;
@@ -464,6 +466,9 @@ tbody {
 }
 
 /*ca index slutt*/
+
+
+
 /* ca Herre klær start*/
 h3 {
   margin-left: 90px;
@@ -595,7 +600,12 @@ h3 {
 }
 
 /*Herre slutt*/
+
+
+
+
 /*klær herre start*/
+
 .h1_over {
   background-color: #fff2ea;
   font-size: 50px;
@@ -690,7 +700,13 @@ h3 {
 }
 
 /*klær herre/dame/barn slutt*/
-/*klesPlagg start*/
+
+
+
+
+/*kles Plagg start*/
+
+
 .H1_klesplagg {
   margin-bottom: 0px;
   text-decoration: none;
@@ -838,11 +854,17 @@ h3 {
 }
 
 /*plagg slutt*/
+
+
+
 a:active {
   color: white;
 }
 
+
+
 /*sko start*/
+
 .sko_kjønn {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -866,8 +888,12 @@ a>p {
   margin-top: 0px;
 }
 
-/*sko slutt*/
+/* ca sko slutt*/
+
+
+
 /*utsolgt start*/
+
 .utsolgt {
   text-decoration: none;
   text-transform: uppercase;
@@ -880,6 +906,8 @@ a>p {
 }
 
 /*utsolgt slutt*/
+
+
 /*loginn start*/
 .loginn_tekst {
   text-decoration: none;
@@ -897,7 +925,7 @@ a>p {
 }
 
 .passord{
-  margin-left: 40px;
+  margin-left: 50px;
 }
 .logginn_alt {
   text-align: center;
@@ -917,3 +945,5 @@ a>p {
   text-decoration: underline;
   background-color: salmon;
 }
+
+/*loginn slutt*/
