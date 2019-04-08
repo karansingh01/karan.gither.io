@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SISAKA</title>
+
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBXt6HrwrG3frVTfTwqeXKUOOmNr5jwON0",
+    authDomain: "hoved-klesbutikk-riktig.firebaseapp.com",
+    databaseURL: "https://hoved-klesbutikk-riktig.firebaseio.com",
+    projectId: "hoved-klesbutikk-riktig",
+    storageBucket: "hoved-klesbutikk-riktig.appspot.com",
+    messagingSenderId: "844489859082"
+  };
+  firebase.initializeApp(config);
+</script>
+  </head>
+
+  <body>
+<header>
+<nav>
+  <button class="knapp" onclick="visAlle()">Klær</button>
+  <button class="knapp" onclick="sko()">sko </button>
+  <button class="knapp" onclick="bukser1()">Oppgave 3c</button>
+  <button class="knapp" onclick="Navn()">Oppgave 3d</button>
+
+</nav>
+</header>
+
+<main>
+
+</main>
+
+
+    <script>
+    const main = document.querySelector("main");
+    //Skriv referanser til database under her:
+    const db = firebase.database();
+    const bukser = db.ref("varer/bukser");
+    const skjorter = db.ref("Varer/skjorter");
+    const gensere = db.ref("varer/gensere");
+    const sport = db.ref("Varer/sport");
+    const jakker = db.ref("varer/jakker");
+    const sko = db.ref("Varer/sko");
+    const tilbehor = db.ref("varer/tilbehor");
+
+
+
+    function visKlaer(snapshot){
+          //Javascript-funksjon som skriver varene ut på nettsiden i main-elementet
+        let varer = snapshot.val();
+        main.innerHTML +=`
+            <article class="varer">
+              <h1>${varer.modell} - ${varer.merke1}</h1>
+              <img src="${varer.bilde1}" alt="">
+              <p>Pris: ${varer.pris}</p>
+
+            </article>
+        `;
+    }
+
+
+    // Funksjon som viser alle varer
+    function visAlle(){
+      main.innerHTML = ""; // sletter innholdet i main.
+      bukser
+      .on("child_added",visKlaer);
+      skjorter
+      .on("child_added", visKlaer);
+      gensere
+      .on("child_added", visKlaer);
+      sport
+      .on("child_added", visKlaer);
+      jakker
+      .on("child_added", visKlaer);
+      sko
+      .on("child_added", visKlaer);
+      tilbehor
+      .on("child_added", visKlaer);
+
+
+    }
+
+    // Lag egne funksjoner som tilfredstiller spørringene 3A, 3B, 3C og 3D her:
+    function bukser1 (){
+      main.innerHTML = ``;
+      skjorter.orderByChild("modell")
+      .on("child_added", visKlaer);
+    }
+
+    function Navn (){
+      main.innerHTML = ``;
+      bukser.orderByChild("Alder")
+      .limitToFirst(3)
+      .on("child_added", visKlaer);
+    }
+
+    function farge(){
+      main.innerHTML = ``;
+      bukser.orderByChild("Farge1")
+      .equalTo("Beige")
+      .on("child_added", visKlaer)
+      skjorter.orderByChild("Farge2")
+      .equalTo("Beige")
+      .on("child_added", visKlaer)
+      bukser.orderByChild("Farge2")
+      .equalTo("Beige")
+      .on("child_added", visKlaer)
+      skjorter.orderByChild("Farge1")
+      .equalTo("Beige")
+      .on("child_added", visKlaer);
+    }
+
+    function Navn() {
+      main.innerHTML = ``;
+      bukser.orderByChild("Navn")
+      .startAt("M")
+      .endAt("T")
+      .on("child_added", visKlaer)
+      skjorter.orderByChild("Navn")
+      .startAt("M")
+      .endAt("T")
+      .on("child_added", visKlaer);
+    }
+
+    visAlle(); // Funksjon som kjøres når siden lastes
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>SISAKA-NY</title>
+  <link rel="stylesheet" href="main.css">
+
+  <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBXt6HrwrG3frVTfTwqeXKUOOmNr5jwON0",
+      authDomain: "hoved-klesbutikk-riktig.firebaseapp.com",
+      databaseURL: "https://hoved-klesbutikk-riktig.firebaseio.com",
+      projectId: "hoved-klesbutikk-riktig",
+      storageBucket: "hoved-klesbutikk-riktig.appspot.com",
+      messagingSenderId: "844489859082"
+    };
+    firebase.initializeApp(config);
+  </script>
+</head>
+
+<body>
+  <header>
+    <section class="lang">
+      <a>Gratis <b><span style="color:blue"> frakt</span></b> og <b><span style="color:blue">retur</span></b> året rundt</a>
+    </section>
+
+
+
+    <section class="logo">
+      <a href="index.html"><img src="bilder_klær_riktig/ny_logo.png" alt="logo" class="logo"></a>
+    </section>
+
+
+
+
+    <section class="usynlig">
+    </section>
+
+
+    <div class="lenke logginn">
+
+
+      <a href="logginn.html"><img src="bilder_klær_riktig klær riktig/logg inn.png" alt="bilde" class="logginnbilde"> </a>
+
+      <a href="logginn.html"><br>LOGG INN</a>
+
+    </div>
+
+
+
+
+
+    <div class="lenke logginn">
+
+      <a href="ønskeliste.html"><img src="bilder_klær_riktig/ønskeliste.png" alt="bilde" class="logginnbilde"> </a>
+
+      <a href="ønskeliste.html">LISTE</a>
+
+    </div>
+
+    <div class="lenke logginn">
+
+
+      <a href="logginn.html"><img src="bilder_klær_riktig/logg inn.png" alt="bilde" class="handlekurvbilde"> </a>
+
+      <a href="logginn.html"><br>KURV</a>
+
+    </div>
+
+  </header>
+
+
+
+  <nav class="navigation">
+
+
+    <section class="klesvalg">
+
+
+
+      <section class="dropned">
+        <button class="dropknapp" onclick="klaer()">Klær</button>
+        <section class="dropned-content">
+        <button type="button" onclick="gensere1()">gensere</button>
+          <button type="button" onclick="bukser1()">Bukser</button>
+        <button type="button" onclick="skjorter1()">skjorter</button>
+        </section>
+      </section>
+
+
+      <section class="dropned">
+        <button class="dropknapp" onclick="Sko1()">Sko</button>
+        <section class="dropned-content">
+          <a href="virker_ikke.html">Boots</a>
+          <a href="virker_ikke.html">Tøfler</a>
+          <a href="virker_ikke.html">Mokasiner</a>
+        </section>
+      </section>
+
+
+
+      <section class="dropned">
+        <button class="dropknapp" onclick="Sport1()">Sport</a>
+        </button>
+        <section class="dropned-content">
+          <a href="virker_ikke.html" onclick="sport1()">Sport overdeler</a>
+          <a href="virker_ikke.html">Sport underdeler</a>
+          <a href="virker_ikke.html">Sport relatert</a>
+        </section>
+      </section>
+
+      <section class="dropned">
+        <button class="dropknapp" onclick="tilbehor1()">Tilbehør</a>
+        </button>
+        <section class="dropned-content">
+          <a href="virker_ikke.html">klokker</a>
+          <a href="virker_ikke.html">bagger</a>
+          <a href="virker_ikke.html">Sport relatert</a>
+        </section>
+      </section>
+
+
+
+      <section class="dropned">
+        <button class="dropknapp" onclick="Nyheter()">Nyheter</a>
+        </button>
+        <section class="dropned-content">
+          <a href="virker_ikke.html">Klokker</a>
+          <a href="virker_ikke.html">Slips</a>
+          <a href="virker_ikke.html">Belter</a>
+        </section>
+      </section>
+
+      <section class="dropned">
+        <button class="dropknapp" onclick="Salg()">Salg</a>
+        </button>
+      </section>
+
+
+    </section>
+
+
+
+    <section class="denusynlig">
+
+    </section>
+    <section class="søkemotor">
+      <input type="text" placeholder="Søk..">
+      <button type="submit">søk</button>
+    </section>
+
+  </nav>
+
+  <section class="under_nav">
+    <section class="women_get">
+      <a href="Dame.html"> Women: get up to 60% off dresses!!</a>
+    </section>
+    <section class="Men_get">
+      <a href="herre.html">Men: Get up to 60% off sweaters!!</a>
+    </section>
+
+
+
+  </section>
+
+  <main>
+    <section class="ALT">
+
+    </section>
+
+  </main>
+  <script>
+    const main = document.querySelector("main");
+    //Skriv referanser til database under her:
+    const db = firebase.database();
+    const bukser = db.ref("varer/bukser");
+    const skjorter = db.ref("Varer/skjorter");
+    const gensere = db.ref("varer/gensere");
+    const sport = db.ref("Varer/sport");
+    const jakker = db.ref("varer/jakker");
+    const sko = db.ref("Varer/sko");
+    const tilbehor = db.ref("varer/tilbehor");
+
+
+
+    function visKlaer(snapshot) {
+      //Javascript-funksjon som skriver varene ut på nettsiden i main-elementet
+      let varer = snapshot.val();
+      main.innerHTML +=
+        `
+        <article class="vare">
+        <section class="bilde">  <img src="${varer.bilde1}" alt=""> </section>
+        <h1 class="navn_varer">${varer.modell} - ${varer.merke1}</h1>
+        <p class="pris_varer">Pris: ${varer.pris}</p>
+        </article>
+    `;
+    }
+
+    function visKlaer_andreVei(snapshot) {
+      //Javascript-funksjon som skriver varene ut på nettsiden i main-elementet
+      let varer = snapshot.val();
+      main.innerHTML +=
+        `
+        <article class="vare">
+        <section>  <img src="${varer.bilde1}" alt=""> </section>
+        <h1 class="navn_varer">${varer.modell} - ${varer.merke1}</h1>
+        <p class="pris_varer">Pris: ${varer.pris}</p>
+
+        </article>
+    `;
+    }
+
+
+    // Funksjon som viser alle varer
+    function visAlle() {
+      main.innerHTML = ""; // sletter innholdet i main.
+      bukser
+        .on("child_added", visKlaer);
+      skjorter
+        .on("child_added", visKlaer);
+      gensere
+        .on("child_added", visKlaer);
+      sport
+        .on("child_added", visKlaer);
+      jakker
+        .on("child_added", visKlaer);
+      sko
+        .on("child_added", visKlaer);
+      tilbehor
+        .on("child_added", visKlaer);
+
+
+    }
+
+    // Lag egne funksjoner som tilfredstiller spørringene 3A, 3B, 3C og 3D her:
+    function klaer() {
+      main.innerHTML = ``;
+      bukser
+        .on("child_added", visKlaer);
+      skjorter
+        .on("child_added", visKlaer);
+      gensere
+        .on("child_added", visKlaer);
+      jakker
+        .on("child_added", visKlaer);
+
+    }
+
+    function bukser1() {
+      main.innerHTML = ``;
+      bukser
+      .orderByChild("modell")
+      .on("child_added", visKlaer);
+    }
+
+    function gensere1() {
+      main.innerHTML = ``;
+      gensere
+      .orderByChild("modell")
+      .on("child_added", visKlaer);
+    }
+
+    function skjorter1() {
+      main.innerHTML = ``;
+      skjorter
+      .orderByChild("modell")
+      .on("child_added", visKlaer);
+    }
+
+    function sko1() {
+      main.innerHTML = ``;
+      sko
+      .on("child_added", visKlaer);
+    }
+
+    function sport1() {
+      main.innerHTML = ``;
+      sko
+      .on("child_added", visKlaer);
+    }
+
+
+
+
+
+
+
+    visAlle(); // Funksjon som kjøres når siden lastes
+  </script>
+  <footer>
+  </footer>
+
+
+</body>
