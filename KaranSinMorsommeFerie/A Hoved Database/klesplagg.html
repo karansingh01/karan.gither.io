@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="klesplagg.css">
+    <title></title>
+    <script src="klesplagg.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBXt6HrwrG3frVTfTwqeXKUOOmNr5jwON0",
+        authDomain: "hoved-klesbutikk-riktig.firebaseapp.com",
+        databaseURL: "https://hoved-klesbutikk-riktig.firebaseio.com",
+        projectId: "hoved-klesbutikk-riktig",
+        storageBucket: "hoved-klesbutikk-riktig.appspot.com",
+        messagingSenderId: "844489859082"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+
+
+  </head>
+  <body>
+    <header>
+
+      <section class="header_øverst">
+
+
+        <section class="lang">
+          <a>Gratis <b><span style="color:blue"> frakt</span></b> og <b><span style="color:blue">retur</span></b> året rundt</a>
+        </section>
+
+        <section class="usynlig">
+
+        </section>
+
+        <section class="logo">
+          <a href="index.html"><img src="bilder_klær_riktig/ny_logo.png" alt="logo" class="logo"></a>
+        </section>
+
+
+        <section class="usynlig1">
+        </section>
+
+
+
+
+        <section class="lenke logginn">
+
+
+          <a href="logginn.html"><img src="bilder_klær_riktig/innlogging.svg" alt="bilde" class="iconbilde"> </a>
+
+          <a href="logginn.html"><br>LOGG INN</a>
+
+        </section>
+
+
+
+
+
+        <section class="lenke logginn">
+
+          <a href="ønskeliste.html"><img src="bilder_klær_riktig/ønskeliste.png" alt="bilde" class="iconbilde"> </a>
+
+          <a href="ønskeliste.html">ØNSKELISTE</a>
+
+        </section>
+
+        <section class="lenke logginn">
+
+
+          <a href="logginn.html"><img src="bilder_klær_riktig/kurv1.png" alt="bilde" class="iconbilde"> </a>
+
+          <a href="l"><br>KURV</a>
+
+        </section>
+
+      </section>
+
+
+      <section class="søkemotor">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <input type="text" placeholder="Søk etter klær eller merker...">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </section>
+
+
+      <nav class="navigation">
+
+
+
+
+        <section class="dropned">
+          <a href="klær.html" class="dropknapp">Klær</a>
+          <section class="dropned-content">
+            <a onclick="gensere1()">gensere</a>
+            <a onclick="bukser1()">Bukser</a>
+            <a onclick="skjorter1()">skjorter</a>
+          </section>
+        </section>
+
+
+
+        <section class="dropned">
+          <a class="dropknapp" onclick="Sport1()">Sport</a>
+
+          <section class="dropned-content">
+            <a href="virker_ikke.html" onclick="sport1()">Sport overdeler</a>
+            <a href="virker_ikke.html">Sport underdeler</a>
+            <a href="virker_ikke.html">Sport relatert</a>
+          </section>
+        </section>
+
+        <section class="dropned">
+          <a href="tilbehor.html" class="dropknapp">Tilbehør</a>
+          <section class="dropned-content">
+            <a onclick="bukser1()"> klokker</a>
+            <a href="virker_ikke.html">bagger</a>
+            <a href="virker_ikke.html">caps</a>
+          </section>
+        </section>
+
+
+        <section class="dropned">
+          <a class="dropknapp" onclick="Sko1()">Sko</a>
+        </section>
+
+        <section class="dropned">
+          <a class="dropknapp" onclick="Nyheter()">Nyheter</a>
+          </a>
+        </section>
+
+        <section class="dropned">
+          <a class="dropknapp" onclick="Salg1()">Salg</a>
+          </a>
+        </section>
+
+
+
+
+      </nav>
+
+    </header>
+
+
+<main>
+
+</main>
+<script>
+const main = document.querySelector("main");
+//Skriv referanser til database under her:
+const db = firebase.database();
+const bukser = db.ref("varer/bukser");
+const skjorter = db.ref("varer/skjorter");
+const gensere = db.ref("varer/gensere");
+const sport = db.ref("varer/sport");
+const jakker = db.ref("varer/jakker");
+const sko = db.ref("varer/sko");
+const tilbehor = db.ref("varer/tilbehor");
+
+
+
+ffunction visKlaer(snapshot) {
+  //Javascript-funksjon som skriver varene ut på nettsiden i main-elementet
+  let varer = snapshot.val();
+    let key = snapshot.key;
+    let objekt = snapshot.val();
+    let parent = snapshot.ref.parent.key;
+  main.innerHTML +=
+    `
+<article class="vare">
+<section class="bilde">  <img src="${varer.bilde1}" alt=""> </section>
+<h1 class="navn_varer">${varer.modell} - ${varer.merke1}</h1>
+<p class="pris_varer">Pris: ${varer.pris}</p>
+</article>
+`;
+}
+   // Funksjon som kjøres når siden lastes
+  </script>
+  </body>
+</html>

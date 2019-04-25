@@ -1,10 +1,16 @@
 body {
   margin: 0px;
   top: 0px;
+  background-color: #dbdde0
 }
 
-header {
-  background-color: #c6e0de;
+header{
+  background-image: url(bilder_klær_riktig/bg-1.jpg);
+
+
+}
+
+.header_øverst {
   text-align: center;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -15,7 +21,7 @@ header {
 
 }
 
-header>.lang {
+.header_øverst>.lang {
   grid-column: span 12;
   background-color: white;
   color: black;
@@ -28,150 +34,167 @@ mark {
   color: blue;
 }
 
-header>.logginn {
-  background-color: white;
+.header_øverst>.usynlig {
+  grid-column: span 3;
+  margin-top: 99px;
+  font-size: 15px;
+
+
+
+}
+
+.logo {
+  width: 150px;
+  height: 120px;
+  padding-top: 15px;
+  padding-right: 0px;
+  padding-left: 130px;
+  padding-bottom: 15px;
+  grid-column: span 4;
+
+}
+
+.header_øverst>.lenke {
   font-size: 13px;
   margin: 10px;
   border-radius: 5px;
   display: inline-block;
 }
 
-.logginnbilde {
-  width: 30px;
+
+
+
+.header_øverst>.usynlig1 {
+  grid-column: span 2;
 }
 
-header>.usynlig {
-  grid-column: span 3;
-}
 
-
-
-header>.lenke {
+.header_øverst>.lenke {
   align-self: center;
   text-decoration: none;
-}
-
-.logo {
-  width: 150px;
-  height: 80px;
-  padding-top: 4px;
-  padding-right: 0px;
-  padding-left: 5px;
-  padding-bottom: 15px;
-  grid-column: span 1;
-  margin-left: 50px;
-  grid-column: span 4;
-  margin-right: 0px;
+  margin-top: 50px;
 
 }
 
 
-header>.lenke>a {
+.header_øverst>.lenke>a {
   color: black;
   text-decoration: none;
-  padding: 4px;
 }
 
-header>.lenke>a:hover {
+.header_øverst>.lenke>a:hover {
   color: darkgrey;
   text-decoration: underline;
   transition: all ease-in-out 350ms;
 }
 
-
-
-
-main {
-  margin-top: 100px;
-  background-image: url(bilder/stj_bak.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+.iconbilde {
+  width: 30px;
 }
 
-/*Main*/
+
+.søkemotor{
+  box-sizing: border-box;
+}
+.søkemotor>[type=text] {
+  padding: 10px;
+   font-size: 17px;
+   border: 1px solid grey;
+   float: left;
+   width: 220px;
+   background: #f1f1f1;
+
+}
+
+.søkemotor>[type=submit] {
+  float: left;
+    width: 60px;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+}
+
+.søkemotor {
+  grid-column: span 1;
+  margin-left: 580px;
+  margin-top: 30px;
+
+}
 
 
-nav {
-  background-color: #b8d0ce;
+.navigation {
   text-align: center;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 10px;
+  grid-template-columns: repeat(6, 1fr);
+  padding-top: 60px;
+  padding-bottom: 0px;
+  padding-left: 290px;
+  padding-right: 290px;
 
 }
 
-nav>.klesvalg {
-  grid-column: span 2;
-}
-
-nav>.klesvalg>a {
-
-  color: blue;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-style: normal;
-  font-family: monospace, inherit, serif;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-nav>.klesvalg>a:hover {
-  color: red;
-  text-decoration: underline;
-  transition: all ease-in-out 200ms;
-}
-
-nav>.denusynlig {
-  grid-column: span 0;
-}
-
-nav>.søkemotor {
-  grid-column: span 1;
-  margin-top: 10px;
-}
-
-nav>.søkemotor>[type=text] {
-  font-size: 15px;
-  border-radius: 10px;
-  border: 1px solid;
-  padding: 5px;
-}
-
-nav>.søkemotor>[type=submit] {
-  border: 1px solid;
-  border-radius: 9px;
-  padding: 7px;
-  margin-right: 0px;
-}
 
 .navigation a {
-  float: left;
-  text-align: center;
-  padding: 14px 0px;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 20px;
   font-weight: bold;
   color: black;
+
 }
 
 .dropned {
-  float: left;
+  float: center;
   overflow: hidden;
-  padding:0px 15px;
+  padding-bottom: 50px;
+  grid-row: span 6;
+}
+
+
+.dropned>a{
+position: relative;
+color: #000;
+text-decoration: none;
+font-size: 25px;
 
 }
 
-.dropned .dropknapp {
-  font-size: 16px;
+.dropned>a:hover {
+color: black;
+}
+
+.dropned>a::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.dropned>a:hover::before{
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+.dropknapp {
   border: none;
   outline: none;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
-  text-decoration: none;
   text-transform: uppercase;
   font-size: 20px;
   font-weight: bold;
@@ -182,6 +205,7 @@ nav>.søkemotor>[type=submit] {
   position: absolute;
   background-color: #b8d0ce;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
 }
 
 .dropned-content a {
@@ -197,13 +221,14 @@ nav>.søkemotor>[type=submit] {
 .dropned-content a:hover {
   text-decoration: underline;
   color: darkgrey;
-  text-decoration: underline;
   transition: all ease-in-out 350ms;
 }
 
 .dropned:hover .dropned-content {
   display: block;
 }
+
+
 
 .under_nav {
   text-align: center;
@@ -213,37 +238,73 @@ nav>.søkemotor>[type=submit] {
   text-transform: uppercase;
   font-size: 20px;
   font-weight: bold;
+
+
+
 }
 
-.women_get {
-  background-color: salmon;
-  color: white;
-  padding: 20px;
+.shoes_get {
+  background-image: url(bilder_klær_riktig/reklame_1.jpg);
+  padding: 140px;
+  margin-top: 40px;
+
 }
 
-.women_get>a, .Men_get>a {
-  color: white;
+.shoes_get>a, .shirts_get>a {
+  color: black;
   text-decoration: none;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 2px;
+  border-style: double;
+  border-color: black;
+  padding:20px 0px;
+
+
 }
 
-.Men_get {
-  background-color: blue;
-  color: white;
-  padding: 20px;
+.shirts_get {
+  background-image: url(bilder_klær_riktig/reklame_genser3.jpg);
+  padding: 140px;
+  margin-top: 40px;
+
 }
 
-.women_get:hover {
+.shoes_get:hover {
   transition-duration: 500ms;
-  background-color: pink
+  opacity: 0.7;
+  filter: alpha(opacity=50);
+}
+.shoes_get>a:hover {
+  transition-duration: 500ms;
+  color: #2F2F2E;
+  border-style: solid;
+  background-color: white;
 }
 
-.Men_get:hover {
+.shirts_get:hover {
   transition-duration: 500ms;
-  background-color: lightblue;
+  opacity: 0.7;
+  filter: alpha(opacity=50);
 }
-img{
+.shirts_get>a:hover{
+  transition-duration: 500ms;
+  color: #2F2F2E;
+  background-color: white;
+  border-style: solid;
+}
+
+
+
+
+
+img {
   width: 250px;
 }
+
+/*Main*/
+
+
 main{
   text-align: center;
   display: grid;
@@ -254,13 +315,178 @@ main{
   font-weight: bold;
   margin: 30px 50px;
   background-color: #fff2ea;
-  padding-left: 100px;
-  padding-top: 40px
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 40px;
 
 }
-.navn_varer{
-font-size: 15px;
+
+
+
+
+.slider {
+	width: 824px;
+	margin: 2em auto;
 }
+
+
+.slider-wrapper {
+	width: 100%;
+	height: 400px;
+	position: relative;
+}
+
+.slide {
+	float: left;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 3s linear;
+}
+
+.slider-wrapper > .slide:first-child {
+	opacity: 1;
+}
+
+
+
+
+.nyheter_forside_overskrift{
+font-size: 60px;
+padding-top: 20px;
+text-align: center;
+
+}
+
+
+.nyheter_forside{
+text-align: center;
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+padding: 0px 290px;
+
+}
+
+
+.nyheter_forside>.nyheter_valg_forside>a {
+text-decoration: none;
+text-transform: uppercase;
+font-size: 20px;
+font-weight: bold;
+color: grey;
+padding: 10px;
+cursor: alias;
+}
+
+.nyheter_forside>.nyheter_valg_forside>a:hover{
+  color: black;
+  transition: all ease-in-out 350ms;
+}
+.nyheter_forside{
+  margin-left: 120px;
+}
+
+.vare{
+padding: 20px;
+box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.vare>a{
+  color: black;
+}
+.vare:hover{
+  -moz-box-shadow: 0 0 20px black;
+  -webkit-box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px black;
+}
+
+.navn_varer{
+font-size: 16px;
+
+}
+
+
 .pris_varer{
-  font-size: 12;
+  font-size: 18px;
+}
+
+.reklame_overskrift{
+  color: white;
+  margin: 10px 50px;
+  margin-top: 70px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 35px;
+  font-weight: bold;
+  background-color: #4d4d4d;
+  text-align: center;
+  padding: 30px;
+}
+
+
+.reklame_under{
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #fff2ea;
+  margin: 30px 50px;
+  background-color: red;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 40px;
+}
+
+
+
+.reklame_under_eneste{
+background-color: blue;
+}
+
+.reklame_under_eneste:hover{
+  margin-top: 8px;
+  filter: invert(33%);
+}
+
+
+
+.hele_footer {
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 40px 100px;
+}
+
+th>a {
+  text-decoration: none;
+  color: white;
+}
+
+td>a {
+  text-decoration: none;
+  color: white;
+}
+
+.sosbilder {
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+  margin: 15px;
+}
+
+thead {
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+tbody {
+  font-style: normal;
+  font-size: 13px;
+  font-family: monospace;
+  font-weight: lighter;
+  text-transform: lowercase;
 }
