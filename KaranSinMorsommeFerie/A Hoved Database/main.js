@@ -8,7 +8,7 @@
 
 	Slideshow.prototype = {
 		init: function() {
-			this.wrapper = this.el.querySelector( ".slider-wrapper" );
+
 			this.slides = this.el.querySelectorAll( ".slide" );
 			this.previous = this.el.querySelector( ".slider-previous" );
 			this.next = this.el.querySelector( ".slider-next" );
@@ -167,3 +167,11 @@ function filterFunction5() {
     }
   }
 }
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+// javascript for størrelse knappen inne på et klesplagg starter her:

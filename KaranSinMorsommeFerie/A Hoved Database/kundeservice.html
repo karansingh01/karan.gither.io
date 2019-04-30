@@ -1,94 +1,269 @@
 <!DOCTYPE html>
 <html lang="nb" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Messenger</title>
-    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyBw148vUQE0uezb6DbQLxjE1j9_pUOzZSo",
-        authDomain: "chat-281af.firebaseapp.com",
-        databaseURL: "https://chat-281af.firebaseio.com",
-        projectId: "chat-281af",
-        storageBucket: "chat-281af.appspot.com",
-        messagingSenderId: "1053246261853"
-      };
-      firebase.initializeApp(config);
-    </script>
-    <link rel="stylesheet" href="./main.css">
-  </head>
-  <body>
 
-    <main>
-      <section id="secMeldinger">
+<head>
+  <meta charset="utf-8">
+  <title>KUNDESERVICE</title>
+  <link rel="stylesheet" href="kundeservice.css">
 
-      </section>
-      <section class="skjemaer">
-        <form id="skjema">
-          <input type="text" id="inpMelding" autocomplete="off">
-        </form>
+
+
+  <script src="main.js">
+
+  </script>
+</head>
+
+<body>
+  <header>
+
+    <section class="header_øverst">
+
+
+      <section class="lang">
+        <a>Gratis <b><span style="color:blue"> frakt</span></b> og <b><span style="color:blue">retur</span></b> året rundt</a>
       </section>
 
-      <script>
-        //HTML-elementer
-        const secMeldinger = document.querySelector("#secMeldinger");
-        const skjema = document.querySelector("#skjema");
-        const inpMelding = document.querySelector("#inpMelding");
+      <section class="usynlig">
 
-        //Firebease
-        const db = firebase.database();
-        const meldinger = db.ref("mineMessengerMeldinger");
+      </section>
+
+      <section class="logo">
+        <a href="index.html"><img src="bilder_klær_riktig/ny_logo.png" alt="logo" class="logo"></a>
+      </section>
 
 
-        let user;
+      <section class="usynlig1">
+      </section>
 
-        function lagreMelding(event){
-          event.preventDefault();
-          meldinger.push({
-            uid: user.uid,
-            displayName: user.displayName,
-            photoURL: user.photoURL,
-            timestamp: firebase.database.ServerValue.TIMESTAMP,
-            tekst: inpMelding.value
-          });
-          skjema.reset();
-        }
 
-        function visMelding(snap){
-          const melding = snap.val();
-          let klasse = "others";
-          if(user.uid === melding.uid){
-            klasse = "me";
-          }
-          let bilde = "anonym.png";
-          if(melding.photoURL){
-            bilde = melding.photoURL;
-          }
-          secMeldinger.innerHTML += `
-            <div class=${klasse}>
-              <img src=${bilde} title=${melding.displayName}>
-              <span>${melding.tekst}</span>
-            </div>
-          `;
-        }
 
-        firebase.auth().onAuthStateChanged(newuser =>{
-            if(newuser){
-              user = newuser;
-              skjema.addEventListener("submit",lagreMelding);
-              meldinger.on("child_added",visMelding);
-            }
-            else {
-              document.body.innerHTML = `
-                <main class="notloggedin"
-                  <h1>Du er ikke logget inn</h1>
-                  <a href="login.html">Logg inn her</a>
-                </main>
-              `;
-            }
-        });
-      </script>
-    </main>
-  </body>
-</html>
+
+      <section class="lenke logginn">
+
+
+        <a href="logginn.html"><img src="bilder_klær_riktig/innlogging.svg" alt="bilde" class="iconbilde"> </a>
+
+        <a href="logginn.html"><br>LOGG INN</a>
+
+      </section>
+
+
+
+
+
+      <section class="lenke logginn">
+
+        <a href="ønskeliste.html"><img src="bilder_klær_riktig/ønskeliste.png" alt="bilde" class="iconbilde"> </a>
+
+        <a href="ønskeliste.html">ØNSKELISTE</a>
+
+      </section>
+
+      <section class="lenke logginn">
+
+
+        <a href="logginn.html"><img src="bilder_klær_riktig/kurv1.png" alt="bilde" class="iconbilde"> </a>
+
+        <a href="l"><br>KURV</a>
+
+      </section>
+
+    </section>
+
+
+    <section class="søkemotor">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <input type="text" placeholder="Søk etter klær eller merker...">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </section>
+
+
+    <nav class="navigation">
+
+
+
+
+      <section class="dropned">
+        <a href="klær.html" class="dropknapp">Klær</a>
+        <section class="dropned-content">
+          <a href="klær.html" onclick="gensere1()">gensere</a>
+          <a onclick="bukser1()">Bukser</a>
+          <a onclick="skjorter1()">skjorter</a>
+        </section>
+      </section>
+
+
+
+      <section class="dropned">
+        <a class="dropknapp" onclick="Sport1()">Sport</a>
+
+        <section class="dropned-content">
+          <a href="virker_ikke.html" onclick="sport1()">Sport overdeler</a>
+          <a href="virker_ikke.html">Sport underdeler</a>
+          <a href="virker_ikke.html">Sport relatert</a>
+        </section>
+      </section>
+
+      <section class="dropned">
+        <a href="tilbehor.html" class="dropknapp">Tilbehør</a>
+        <section class="dropned-content">
+          <a onclick="bukser1()"> klokker</a>
+          <a href="virker_ikke.html">bagger</a>
+          <a href="virker_ikke.html">caps</a>
+        </section>
+      </section>
+
+
+      <section class="dropned">
+        <a class="dropknapp" onclick="Sko1()">Sko</a>
+      </section>
+
+      <section class="dropned">
+        <a class="dropknapp" onclick="Salg_alle()">Nyheter</a>
+        </a>
+      </section>
+
+      <section class="dropned">
+        <a class="dropknapp" onclick="Salg_alle()">Salg</a>
+        </a>
+      </section>
+
+
+
+
+    </nav>
+
+  </header>
+
+  <div class="chat-popup" id="myForm">
+    <form action="kundeservice-ferdig.html" class="form-container">
+      <h1>KUNDESERVICE</h1>
+      <h4>Vi svarer inne noen få virkedager</h4>
+      <label for="msg"><b>Send Melding her:</b></label>
+      <textarea placeholder="Type message.." name="msg" required></textarea>
+
+      <button type="submit" class="btn">Send</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+
+
+
+
+
+    <section class="reklame2">
+      <a href="klær.html"><img src="bilder_klær_riktig/reklame_2bild.jpg" alt="bilde"></a>
+    </section>
+    <footer>
+    </footer>
+
+
+    <footer>
+
+      <section class="hele_footer">
+
+
+        <section class="om_oss_footer">
+          <table>
+            <thead>
+              <tr>
+                <th>INFORMASJON</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="logginn.html"> LOGG INN</a></td>
+              </tr>
+              <tr>
+                <td><a href="ønskeliste.html">ØNSKELISTE</a></td>
+              </tr>
+              <tr>
+                <td><a href="kundeservice.html">KONTAKT OSS</a></td>
+              </tr>
+              <tr>
+                <td><a href="virker_ikke.html">FÅ NYHETSBREV</a></td>
+              </tr>
+            </tbody>
+
+          </table>
+        </section>
+
+        <section class="">
+          <table>
+            <thead>
+              <tr>
+                <th><a href="index.html">VARER</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td> <a href="klær.html">klær</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="sport.html">sport</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="sko.html">sko</a></td>
+              </tr>
+              <tr>
+                <td><a href="tilbehør.html">tilbehør</a></td>
+              </tr>
+            </tbody>
+
+          </table>
+
+        </section>
+
+        <section class="oss_footer">
+          <table>
+            <thead>
+              <tr>
+                <th><a href="oss.html">OM OSS</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="oss.html">søk jobb</a></td>
+              </tr>
+              <tr>
+                <td><a href="oss.html">ansatte</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="oss.html">historikk</a></td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </section>
+
+
+
+
+        <section class="sosial_footer">
+          <table>
+            <thead>
+              <tr>
+                <th>Følg oss</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="http://www.facebook.com"><img src="bilder_klær_riktig/face.png" class="sosbilder"></a></td>
+                <td><a href="http://www.twitter.com"><img src="bilder_klær_riktig/twit.png" class="sosbilder"></a></td>
+                <td><a href="http://www.instagram.com"><img src="bilder_klær_riktig/insta.jpg" class="sosbilder"></a></td>
+              </tr>
+
+            </tbody>
+
+          </table>
+        </section>
+
+
+
+      </section>
+    </footer>

@@ -252,7 +252,7 @@ main{
 }
 .tilbake_knapp{
 
-  
+
 }
 
 .valg_klær1, #valg_klær1 {
@@ -425,25 +425,32 @@ color: grey;
   margin-bottom: 55px;
   display: inline-block;
 }
-
-
-
-
-
-.vare{
-padding: 20px;
-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+.vare {
+  padding: 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  margin: 3px;
 }
-.vare>a{
+
+.vare>a {
   color: black;
 }
 
-
-
-.vare:hover{
+.vare:hover {
   -moz-box-shadow: 0 0 20px black;
   -webkit-box-shadow: 0 0 10px black;
   box-shadow: 0 0 10px black;
+}
+
+.bilde{
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.bilde:hover{
+ -moz-transform: scale(1.2);
+   -webkit-transform: scale(1.2);
+   transform: scale(1.1);
 }
 
 
@@ -470,9 +477,8 @@ font-size: 16px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-decoration: none;
-  font-size: 14px;
   font-weight: normal;
-  padding: 40px 100px;
+  padding: 60px 100px;
 }
 
 th>a {
@@ -494,12 +500,12 @@ td>a {
 
 thead {
   text-decoration: underline;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 tbody {
   font-style: normal;
-  font-size: 13px;
+  font-size: 18px;
   font-family: monospace;
   font-weight: lighter;
   text-transform: lowercase;
