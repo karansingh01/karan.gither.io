@@ -12,8 +12,6 @@
 
 </head>
 
-<body>
-  </head>
 
   <body>
     <header>
@@ -64,9 +62,9 @@
         <section class="lenke logginn">
 
 
-          <a href="logginn.html"><img src="bilder_klær_riktig/kurv1.png" alt="bilde" class="iconbilde"> </a>
+          <a href="handlekurv.html"><img src="bilder_klær_riktig/kurv1.png" alt="bilde" class="iconbilde"> </a>
 
-          <a href="l"><br>KURV</a>
+          <a href=handlekurv.html><br>KURV</a>
 
         </section>
 
@@ -83,52 +81,42 @@
       <nav class="navigation">
 
 
+              <section class="dropned">
+                <a href="klær.html" class="dropknapp">Klær</a>
+                <section class="dropned-content">
+                  <a href="gensere.html">gensere</a>
+                  <a href="bukser.html">Bukser</a>
+                  <a href="skjorter.html">skjorter</a>
+                  <a href="jakker.html">jakker</a>
+
+                </section>
+              </section>
 
 
-        <section class="dropned">
-          <a href="klær.html" class="dropknapp">Klær</a>
-          <section class="dropned-content">
-            <a href="klær.html" onclick="gensere1()">gensere</a>
-            <a onclick="bukser1()">Bukser</a>
-            <a onclick="skjorter1()">skjorter</a>
-          </section>
-        </section>
+
+              <section class="dropned">
+                <a href="sport.html" class="dropknapp" >Sport</a>
+
+              </section>
+
+              <section class="dropned">
+                <a href="tilbehor.html" class="dropknapp">Tilbehør</a>
+              </section>
 
 
+              <section class="dropned">
+                <a href="sko.html" class="dropknapp" >Sko</a>
+              </section>
 
-        <section class="dropned">
-          <a class="dropknapp" onclick="Sport1()">Sport</a>
+              <section class="dropned">
+                <a href="nyheter.html" class="dropknapp" >Nyheter</a>
+                </a>
+              </section>
 
-          <section class="dropned-content">
-            <a href="virker_ikke.html" onclick="sport1()">Sport overdeler</a>
-            <a href="virker_ikke.html">Sport underdeler</a>
-            <a href="virker_ikke.html">Sport relatert</a>
-          </section>
-        </section>
-
-        <section class="dropned">
-          <a href="tilbehor.html" class="dropknapp">Tilbehør</a>
-          <section class="dropned-content">
-            <a onclick="bukser1()"> klokker</a>
-            <a href="virker_ikke.html">bagger</a>
-            <a href="virker_ikke.html">caps</a>
-          </section>
-        </section>
-
-
-        <section class="dropned">
-          <a class="dropknapp" onclick="Sko1()">Sko</a>
-        </section>
-
-        <section class="dropned">
-          <a class="dropknapp" onclick="Salg_alle()">Nyheter</a>
-          </a>
-        </section>
-
-        <section class="dropned">
-          <a class="dropknapp" onclick="Salg_alle()">Salg</a>
-          </a>
-        </section>
+              <section class="dropned">
+                <a href="salg.html" class="dropknapp">Salg</a>
+                </a>
+              </section>
 
 
 
@@ -140,20 +128,7 @@
       <--Tilbake</button>
       <h1>LOGG INN</h1>
         <div id="firebaseui-auth-container"></div>
-        <!-- LIM INN FIREBASE-KODEN DIN HER -->
-        <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
-        <script>
-          // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBXt6HrwrG3frVTfTwqeXKUOOmNr5jwON0",
-    authDomain: "hoved-klesbutikk-riktig.firebaseapp.com",
-    databaseURL: "https://hoved-klesbutikk-riktig.firebaseio.com",
-    projectId: "hoved-klesbutikk-riktig",
-    storageBucket: "hoved-klesbutikk-riktig.appspot.com",
-    messagingSenderId: "844489859082"
-  };
-  firebase.initializeApp(config);
-</script>
+
         <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
         <script>
           // Initialize Firebase
@@ -231,7 +206,7 @@
                       <td><a href="kundeservice.html">KONTAKT OSS</a></td>
                     </tr>
                     <tr>
-                      <td><a href="virker_ikke.html">FÅ NYHETSBREV</a></td>
+                      <td><a href="oss.html">FÅ NYHETSBREV</a></td>
                     </tr>
                   </tbody>
 
@@ -258,7 +233,7 @@
                       <td><a href="sko.html">sko</a></td>
                     </tr>
                     <tr>
-                      <td><a href="tilbehør.html">tilbehør</a></td>
+                      <td><a href="tilbehor.html">tilbehør</a></td>
                     </tr>
                   </tbody>
 

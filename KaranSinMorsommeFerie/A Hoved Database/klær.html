@@ -75,9 +75,9 @@
       <section class="lenke logginn">
 
 
-        <a href="logginn.html"><img src="bilder_klær_riktig/kurv1.png" alt="bilde" class="iconbilde"> </a>
+        <a href="handlekurv.html"><img src="bilder_klær_riktig/kurv1.png" alt="bilde" class="iconbilde"> </a>
 
-        <a href="l"><br>KURV</a>
+        <a href=handlekurv.html><br>KURV</a>
 
       </section>
 
@@ -99,46 +99,37 @@
       <section class="dropned">
         <a href="klær.html" class="dropknapp">Klær</a>
         <section class="dropned-content">
-          <a onclick="gensere1()">gensere</a>
-          <a onclick="bukser1()">Bukser</a>
-          <a onclick="skjorter1()">skjorter</a>
+          <a href="gensere.html">gensere</a>
+          <a href="bukser.html">Bukser</a>
+          <a href="skjorter.html">skjorter</a>
+          <a href="jakker.html">jakker</a>
+
         </section>
       </section>
 
 
-
+      <!-- kode for knapper som ikke har dropdown i navigasjons baren-->
       <section class="dropned">
-        <a class="dropknapp" onclick="Sport1()">Sport</a>
-
-        <section class="dropned-content">
-          <a href="virker_ikke.html" onclick="sport1()">Sport overdeler</a>
-          <a href="virker_ikke.html">Sport underdeler</a>
-          <a href="virker_ikke.html">Sport relatert</a>
-        </section>
+        <a href="sport.html" class="dropknapp">Sport</a>
       </section>
 
       <section class="dropned">
         <a href="tilbehor.html" class="dropknapp">Tilbehør</a>
-        <section class="dropned-content">
-          <a onclick="bukser1()"> klokker</a>
-          <a href="virker_ikke.html">bagger</a>
-          <a href="virker_ikke.html">caps</a>
-        </section>
       </section>
 
 
       <section class="dropned">
-        <a class="dropknapp" onclick="Sko1()">Sko</a>
+        <a href="sko.html" class="dropknapp">Sko</a>
       </section>
 
       <section class="dropned">
-        <a class="dropknapp" onclick="Nyheter()">Nyheter</a>
-        </a>
+        <a href="nyheter.html" class="dropknapp">Nyheter</a>
+
       </section>
 
       <section class="dropned">
-        <a class="dropknapp" onclick="Salg1()">Salg</a>
-        </a>
+        <a href="salg.html" class="dropknapp">Salg</a>
+
       </section>
 
 
@@ -158,12 +149,11 @@
 
 
     <section class="usynlig_valg_linje"></section>
-
     <div class="valg_klær1">
 
 
       <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">MERKE</button>
+        <button onclick="myFunction()" class="dropbtn">Merke</button>
         <div id="myDropdown" class="dropdown-content">
           <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
           <a onclick="klaer()">ALLE</a>
@@ -174,30 +164,20 @@
           <a onclick="merke5_klaer()">VERSACE</a>
           <a onclick="merke6_klaer()">LYLE&SCOTT</a>
         </div>
-
       </div>
-      <script>
-        //dropdown.onclick = function(event) {
-  //if (event.target == myFunction()) {
-    //myFunction().style.display = "none";
-  //}
-//}
-</script>
 
       <div class="dropdown">
-        <button onclick="myFunction2()" class="dropbtn">STØRRELSE</button>
+        <button onclick="myFunction2()" class="dropbtn">Anledning</button>
         <div id="myDropdown2" class="dropdown-content">
           <a onclick="klaer()">ALLE</a>
-          <a onclick="str_klaer_XS()">XS</a>
-          <a onclick="str_klaer_S()">S</a>
-          <a onclick="str_klaer_M()">M</a>
-          <a onclick="str_klaer_L()">L</a>
-          <a onclick="str_klaer_XL()">XL</a>
+          <a onclick="anledning_fritid()">fritid</a>
+          <a onclick="anledning_formel()">formel</a>
+          <a onclick="anledning_casual()">casual</a>
         </div>
       </div>
 
       <div class="dropdown">
-        <button onclick="myFunction3()" class="dropbtn">pris</button>
+        <button onclick="myFunction3()" class="dropbtn">Pris</button>
         <div id="myDropdown3" class="dropdown-content">
           <a onclick="klaer()">ALLE</a>
           <a onclick="pris_500()">100-500 kr</a>
@@ -229,7 +209,7 @@
 
 
 
-
+    <!-- kode for å sortere i tabellen-->
     <section class="tabell_full">
 
 
@@ -238,32 +218,29 @@
           <section class="klær_tekst"><a onclick="klaer()">Klær</a>
           </section>
         </li>
-
-
-
-        <li><a onclick="skjorter1()" class="tabell_ord">Skjorter </a></li>
-        <li><a onclick="jakker1()" class="tabell_ord">Jakker</a></li>
-        <li><a onclick="gensere1()" class="tabell_ord">Gensere</a></li>
-        <li><a onclick="bukser1()" class="tabell_ord">Bukser </a></li>
-
-
+        <li><a href="skjorter.html" class="tabell_ord">Skjorter </a></li>
+        <li><a href="jakker.html" class="tabell_ord">Jakker</a></li>
+        <li><a href="gensere.html" class="tabell_ord">Gensere</a></li>
+        <li><a href="bukser.html" class="tabell_ord">Bukser </a></li>
 
 
       </ul>
     </section>
-
+    <!-- kode i linjen under den første linjen med sortering. for å sortere etter bærkraftig og flerer forskjellige ting under knappen sorter-->
     <section class="linje2_valg">
 
+      <!-- sorterer etter bærekraftig-->
       <section class="Bærekraftig">
         Bærekraftig:
         <input class="Bærekraftig_boks" type="checkbox" onclick="baerekraftig()"></input>
       </section>
 
-
+      <!--usynlig del i linje 2-->
       <section class="usynlig_linje2_valg">
 
       </section>
 
+      <!-- sorterings knapp i linje 2-->
       <p class="sorter_etter">Sorter etter:</p>
       <div class="sortering_hele">
         <button onclick="myFunction5()" class="dropbtn">Sorter</button>
@@ -279,34 +256,26 @@
       </div>
 
 
-
-
-
-
-
     </section>
 
 
-
     <main>
-
 
     </main>
 
   </section>
 
+  <!-- kode for reklamen-->
   <section class="reklame2">
     <a href="klær.html"><img src="bilder_klær_riktig/reklame_2bild.jpg" alt="bilde"></a>
   </section>
-  <footer>
-  </footer>
 
-
+  <!-- kode for innholdet i footer -->
   <footer>
 
     <section class="hele_footer">
 
-
+      <!-- kode for linje 1 i footer -->
       <section class="om_oss_footer">
         <table>
           <thead>
@@ -325,14 +294,15 @@
               <td><a href="kundeservice.html">KONTAKT OSS</a></td>
             </tr>
             <tr>
-              <td><a href="virker_ikke.html">FÅ NYHETSBREV</a></td>
+              <td><a href="oss.html">FÅ NYHETSBREV</a></td>
             </tr>
           </tbody>
 
         </table>
       </section>
 
-      <section class="">
+      <!-- kode for linje 2 i footer -->
+      <section class="oss_footer">
         <table>
           <thead>
             <tr>
@@ -352,7 +322,7 @@
               <td><a href="sko.html">sko</a></td>
             </tr>
             <tr>
-              <td><a href="tilbehør.html">tilbehør</a></td>
+              <td><a href="tilbehor.html">tilbehør</a></td>
             </tr>
           </tbody>
 
@@ -360,6 +330,7 @@
 
       </section>
 
+      <!-- kode for linje 3 i footer -->
       <section class="oss_footer">
         <table>
           <thead>
@@ -387,7 +358,7 @@
 
 
 
-
+      <!-- del av footer med sosiale medier bilder -->
       <section class="sosial_footer">
         <table>
           <thead>
@@ -413,12 +384,12 @@
   </footer>
 
 
+  <!-- javascript starter under her -->
 
   <script>
-    const main = document.querySelector("main");
-    //Skriv referanser til database under her:
+    const main = document.querySelector("main"); // Variabel som referer til mian-elementet
+    //Skriver referanser til database under her:
     const db = firebase.database();
-    const varer = db.ref("varer");
     const bukser = db.ref("varer/bukser");
     const skjorter = db.ref("varer/skjorter");
     const gensere = db.ref("varer/gensere");
@@ -430,17 +401,6 @@
 
 
 
-    //  function visVare(snapshot) {
-    //Javascript-funksjon som skriver varene ut på nettsiden i main-elementet
-    //    let varer = snapshot.val();
-
-    //let key = snapshot.key;
-    //   let ref = parent +"/" + key;
-    //    let nyttElement = document.createElement("article");
-    //  let type = "";
-
-    //nyttElement.innerHTML =
-
 
     function visVare(snapshot) {
       //Javascript-funksjon som skriver varene ut på nettsiden i main-elementet
@@ -448,9 +408,11 @@
       let key = snapshot.key;
       let parent = snapshot.ref.parent.key;
       let parentParent = snapshot.ref.parent.parent.key;
-      let ref = parent +"/" + key;
+      let ref = parent + "/" + key;
 
-      console.log(snapshot.val())
+      if(varer.tilbud)
+
+        console.log(snapshot.val())
 
       main.innerHTML +=
         `
@@ -458,6 +420,7 @@
 <a href="klesplagg.html?id=${key}&parent=${parent}">
         <section class="bilde">  <img src="${varer.bilde1}" alt=""> </section>
         <h1 class="navn_varer">${varer.modell} - ${varer.merke1}</h1>
+
         <p class="pris_varer">Pris: ${varer.pris} kr</p>
         </a>
         </article>
@@ -468,12 +431,12 @@
 
 
     function visVare_andre_vei(snapshot) {
-      //Javascript-funksjon som skriver varene ut på nettsiden i main-elementet
+      //Javascript-funksjon som skriver varene ut på nettsiden i main-elementet bare andre vei
       let varer = snapshot.val();
       let key = snapshot.key;
       let parent = snapshot.ref.parent.key;
       let parentParent = snapshot.ref.parent.parent.key;
-      let ref = parent +"/" + key;
+      let ref = parent + "/" + key;
 
       console.log(snapshot.val())
       main.innerHTML =
@@ -491,10 +454,8 @@
 
 
 
-
-
-    // Funksjon som viser alle varer
     function visAlle() {
+      // Funksjoner til spørringene
       main.innerHTML = ""; // sletter innholdet i main.
       bukser
         .orderByChild("merke1")
@@ -521,7 +482,8 @@
     }
 
     function klaer() {
-      main.innerHTML = ``;
+      // Funksjoner til spørringene
+      main.innerHTML = ""; // sletter innholdet i main.
       bukser
         .on("child_added", visVare);
       skjorter
@@ -533,14 +495,16 @@
     }
 
     function sko1() {
-      main.innerHTML = ``;
+      // Funksjoner til spørringene
+      main.innerHTML = ""; // sletter innholdet i main.
       sko
         .orderByChild("modell")
         .on("child_added", visVare);
     }
 
     function sport1() {
-      main.innerHTML = ``;
+      // Funksjoner til spørringene
+      main.innerHTML = ""; // sletter innholdet i main.
       sport
         .orderByChild("modell")
         .on("child_added", visVare);
@@ -724,127 +688,67 @@
 
 
 
-    function str_klaer_alle() {
+    function anledning_fritid() {
       main.innerHTML = ``;
       bukser
-        .orderByChild("Storrelse")
+        .orderByChild("anledning")
+        .equalTo("fritid")
         .on("child_added", visVare);
       skjorter
-        .orderByChild("Storrelse")
+        .orderByChild("anledning")
+        .equalTo("fritid")
         .on("child_added", visVare);
       gensere
-        .orderByChild("Storrelse")
+        .orderByChild("anledning")
+        .equalTo("fritid")
         .on("child_added", visVare);
       jakker
-        .orderByChild("Storrelse")
+        .orderByChild("anledning")
+        .equalTo("fritid")
         .on("child_added", visVare);
     }
 
 
 
-    function str_klaer_XS() {
+    function anledning_formel() {
       main.innerHTML = ``;
       bukser
-        .orderByChild("Storrelse")
-        .equalTo("XS")
+        .orderByChild("anledning")
+        .equalTo("formel")
         .on("child_added", visVare);
       skjorter
-        .orderByChild("Storrelse")
-        .equalTo("XS")
+        .orderByChild("anledning")
+        .equalTo("formel")
         .on("child_added", visVare);
       gensere
-        .orderByChild("Storrelse")
-        .equalTo["XS", "S", "XL"]
+        .orderByChild("anledning")
+        .equalTo("formel")
         .on("child_added", visVare);
       jakker
-        .orderByChild("Storrelse")
-        .equalTo("XS")
+        .orderByChild("anledning")
+        .equalTo("formel")
         .on("child_added", visVare);
     }
 
-    function str_klaer_S() {
+    function anledning_casual() {
       main.innerHTML = ``;
       bukser
-        .orderByChild("Storrelse")
-        .equalTo("S")
+        .orderByChild("anledning")
+        .equalTo("casual")
         .on("child_added", visVare);
       skjorter
-        .orderByChild("Storrelse")
-        .equalTo("S")
+        .orderByChild("anledning")
+        .equalTo("casual")
         .on("child_added", visVare);
       gensere
-        .orderByChild("Storrelse")
-        .equalTo("S")
+        .orderByChild("anledning")
+        .equalTo("casual")
         .on("child_added", visVare);
       jakker
-        .orderByChild("Storrelse")
-        .equalTo("S")
+        .orderByChild("anledning")
+        .equalTo("casual")
         .on("child_added", visVare);
     }
-
-    function str_klaer_M() {
-      main.innerHTML = ``;
-      bukser
-        .orderByChild("Storrelse")
-        .equalTo("M")
-        .on("child_added", visVare);
-      skjorter
-        .orderByChild("Storrelse")
-        .equalTo("M")
-        .on("child_added", visVare);
-      gensere
-        .orderByChild("Storrelse")
-        .equalTo("M")
-        .on("child_added", visVare);
-      jakker
-        .orderByChild("Storrelse")
-        .equalTo("M")
-        .on("child_added", visVare);
-    }
-
-    function str_klaer_L() {
-      main.innerHTML = ``;
-      bukser
-        .orderByChild("Storrelse")
-        .equalTo("L")
-        .on("child_added", visVare);
-      skjorter
-        .orderByChild("Storrelse")
-        .equalTo("L")
-        .on("child_added", visVare);
-      gensere
-        .orderByChild("Storrelse")
-        .equalTo("L")
-        .on("child_added", visVare);
-      jakker
-        .orderByChild("Storrelse")
-        .equalTo("L")
-        .on("child_added", visVare);
-    }
-
-    function str_klaer_XL() {
-      main.innerHTML = ``;
-      bukser
-        .orderByChild("Storrelse")
-        .equalTo("XL")
-        .on("child_added", visVare);
-      skjorter
-        .orderByChild("Storrelse")
-        .equalTo("XL")
-        .on("child_added", visVare);
-      gensere
-        .orderByChild("Storrelse")
-        .equalTo("XL")
-        .on("child_added", visVare);
-      jakker
-        .orderByChild("Storrelse")
-        .equalTo("XL")
-        .on("child_added", visVare);
-    }
-
-
-
-
 
     function pris_500() {
       main.innerHTML = ``;
@@ -1139,8 +1043,6 @@
 
     popoulære_klaer(); // Funksjon som kjøres når siden lastes
   </script>
-
-
 
 
 </body>

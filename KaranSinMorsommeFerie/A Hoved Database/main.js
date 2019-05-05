@@ -1,4 +1,4 @@
-
+// javascript for at slideshowet skal virke funnet online.
 (function() {
 
 	function Slideshow( element ) {
@@ -39,7 +39,7 @@
 				}
 				self._slideTo( self.index );
 
-			}, 5000);
+			}, 4000);
 		},
 
 
@@ -54,14 +54,11 @@
 
 
 })();
+// slutt på javascript for slideshow
 
 
-//function visAlle() {
-  //  document.getElementById("nyhetAlle").style.color = "red";
-//}
 
-// When the user clicks on the button,
-//toggle between hiding and showing the dropdown content */
+// funksjon for å få dropdown av merker når man skal sortere varer etter merker er under her
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -81,11 +78,11 @@ function filterFunction() {
     }
   }
 }
+// Her slutter sortering av merker innenfor varer
 
 
 
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
+// funksjon for å få dropdown av anledning når man skal sortere varer etter anledning er under her
 
 function myFunction2() {
   document.getElementById("myDropdown2").classList.toggle("show");
@@ -105,6 +102,9 @@ function filterFunction2() {
     }
   }
 }
+// Her slutter sortering av anledning innenfor varer
+
+// funksjon for å få dropdown av pris når man skal sortere varer etter prisr er under her
 
 
 function myFunction3() {
@@ -125,12 +125,9 @@ function filterFunction3() {
     }
   }
 }
-//window.onclick = filterFunction3(event) {
-  //if (event.target == myFunction3()) {
-    //myFunction3().style.display = "none";
-//  }
-//}
+// Her slutter sortering av pris innenfor varer
 
+// funksjon for å få dropdown av farge når man skal sortere varer etter farge er under her
 
 function myFunction4() {
   document.getElementById("myDropdown4").classList.toggle("show");
@@ -150,6 +147,9 @@ function filterFunction4() {
     }
   }
 }
+// Her slutter sortering av farge innenfor varer
+// funksjon for å få dropdown av forskjellige ting når man skal sortere varer etter forskjellige ting er under her
+
 function myFunction5() {
   document.getElementById("myDropdown5").classList.toggle("show");
 }
@@ -167,6 +167,7 @@ function filterFunction5() {
     }
   }
 }
+// Her slutter sortering av forskjellige ting innenfor varer
 function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
@@ -174,4 +175,3 @@ function openForm() {
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
-// javascript for størrelse knappen inne på et klesplagg starter her:

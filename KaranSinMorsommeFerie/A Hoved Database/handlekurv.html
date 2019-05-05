@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="handlekurv.css">
+  <script src="handlekurv.js"></script>
+  <title>Log in</title>
+
+</head>
+
+
+<body>
+
+  <header>
+
+    <section class="header_øverst">
+
+
+      <section class="lang">
+        Gratis <b><span style="color:blue"> frakt</span></b> og <b><span style="color:blue">retur</span></b> året rundt
+      </section>
+
+      <section class="usynlig">
+
+      </section>
+
+      <section class="logo">
+        <a href="index.html"><img src="bilder_klær_riktig/ny_logo.png" alt="logo" class="logo"></a>
+      </section>
+
+
+      <section class="usynlig1">
+      </section>
+
+
+
+
+
+      <!-- kode for logg inn, ønskeliste og handlekurv knappene er under her  -->
+
+      <section class="lenke logginn">
+
+
+        <a href="logginn.html"><img src="bilder_klær_riktig/innlogging.svg" alt="bilde" class="iconbilde"> </a>
+
+        <a href="logginn.html"><br>LOGG INN</a>
+
+      </section>
+
+
+
+      <section class="lenke logginn ønskeliste">
+
+        <a href="ønskeliste.html"><img src="bilder_klær_riktig/ønskeliste.png" alt="bilde" class="iconbilde"> </a>
+
+        <a href="ønskeliste.html">ØNSKELISTE</a>
+
+      </section>
+
+      <section class="lenke logginn handlekurv">
+
+
+        <a href="handlekurv.html"><img src="bilder_klær_riktig/kurv1.png" alt="bilde" class="iconbilde"> </a>
+
+        <a href=handlekurv.html><br>KURV</a>
+
+
+      </section>
+
+    </section>
+    <!-- kode for søkefeltet -->
+    <section class="søkemotor">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <input type="text" placeholder="Søk etter klær eller merker...">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </section>
+
+
+
+    <!-- kode for navigasjonbarene starter under her-->
+
+    <nav class="navigation">
+
+
+      <section class="dropned">
+        <a href="klær.html" class="dropknapp">Klær</a>
+        <section class="dropned-content">
+          <a href="gensere.html">gensere</a>
+          <a href="bukser.html">Bukser</a>
+          <a href="skjorter.html">skjorter</a>
+          <a href="jakker.html">jakker</a>
+
+        </section>
+      </section>
+
+
+
+      <section class="dropned">
+        <a href="sport.html" class="dropknapp">Sport</a>
+
+      </section>
+
+      <section class="dropned">
+        <a href="tilbehor.html" class="dropknapp">Tilbehør</a>
+      </section>
+
+
+      <section class="dropned">
+        <a href="sko.html" class="dropknapp">Sko</a>
+      </section>
+
+      <section class="dropned">
+        <a href="nyheter.html" class="dropknapp">Nyheter</a>
+
+      </section>
+
+      <section class="dropned">
+        <a href="salg.html" class="dropknapp">Salg</a>
+
+      </section>
+
+
+
+    </nav>
+
+  </header>
+  <main>
+    <div class="shopping-cart">
+  <!-- Title -->
+  <div class="title">
+    Shopping Bag
+  </div>
+
+  <!-- Product #1 -->
+  <div class="item">
+    <div class="buttons">
+      <span class="delete-btn"></span>
+      <span class="like-btn"></span>
+    </div>
+
+    <div class="image">
+      <img src="bilder_klær_riktig/handlekurv1.jpg" alt="" />
+    </div>
+
+    <div class="description">
+      <span>Common Projects</span>
+      <span>Bball High</span>
+      <span></span>grå
+    </div>
+
+    <div class="quantity">
+      <button class="plus-btn" type="button" name="button">
+        <img src="plus.svg" alt="" />
+      </button>
+      <input type="text" name="name" value="1">
+      <button class="minus-btn" type="button" name="button">
+        <img src="minus.svg" alt="" />
+      </button>
+    </div>
+
+    <div class="total-price">549 kr</div>
+  </div>
+
+  <!-- Product #2 -->
+  <div class="item">
+    <div class="buttons">
+      <span class="delete-btn"></span>
+      <span class="like-btn"></span>
+    </div>
+
+    <div class="image">
+      <img src="bilder_klær_riktig/handlekurv2.jpg"  alt=""/>
+    </div>
+
+    <div class="description">
+      <span>Maison Margiela</span>
+      <span>Future Sneakers</span>
+      <span>Hvit</span>
+    </div>
+
+    <div class="quantity">
+      <button class="plus-btn" type="button" name="button">
+        <img src="plus.svg"  alt="" />
+      </button>
+      <input type="text" name="name" value="1">
+      <button class="minus-btn" type="button" name="button">
+        <img src="minus.svg" alt="" />
+      </button>
+    </div>
+
+    <div class="total-price">979 kr</div>
+  </div>
+
+  <!-- Product #3 -->
+  <div class="item">
+    <div class="buttons">
+      <span class="delete-btn"></span>
+      <span class="like-btn" img src="bilder_klær_riktig/handlekurv_liker.jpg"></span>
+    </div>
+
+    <div class="image">
+      <img src="bilder_klær_riktig/handlekurv3.jpg" class="bilde"  alt="" />
+    </div>
+
+    <div class="description">
+      <span>Our Legacy</span>
+      <span>Brushed Scarf</span>
+      <span>Grå</span>
+    </div>
+
+    <div class="quantity">
+      <button class="plus-btn" type="button" name="button">
+        <img src="plus.svg" alt="" />
+      </button>
+      <input type="text" name="name" value="1">
+      <button class="minus-btn" type="button" name="button">
+        <img src="minus.svg" alt="" />
+      </button>
+    </div>
+
+    <div class="total-price">849 kr</div>
+  </div>
+
+  <a href="logginn.html" class="fortsett_knapp">FORTSETT</a>
+</div>
+  </main>
+
+
+  <footer>
+
+
+  </footer>
