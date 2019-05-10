@@ -82,6 +82,24 @@ body {
   .form-container{
     margin: 0px;
   }
+
+  .hele_footer {
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-decoration: none;
+    font-weight: normal;
+    padding: 20px 40px;
+  }
+
+  .sosial_footer{
+    display: none;
+  }
+.sosbilder{
+  /* skjuler*/
+display: none;
+}
 }
 
 header {
@@ -262,12 +280,13 @@ mark {
   font-size: 20px;
   font-weight: bold;
 }
-
+@media only screen and (min-width: 600px) {
 .dropned-content {
   display: none;
   position: absolute;
   background-color: #b8d0ce;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
 }
 
 .dropned-content a {
@@ -382,6 +401,7 @@ box-sizing: border-box;
   background-position: center;
   background-size: cover;
 }
+@media only screen and (min-width: 600px) {
 .hele_footer {
   background-color: black;
   color: white;
@@ -391,7 +411,7 @@ box-sizing: border-box;
   font-weight: normal;
   padding: 60px 100px;
 }
-
+}
 th>a {
   text-decoration: none;
   color: white;

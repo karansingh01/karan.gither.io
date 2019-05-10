@@ -1,13 +1,158 @@
-body {
+@media only screen and (min-width: 600px) {
+  body {
+  background-color: #dbdde0;
   margin: 0px;
   top: 0px;
-  background-color: #dbdde0
+}
 }
 
-header {
+
+/*css for forskjellige deler når nettsiden er under 600px starter under her*/
+@media only screen and (max-width: 600px) {
+  body {
+    /*bakgrunnsfarge og beholder plassering*/
+    background-color: #dbdde0;
+    margin: 0px;
+    top: 0px;
+  }
+
+
+  /*css for .lang er den hvite linjen øverst på siden starter under her*/
+  .lang {
+    /* skjuler*/
+    display: none;
+  }
+
+  .header_øverst {
+    /* Lager en grid. */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /*gir en bredde på 100% og text plasseres sentralt*/
+    width: 100%;
+    text-align: center;
+  }
+
+
+.logo>a>img{
+  /* Lager en grid. */
+  grid-template-columns: repeat(1, 1fr);
+  grid-row: span 1;
+  grid-column: span 3;
+  width: 150px;
+  height: 120px;
+  padding-top: 20px;
+}
+
+/*css for ønskeliste, handlekurv og logginn starter under her*/
+.lenke {
+  /* Lager en grid. */
+  grid-template-columns: repeat(1, 1fr);
+  grid-row: span 1;
+  grid-column: span 3;
+  /*legger text sentralt*/
+  text-align: center;
+
+}
+
+  .usynlig, .usynlig1 {
+    /* skjuler*/
+    display: none;
+  }
+
+  .søkemotor {
+    /* skjuler*/
+    display: none;
+  }
+
+  /*css for navigasjon baren er under her  starter under her*/
+  .navigation {
+    /* Lager en grid. */
+    grid-template-columns: repeat(1, 1fr);
+    grid-row: span 1;
+    grid-column: span 6;
+    /*holder plasseringen sin og tekst ligger sentralt*/
+    margin-left: 0px;
+    padding-left: 0px;
+    text-align: center;
+    width: auto;
+  }
+
+  .dropned-content {
+    /* skjuler*/
+    display: none;
+  }
+
+  h1{
+    color: #892121;
+    font-weight: 100;
+    font-size: 30px;
+    margin: 10px 0px 20px;
+    padding: 20px;
+    text-decoration: underline;
+    font-weight: bold;
+    text-align:center;
+  }
+
+  #clockdiv {
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .ansatte{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+
+  .hele_footer {
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-decoration: none;
+    font-weight: normal;
+    padding: 20px 40px;
+  }
+
+  .sosial_footer{
+    display: none;
+  }
+.sosbilder{
+  /* skjuler*/
+display: none;
+}
+
+}
+
+
+
+/* start på kode som ikke har max width 600px*/
+h1 {
+  font-family: sans-serif;
+  color: darkcyan;
+  text-align: center;
+  font-size: 35px;
+  margin: 5px 0px;
+}
+
+.tilbake_knapp {
+  margin-top: 20px;
+  margin-left: 50px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+
+header{
   background-image: url(bilder_klær_riktig/bg-1.jpg);
-}
 
+
+}
+@media only screen and (min-width: 600px) {
 .header_øverst {
   text-align: center;
   display: grid;
@@ -16,6 +161,7 @@ header {
   text-transform: uppercase;
   font-size: 20px;
   font-weight: bold;
+}
 }
 
 .header_øverst>.lang {
@@ -27,17 +173,18 @@ header {
   font-style: normal;
   font-weight: lighter;
 }
-
 mark {
   color: blue;
 }
 
 .header_øverst>.usynlig {
   grid-column: span 3;
+  margin-top: 99px;
   font-size: 15px;
+
+
 }
-
-
+@media only screen and (min-width: 600px) {
 .logo {
   width: 150px;
   height: 120px;
@@ -47,6 +194,7 @@ mark {
   padding-bottom: 15px;
   grid-column: span 4;
 }
+}
 
 .header_øverst>.lenke {
   font-size: 13px;
@@ -55,15 +203,21 @@ mark {
   display: inline-block;
 }
 
+
+
+
 .header_øverst>.usynlig1 {
   grid-column: span 2;
 }
+
 
 .header_øverst>.lenke {
   align-self: center;
   text-decoration: none;
   margin-top: 50px;
+
 }
+
 
 .header_øverst>.lenke>a {
   color: black;
@@ -80,38 +234,40 @@ mark {
   width: 30px;
 }
 
-.søkemotor {
+
+.søkemotor{
   box-sizing: border-box;
 }
-
 .søkemotor>[type=text] {
   padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 220px;
-  background: #f1f1f1;
+   font-size: 17px;
+   border: 1px solid grey;
+   float: left;
+   width: 220px;
+   background: #f1f1f1;
+
 }
 
 .søkemotor>[type=submit] {
   float: left;
-  width: 60px;
-  padding: 10px;
-  background: #2196F3;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none;
-  /* Prevent double borders */
-  cursor: pointer;
+    width: 60px;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
 }
 
 .søkemotor {
   grid-column: span 1;
   margin-left: 580px;
   margin-top: 30px;
+
 }
 
+@media only screen and (min-width: 600px) {
 .navigation {
   text-align: center;
   display: grid;
@@ -121,6 +277,8 @@ mark {
   padding-left: 290px;
   padding-right: 290px;
 }
+}
+
 
 .navigation a {
   text-decoration: none;
@@ -128,6 +286,7 @@ mark {
   font-size: 20px;
   font-weight: bold;
   color: black;
+
 }
 
 .dropned {
@@ -137,18 +296,20 @@ mark {
   grid-row: span 6;
 }
 
-.dropned>a {
-  position: relative;
-  color: #000;
-  text-decoration: none;
-  font-size: 25px;
+
+.dropned>a{
+position: relative;
+color: #000;
+text-decoration: none;
+font-size: 25px;
+
 }
 
 .dropned>a:hover {
-  color: black;
+color: black;
 }
 
-.dropned>a::before {
+.dropned>a::before{
   content: "";
   position: absolute;
   width: 100%;
@@ -163,11 +324,12 @@ mark {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.dropned>a:hover::before {
+.dropned>a:hover::before{
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
+
 
 .dropknapp {
   border: none;
@@ -179,12 +341,13 @@ mark {
   font-size: 20px;
   font-weight: bold;
 }
-
+@media only screen and (min-width: 600px) {
 .dropned-content {
   display: none;
   position: absolute;
   background-color: #b8d0ce;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
 }
 
 .dropned-content a {
@@ -211,27 +374,59 @@ mark {
   margin-top: 20px;
   margin-left: 50px;
   padding: 10px;
-  background-color: #dbdde0;
-  border-style: dashed;
-  border-radius: 90px;
-  border-color: red;
-  border-width: 3px;
+  border-style: none;
   font-size: 20px;
 }
 
-
+@media only screen and (min-width: 600px) {
 h1 {
   color: #892121;
   font-weight: 100;
   font-size: 60px;
-  margin: 10px 0px 20px;
   padding: 20px;
   text-decoration: underline;
   font-weight: bold;
   text-align:center;
-
+}
 }
 
+h3{
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 70px;
+}
+
+
+  #more{
+    display: none;
+  }
+
+.les_mer{
+  background-color: white;
+  margin: 50px;
+  font-size: 20px;
+}
+
+.les_mer>p{
+text-align: center;
+padding: 0px 20px;
+}
+
+h2{
+  text-align: center;
+  font-size: 55px;
+  margin: 20px;
+}
+
+#myBtn{
+padding: 15px;
+background-color: salmon;
+color: white;
+font-size: 18px;
+
+
+}
+@media only screen and (min-width: 600px) {
 #clockdiv {
   font-family: sans-serif;
   color: #fff;
@@ -239,9 +434,9 @@ h1 {
   font-weight: 100;
   text-align: center;
   font-size: 30px;
-  margin: 50px 450px;
+  margin: 10px 375px 50px 425px;
 }
-
+}
 #clockdiv>div {
   padding: 10px;
   border-radius: 3px;
@@ -261,6 +456,38 @@ h1 {
   font-size: 26px;
 }
 
+@media only screen and (min-width: 600px) {
+.ansatte{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+}
+
+.hver_for_seg_ansatte{
+  grid-row: span 1;
+  grid-column: span 1;
+  border-style: solid;
+  border-width: 1px;
+  margin: 20px;
+}
+
+.ansatte>.hver_for_seg_ansatte>img{
+  width: 200px;
+  height: 300px;
+  padding-left: 100px;
+}
+
+h2{
+  text-align: center;
+margin: 0px;
+padding: 0px;
+}
+
+h4{
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
 
 .reklame2>a>img {
   width: 100%;
@@ -270,6 +497,8 @@ h1 {
   background-position: center;
   background-size: cover;
 }
+/*Footer starter her*/
+@media only screen and (min-width: 600px) {
 .hele_footer {
   background-color: black;
   color: white;
@@ -278,6 +507,7 @@ h1 {
   text-decoration: none;
   font-weight: normal;
   padding: 60px 100px;
+}
 }
 
 th>a {
@@ -290,11 +520,13 @@ td>a {
   color: white;
 }
 
+@media only screen and (min-width: 600px) {
 .sosbilder {
   width: 40px;
   height: 40px;
   border-radius: 15px;
   margin: 15px;
+}
 }
 
 thead {
@@ -303,6 +535,7 @@ thead {
 }
 
 tbody {
+  /* styler tekst. */
   font-style: normal;
   font-size: 18px;
   font-family: monospace;

@@ -186,9 +186,6 @@
         </div>
       </div>
 
-
-
-
       <div class="dropdown">
         <button onclick="myFunction4()" class="dropbtn">Farge</button>
         <div id="myDropdown4" class="dropdown-content">
@@ -200,14 +197,7 @@
         </div>
       </div>
 
-
-
-
-
     </div>
-
-
-
 
     <!-- kode for å sortere i tabellen-->
     <section class="tabell_full">
@@ -382,6 +372,7 @@
 
     </section>
   </footer>
+  <!-- footer slutter her-->
 
 
   <!-- javascript starter under her -->
@@ -409,8 +400,13 @@
       let parent = snapshot.ref.parent.key;
       let parentParent = snapshot.ref.parent.parent.key;
       let ref = parent + "/" + key;
-
-      if(varer.tilbud)
+      let prisTekst = ``;
+      if(varer.Salg === true){
+        prisTekst = `<p class="pris_varer_salg">Pris: ${varer.pris} kr</p>`;
+      }
+      else{
+        prisTekst = `<p class="pris_varer">Pris: ${varer.pris} kr</p>`
+      }
 
         console.log(snapshot.val())
 
@@ -420,14 +416,11 @@
 <a href="klesplagg.html?id=${key}&parent=${parent}">
         <section class="bilde">  <img src="${varer.bilde1}" alt=""> </section>
         <h1 class="navn_varer">${varer.modell} - ${varer.merke1}</h1>
-
-        <p class="pris_varer">Pris: ${varer.pris} kr</p>
+        ${prisTekst}
         </a>
         </article>
       `;
     }
-
-
 
 
     function visVare_andre_vei(snapshot) {

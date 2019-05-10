@@ -141,12 +141,50 @@
     </nav>
 
   </header>
-
-  <button class="tilbake_knapp" onclick="goBack()">
-    <--Tilbake</button>
-
 <main>
-  <h1>UNDER VEDLIKHOLD </h1>
+
+
+  <section class="les_mer">
+
+
+      <button class="tilbake_knapp" onclick="goBack()">
+        <--Tilbake</button>
+
+    <h2> Vi er desverre under vedlikhold og blir ferdig om 15 dager</h2>
+
+<h3>OM OSS</h3>
+  <p>SISAKA er en av verden beste online klasbutikker. Den ble dannet i 2019 av Karan Singh. Vi har en rekke unike produkter på priser som slår alle. VI er desverre under vedlikhold og blir ferdig om 15 dager. Etter det kan dere se litt mer om våre ansatte og hvordan du kan få deg en jobb her.<span id="dots">...</span><span id="more"> SISAKA.com, Inc. er et Norsk IT-selskap. Selskapet driver elektronisk handel over Internett, og eier Alexa Internet, A9.com og Internet Movie Database (IMDb).
+   SISAKA er kjent for å ha revolusjonert netthandelen og gjort om netthandel-industrien til et av de mest lønnsomme markedene i verden i dag. Selskapet har store varehus i både Nord-Amerika, Europa og Asia. I Europa er de stort sett plassert i England, men også Tyskland og Frankrike. Varer leveres omtrent verden over. Selskapet har dessuten forskjellige websider for forskjellige land, og det er Canada, England, Tyskland, Østerrike, Frankrike, Kina og Japan som for øyeblikket har sine egne sider.
+</p>
+
+  <button onclick="myFunction()" id="myBtn">LES MER</button>
+
+
+<script>
+
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "LES MER";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "LES MINDRE";
+    moreText.style.display = "inline";
+  }
+}
+
+</script>
+
+
+
+
+
+  <h1>RESTERENDE TID</h1>
   <div id="clockdiv">
     <div>
       <span class="days"></span>
@@ -233,15 +271,37 @@
       }
     };
     // Initialize the FirebaseUI Widget using Firebase.
-    var ui = new firebaseui.auth.AuthUI(firebase.auth());
     // The start method will wait until the DOM is loaded.
-    ui.start('#firebaseui-auth-container', uiConfig);
   </script>
   <script>
     function goBack() {
       window.history.back();
     }
   </script>
+
+
+<section>
+  <h1>VÅRE ANSATTE I STYRET</h1>
+</section>
+<section class="ansatte">
+  <section class="hver_for_seg_ansatte">
+    <h2>Elon Musk</h2>
+    <h4>Economy manager</h4>
+    <img src="bilder_klær_riktig/elon2.jpg" alt="">
+  </section>
+<section class="hver_for_seg_ansatte">
+<h2>Jeff Bezos</h2>
+<h4>Production manager</h4>
+  <img src="bilder_klær_riktig/jeff2.jpg" alt="">
+</section>
+
+<section class="hver_for_seg_ansatte">
+  <h2>Zuckerberg</h2>
+  <h4>Social Media manager</h4>
+  <img src="bilder_klær_riktig/mark.jpg" alt="">
+</section>
+
+</section>
 
 
   </main>

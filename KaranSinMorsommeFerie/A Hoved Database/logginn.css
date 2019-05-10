@@ -6,11 +6,9 @@
 }
 }
 
-
+/*css for forskjellige deler når nettsiden er under 600px starter under her*/
 @media only screen and (max-width: 600px) {
   body {
-    /* Lager en grid. */
-
     /*bakgrunnsfarge og beholder plassering*/
     background-color: #dbdde0;
     margin: 0px;
@@ -83,8 +81,29 @@
     display: none;
   }
 
+
+  .hele_footer {
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-decoration: none;
+    font-weight: normal;
+    padding: 20px 40px;
+  }
+
+  .sosial_footer{
+    display: none;
+  }
+.sosbilder{
+  /* skjuler*/
+display: none;
 }
 
+}
+
+
+/* start på kode som ikke har max width 600px*/
 h1 {
   font-family: sans-serif;
   color: darkcyan;
@@ -97,11 +116,6 @@ h1 {
   margin-top: 20px;
   margin-left: 50px;
   padding: 10px;
-  background-color: #dbdde0;
-  border-style: dashed;
-  border-radius: 90px;
-  border-color: red;
-  border-width: 3px;
   font-size: 20px;
 }
 
@@ -301,12 +315,13 @@ color: black;
   font-weight: bold;
 }
 
+@media only screen and (min-width: 600px) {
 .dropned-content {
   display: none;
   position: absolute;
   background-color: #b8d0ce;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-
+}
 }
 
 .dropned-content a {

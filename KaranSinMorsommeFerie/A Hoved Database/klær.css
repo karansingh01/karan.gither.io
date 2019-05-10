@@ -1,14 +1,5 @@
 /*css for forskjellige deler når nettsiden er under 600px starter under her*/
 @media only screen and (max-width: 600px) {
-  body {
-    /* Lager en grid. */
-
-    /*bakgrunnsfarge og beholder plassering*/
-    background-color: #dbdde0;
-    margin: 0px;
-    top: 0px;
-  }
-
 
   /*css for .lang er den hvite linjen øverst på siden starter under her*/
   .lang {
@@ -25,27 +16,25 @@
     text-align: center;
   }
 
+  .logo>a>img {
+    /* Lager en grid. */
+    grid-template-columns: repeat(1, 1fr);
+    grid-row: span 1;
+    grid-column: span 3;
+    width: 150px;
+    height: 120px;
+    padding-top: 20px;
+  }
 
-.logo>a>img{
-  /* Lager en grid. */
-  grid-template-columns: repeat(1, 1fr);
-  grid-row: span 1;
-  grid-column: span 3;
-  width: 150px;
-  height: 120px;
-  padding-top: 20px;
-}
-
-/*css for ønskeliste, handlekurv og logginn starter under her*/
-.lenke {
-  /* Lager en grid. */
-  grid-template-columns: repeat(1, 1fr);
-  grid-row: span 1;
-  grid-column: span 3;
-  /*legger text sentralt*/
-  text-align: center;
-
-}
+  /*css for ønskeliste, handlekurv og logginn starter under her*/
+  .lenke {
+    /* Lager en grid. */
+    grid-template-columns: repeat(1, 1fr);
+    grid-row: span 1;
+    grid-column: span 3;
+    /*legger text sentralt*/
+    text-align: center;
+  }
 
   .usynlig, .usynlig1 {
     /* skjuler*/
@@ -60,9 +49,8 @@
   /*css for navigasjon baren er under her  starter under her*/
   .navigation {
     /* Lager en grid. */
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-row: span 1;
-    grid-column: span 6;
     /*holder plasseringen sin og tekst ligger sentralt*/
     margin-left: 0px;
     padding-left: 0px;
@@ -75,107 +63,122 @@
     display: none;
   }
 
+  .klær_hoved {
+    /* Lager en grid. */
+    grid-template-columns: repeat(1, 1fr);
+    grid-row: span 1;
+    grid-column: span 6;
+    /*holder plasseringen sin og tekst ligger sentralt*/
+    margin-left: 0px;
+    padding-left: 0px;
+    text-align: center;
+    width: auto;
+  }
 
+  .tabell_full {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    list-style: none;
+  }
 
-.klær_hoved{
-  /* Lager en grid. */
-  grid-template-columns: repeat(1, 1fr);
-  grid-row: span 1;
-  grid-column: span 6;
-  /*holder plasseringen sin og tekst ligger sentralt*/
-  margin-left: 0px;
-  padding-left: 0px;
-  text-align: center;
-  width: auto;
-}
-.tabell_full{
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bold;
-  list-style: none;
-}
+  .tabell_ord {
+    padding: 0px;
+  }
 
-li{
-  list-style: none;
-}
+  li {
+    list-style: none;
+  }
 
-.linje2_valg{
-/* skjuler*/
-display: none;
-}
+  .linje2_valg {
+    /* skjuler*/
+    display: none;
+  }
+
   main {
     /* Lager en grid. */
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-      /* gjør så main ikke har noe ekstra margin utenfor eller paddin inni*/
+    /* gjør så main ikke har noe ekstra margin utenfor eller paddin inni*/
     margin: 0px;
     padding: 0px;
   }
 
   /*css for varene under nyheter i main starter under her*/
   main>.vare {
-      /*holder plasseringen sin*/
+    /*holder plasseringen sin*/
     margin: 0px;
-    padding: 0px;
-      /* 100% i bredde*/
+    padding: 20px 0px;
+    /* 100% i bredde*/
     width: 100%;
-      /* styler tekst til å være i midten*/
+    /* styler tekst til å være i midten*/
     text-align: center;
   }
-.sosbilder{
-  /* skjuler*/
-display: none;
+
+  .hele_footer {
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-decoration: none;
+    font-weight: normal;
+    padding: 20px 40px;
+  }
+
+  .sosial_footer {
+    display: none;
+  }
+
+  .sosbilder {
+    /* skjuler*/
+    display: none;
+  }
 }
 
-}
-
-
-@media only screen and (min-width: 600px) {
-  body {
-    /*gjør slik at det ikke er noe avstand mellom body og det som er utenfor*/
-
+/*kode som ikke har en max størrelse på 600px starter her*/
+body {
+  /*gjør slik at det ikke er noe avstand mellom body og det som er utenfor*/
   margin: 0px;
   top: 0px;
   /*gir body en bakgrunnsfarge*/
   background-color: #dbdde0
 }
-}
 
-
-header{
+header {
   /* bakgrunnbilde til header*/
   background-image: url(bilder_klær_riktig/bg-1.jpg);
-
-
 }
+
 /*css for hele delen over søkemotoren av header når den er større enn 600px starter under her*/
 @media only screen and (min-width: 600px) {
   .header_øverst {
-  text-align: center;
-  /* Lager en grid. */
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  /* styler tekst*/
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: bold;
+    text-align: center;
+    /* Lager en grid. */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* styler tekst*/
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+  }
 }
-}
+
 /*css for vanlig koding som ikke har noen begrenset størrelse starter under her*/
 /*css for den hvite linjen øverst starter under her*/
 .header_øverst>.lang {
   /*gjør slik at .lang går over 12 grids bortover*/
   grid-column: span 12;
-    /*gir bakgrunnfsrge hvit*/
+  /*gir bakgrunnfsrge hvit*/
   background-color: white;
-    /* styler tekst*/
+  /* styler tekst*/
   color: black;
   text-transform: lowercase;
   text-decoration: underline;
   font-style: normal;
   font-weight: lighter;
 }
+
 mark {
   /* styler tekst farge som er innefor mark*/
   color: blue;
@@ -184,24 +187,24 @@ mark {
 .header_øverst>.usynlig {
   /* viser hvor stor plass til den usynlige delen*/
   grid-column: span 3;
+}
 
-}
 @media only screen and (min-width: 600px) {
-.logo {
-  /* styler høyden og bredden til logo*/
-  width: 150px;
-  height: 120px;
-/* endrer plassering*/
-  padding-top: 15px;
-  padding-right: 0px;
-  padding-left: 130px;
-  padding-bottom: 15px;
-  grid-column: span 4;
-}
+  .logo {
+    /* styler høyden og bredden til logo*/
+    width: 150px;
+    height: 120px;
+    /* endrer plassering*/
+    padding-top: 15px;
+    padding-right: 0px;
+    padding-left: 130px;
+    padding-bottom: 15px;
+    grid-column: span 4;
+  }
 }
 
 .header_øverst>.lenke {
-    /* styler tekst og endrer plassering*/
+  /* styler tekst og endrer plassering*/
   font-size: 13px;
   margin: 10px;
   border-radius: 5px;
@@ -212,12 +215,10 @@ mark {
   grid-column: span 2;
 }
 
-
 .header_øverst>.lenke {
   align-self: center;
   text-decoration: none;
   margin-top: 50px;
-
 }
 
 /* logg inn, handlekurv og ønskeliste innen for øvrste del av header*/
@@ -241,32 +242,33 @@ mark {
   width: 30px;
 }
 
-.søkemotor{
+.søkemotor {
   /* styler type boks*/
-
   box-sizing: border-box;
 }
+
 .søkemotor>[type=text] {
   /* styler tekst og endrer plasseing og farge*/
   padding: 10px;
-   font-size: 17px;
-   border: 1px solid grey;
-   float: left;
-   width: 220px;
-   background: #f1f1f1;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 220px;
+  background: #f1f1f1;
 }
 
 .søkemotor>[type=submit] {
   /* styler tekst og endrer plasseing og farge*/
   float: left;
-    width: 60px;
-    padding: 10px;
-    background: #2196F3;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none; /* Prevent double borders */
-    cursor: pointer;
+  width: 60px;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  /* Prevent double borders */
+  cursor: pointer;
 }
 
 .søkemotor {
@@ -274,22 +276,22 @@ mark {
   grid-column: span 1;
   margin-left: 580px;
   margin-top: 30px;
-
 }
+
 /*css for navigasjon med dropned baren starter her, det er altså den delen under starter under her*/
 @media only screen and (min-width: 600px) {
-.navigation {
-  /* Lager en grid. */
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  /*endrer plasseing*/
-  padding-top: 60px;
-  padding-bottom: 0px;
-  padding-left: 290px;
-  padding-right: 290px;
-  /*styler tekst*/
+  .navigation {
+    /* Lager en grid. */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /*endrer plasseing*/
+    padding-top: 60px;
+    padding-bottom: 0px;
+    padding-left: 290px;
+    padding-right: 290px;
+    /*styler tekst*/
     text-align: center;
-}
+  }
 }
 
 .navigation a {
@@ -308,21 +310,20 @@ mark {
   grid-row: span 6;
 }
 
-.dropned>a{
+.dropned>a {
   /* styler tekst og endrer plasseing og farge*/
-position: relative;
-color: #000;
-text-decoration: none;
-font-size: 25px;
-
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  font-size: 25px;
 }
 
 .dropned>a:hover {
   /*endrer farge av tekst ved hover*/
-color: black;
+  color: black;
 }
 
-.dropned>a::before{
+.dropned>a::before {
   /* styler tekst og endrer plasseing og bakgrunnsfarge*/
   content: "";
   position: absolute;
@@ -339,7 +340,7 @@ color: black;
   transition: all 0.3s ease-in-out 0s;
 }
 
-.dropned>a:hover::before{
+.dropned>a:hover::before {
   /* funksjoner for å skalere elementer*/
   visibility: visible;
   -webkit-transform: scaleX(1);
@@ -357,15 +358,16 @@ color: black;
   font-size: 20px;
   font-weight: bold;
 }
+
 @media only screen and (min-width: 600px) {
-.dropned-content {
-  /* skjuler*/
-  display: none;
-  position: absolute;
-  background-color: #b8d0ce;
-  /* skygge*/
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-}
+  .dropned-content {
+    /* skjuler*/
+    display: none;
+    position: absolute;
+    background-color: #b8d0ce;
+    /* skygge*/
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .dropned-content a {
@@ -390,52 +392,44 @@ color: black;
   display: block;
 }
 
-
-img{
+img {
   width: 210px;
 }
 
 /*Main*/
 /*css for main større enn 600px starter under her*/
 @media only screen and (min-width: 600px) {
-main{
-  /* Lager en grid i main */
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-
-  /* styler tekst. */5tg4fr3de
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 28px;
-  font-weight: bold;
-  text-align: center;
-
-  /* endrer plassering og bakgrunn */
-  margin: 30px 50px;
-  background-color: #fff2ea;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 40px;
+  main {
+    /* Lager en grid i main */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* styler tekst. */
+    5tg4fr3de text-decoration: none;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    /* endrer plassering og bakgrunn */
+    margin: 30px 50px;
+    background-color: #fff2ea;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 40px;
+  }
 }
-}
-
 
 @media only screen and (min-width: 600px) {
   .valg_klær1, #valg_klær1 {
     /* Lager en grid. */
-  display: grid;
-  background-color: #fff2ea;
-  grid-template-columns: repeat(4, 1fr);
-
-  margin: 0px 50px;
-  padding: 25px;
-  text-align: center;
-  cursor: pointer;
+    display: grid;
+    background-color: #fff2ea;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0px 50px;
+    padding: 25px;
+    text-align: center;
+    cursor: pointer;
+  }
 }
-}
-
-
-
 
 /* Dropdown Button */
 .dropbtn {
@@ -466,20 +460,21 @@ main{
 }
 
 /* The search field when it gets focus/clicked on */
-#myInput:focus {outline: 3px solid #ddd;}
+#myInput:focus {
+  outline: 3px solid #ddd;
+}
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   display: inline-block;
   width: 200px;
   padding: 20px;
-
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   /* skjuler*/
-display: none;
+  display: none;
   position: absolute;
   background-color: #f6f6f6;
   min-width: 230px;
@@ -495,36 +490,34 @@ display: none;
   display: block;
 }
 
-
 /* Change color of dropdown links on hover */
-.dropdown-content>a:hover
-{background-color: #f1f1f1}
+.dropdown-content>a:hover {
+  background-color: #f1f1f1
+}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-
-
-
-
+.show {
+  display: block;
+}
 
 /* overskrift */
-.h1_over{
-padding: 15px;
-text-align: center;
-
+.h1_over {
+  padding: 15px;
+  text-align: center;
 }
+
 /* All sortering over main */
 @media only screen and (min-width: 600px) {
-.klær_hoved {
-  /* Lager en grid. */
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin: 10px 50px;
-  background-color: #fff2ea;
-}
+  .klær_hoved {
+    /* Lager en grid. */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 10px 50px;
+    background-color: #fff2ea;
+  }
 }
 
 /* hele tabellen på siden */
@@ -532,7 +525,6 @@ text-align: center;
   grid-row: span 4;
   grid-column: span 0.8;
 }
-
 
 /*Teksten øverst i tabellen som viser hva du er inne på */
 .klær_tekst {
@@ -546,7 +538,6 @@ text-align: center;
   cursor: pointer;
 }
 
-
 /* Teksten øverst i tabellen som viser hva du er inne på og innenfor a*/
 .klær_tekst>a {
   color: black;
@@ -558,19 +549,18 @@ text-align: center;
 
 /* Halvparten av tabellen*/
 @media only screen and (min-width: 600px) {
-.tabell_halv {
-  list-style-type: none;
-  text-align: left;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 5px;
-  padding-top: 50px;
-}
+  .tabell_halv {
+    list-style-type: none;
+    text-align: left;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5px;
+    padding-top: 50px;
+  }
 }
 
 /* Ordene i tabellen*/
-
-.tabell_ord_valgt{
+.tabell_ord_valgt {
   text-decoration: underline;
   padding-left: 30px;
   margin-top: 22px;
@@ -582,8 +572,8 @@ text-align: center;
   font-family: monospace;
   color: black;
   cursor: pointer;
-
 }
+
 .tabell_ord {
   text-decoration: none;
   padding-left: 30px;
@@ -596,41 +586,46 @@ text-align: center;
   color: black;
   cursor: pointer;
 }
+
 /* styling av Ordene i tabellen når man tar musen over ordene*/
 .tabell_ord:hover {
   text-decoration: underline;
   color: grey;
   cursor: pointer;
 }
+
 /* linje nummer 2 med sortering som inneholder bærekraftig avkrysning og sorterings knapp*/
 @media only screen and (min-width: 600px) {
-.linje2_valg, #linje2_valg {
-  /* Lager en grid. */
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  .linje2_valg, #linje2_valg {
+    /* Lager en grid. */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: #fff2ea;
+    margin: 0px 50px;
+    padding: 0px 25px;
+  }
+}
 
-  background-color: #fff2ea;
-  margin: 0px 50px;
-  padding: 0px 25px;
-}
-}
 /* styling sv bærekraftig knapp */
-.Bærekraftig{
+.Bærekraftig {
   margin-left: 50px;
   padding-top: 15px;
 }
+
 /* usynlig del i linje 2*/
-.usynlig_linje2_valg{
+.usynlig_linje2_valg {
   grid-column: span 2;
 }
+
 /*tekst ved siden av knapp for sortering */
-.sorter_etter{
-padding-top: 0px;
-padding-left: 53px;
-color: grey;
+.sorter_etter {
+  padding-top: 0px;
+  padding-left: 53px;
+  color: grey;
 }
+
 /* Knappen i linje to for å sortere etter forskjellige ting */
-.sortering_hele{
+.sortering_hele {
   margin-bottom: 55px;
   display: inline-block;
 }
@@ -644,7 +639,6 @@ color: grey;
 
 .vare>a {
   /* farge til tekst. */
-
   color: black;
 }
 
@@ -655,25 +649,29 @@ color: grey;
 }
 
 /*css for bildene i varene starter under her*/
-.bilde{
+.bilde {
   max-width: 100%;
   -moz-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.bilde:hover{
- -moz-transform: scale(1.2);
-   -webkit-transform: scale(1.2);
-   transform: scale(1.1);
+
+.bilde:hover {
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.1);
 }
 
-
-.navn_varer{
-font-size: 16px;
-
+.navn_varer {
+  font-size: 16px;
 }
 
-.pris_varer{
+.pris_varer {
+  font-size: 18px;
+}
+
+.pris_varer_salg {
+  color: red;
   font-size: 18px;
 }
 
@@ -685,14 +683,18 @@ font-size: 16px;
   background-position: center;
   background-size: cover;
 }
-.hele_footer {
-  background-color: black;
-  color: white;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  text-decoration: none;
-  font-weight: normal;
-  padding: 60px 100px;
+
+/*Footer starter her*/
+@media only screen and (min-width: 600px) {
+  .hele_footer {
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-decoration: none;
+    font-weight: normal;
+    padding: 60px 100px;
+  }
 }
 
 th>a {
@@ -706,12 +708,12 @@ td>a {
 }
 
 @media only screen and (min-width: 600px) {
-.sosbilder {
-  width: 40px;
-  height: 40px;
-  border-radius: 15px;
-  margin: 15px;
-}
+  .sosbilder {
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    margin: 15px;
+  }
 }
 
 thead {
@@ -720,6 +722,7 @@ thead {
 }
 
 tbody {
+  /* styler tekst. */
   font-style: normal;
   font-size: 18px;
   font-family: monospace;

@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <title>SISAKA-gensere</title>
   <link rel="stylesheet" href="klær.css">
-
+<script src="main.js">
+</script>
 
   <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
   <script>
@@ -388,20 +389,27 @@
       let parent = snapshot.ref.parent.key;
       let parentParent = snapshot.ref.parent.parent.key;
       let ref = parent + "/" + key;
+      let prisTekst = ``;
+      if(varer.Salg === true){
+        prisTekst = `<p class="pris_varer_salg">Pris: ${varer.pris} kr</p>`;
+      }
+      else{
+        prisTekst = `<p class="pris_varer">Pris: ${varer.pris} kr</p>`
+      }
 
-      console.log(snapshot.val())
+        console.log(snapshot.val())
 
       main.innerHTML +=
         `
         <article class="vare">
-<a href="klesplagg.html?id=${key}&parent=${parent}">
+      <a href="klesplagg.html?id=${key}&parent=${parent}">
         <section class="bilde">  <img src="${varer.bilde1}" alt=""> </section>
         <h1 class="navn_varer">${varer.modell} - ${varer.merke1}</h1>
-        <p class="pris_varer">Pris: ${varer.pris} kr</p>
+        ${prisTekst}
         </a>
         </article>
       `;
-    }
+      }
 
 
 

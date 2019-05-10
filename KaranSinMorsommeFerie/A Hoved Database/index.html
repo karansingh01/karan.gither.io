@@ -22,7 +22,7 @@
   </script>
 
 
-  <script src="main.js">
+  <script src="index.js">
 
   </script>
 </head>
@@ -46,17 +46,12 @@
       <section class="logo">
         <a href="index.html"><img src="bilder_klær_riktig/ny_logo.png" alt="logo" class="logo"></a>
       </section>
-
-
+      <!-- kode for usynlig del -->
       <section class="usynlig1">
       </section>
 
 
-
-
-
-      <!-- kode for logg inn, ønskeliste og handlekurv knappene er under her  -->
-
+      <!-- kode for logg inn, og handlekurv knappene er under her  -->
       <section class="lenke logginn">
 
 
@@ -67,7 +62,7 @@
       </section>
 
 
-
+      <!-- kode for  ønskeliste og knappene er under her  -->
       <section class="lenke logginn ønskeliste">
 
         <a href="ønskeliste.html"><img src="bilder_klær_riktig/ønskeliste.png" alt="bilde" class="iconbilde"> </a>
@@ -141,8 +136,9 @@
       </section>
 
 
-
     </nav>
+    <!-- kode for navigasjons varen er slutt  -->
+
   </header>
   <!-- slutt på kode for header-->
 
@@ -175,7 +171,7 @@
   <section class="nyheter_forside">
 
     <section class="nyheter_valg_forside">
-      <button class="nyhetAlle" onclick="nyheter_alle()">Alle</button>
+      <button  onclick="nyheter_alle()">Alle</button>
     </section>
 
     <section class="nyheter_valg_forside">
@@ -205,6 +201,7 @@
   </main>
 
   <!-- kode for både footer og videon i footer starter under her -->
+
   <section class="footer_og_video">
     <video autoplay muted loop id="myVideo">
       <source src="bilder_klær_riktig/Pexels Videos 5168.mp4" type="video/mp4">
@@ -320,7 +317,7 @@
 
             </table>
           </section>
-
+        </section>
 
 
         </section>
@@ -353,20 +350,27 @@
           let parent = snapshot.ref.parent.key;
           let parentParent = snapshot.ref.parent.parent.key;
           let ref = parent + "/" + key;
+          let prisTekst = ``;
+          if(varer.Salg === true){
+            prisTekst = `<p class="pris_varer_salg">Pris: ${varer.pris} kr</p>`;
+          }
+          else{
+            prisTekst = `<p class="pris_varer">Pris: ${varer.pris} kr</p>`
+          }
 
-          console.log(snapshot.val())
+            console.log(snapshot.val())
 
           main.innerHTML +=
             `
-                <article class="vare">
-        <a href="klesplagg.html?id=${key}&parent=${parent}">
-                <section class="bilde">  <img src="${varer.bilde1}" alt=""> </section>
-                <h1 class="navn_varer">${varer.modell} - ${varer.merke1}</h1>
-                <p class="pris_varer">Pris: ${varer.pris} kr</p>
-                </a>
-                </article>
-              `;
-        }
+            <article class="vare">
+          <a href="klesplagg.html?id=${key}&parent=${parent}">
+            <section class="bilde">  <img src="${varer.bilde1}" alt=""> </section>
+            <h1 class="navn_varer">${varer.modell} - ${varer.merke1}</h1>
+            ${prisTekst}
+            </a>
+            </article>
+          `;
+          }
 
         function nyheter_alle() {
           // Funksjoner til spørringene
@@ -406,14 +410,7 @@
         function nyheter_klaer() {
           // Funksjoner til spørringene
           main.innerHTML = ""; // sletter innholdet i main.
-          gensere
-            .orderByChild("Nyheter")
-            .equalTo(true)
-            .on("child_added", visVare);
-          jakker
-            .orderByChild("Nyheter")
-            .equalTo(true)
-            .on("child_added", visVare);
+
           bukser
             .orderByChild("Nyheter")
             .equalTo(true)
@@ -422,6 +419,14 @@
             .orderByChild("Nyheter")
             .equalTo(true)
             .on("child_added", visVare);
+            gensere
+              .orderByChild("Nyheter")
+              .equalTo(true)
+              .on("child_added", visVare);
+            jakker
+              .orderByChild("Nyheter")
+              .equalTo(true)
+              .on("child_added", visVare);
 
         }
 
