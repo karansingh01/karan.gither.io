@@ -7,7 +7,34 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+}
+@media only screen and (max-width: 600px) {
+.hele_footer {
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-decoration: none;
+  font-weight: normal;
+  padding: 20px 40px;
+}
+
+.sosial_footer{
+  display: none;
+}
+.sosbilder{
+/* skjuler*/
+display: none;
+}
+
+}
+
+.tilbake_knapp {
+  margin-top: 20px;
+  margin-left: 50px;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #dbdde0;
 }
 
 .shopping-cart {
@@ -43,7 +70,6 @@ body {
   border-bottom:  1px solid #E1E8EE;
 }
 
-
 .buttons {
   position: relative;
   padding-top: 30px;
@@ -57,21 +83,20 @@ body {
 .delete-btn {
   width: 18px;
   height: 17px;
-  background: url(&quot;delete-icn.svg&quot;) no-repeat center;
+    background: url('bilder_klær_riktig/twitter-heart.png');
 }
 
 .like-btn {
   position: absolute;
   top: 9px;
   left: 15px;
-  background: url('twitter-heart.png');
+  background: url('A Hoved Database/bilder_klær_riktig/heart.jpg')
+  no-repeat center;
   width: 60px;
   height: 60px;
   background-size: 2900%;
   background-repeat: no-repeat;
 }
-
-
 
 .is-active {
   animation-name: animate;
@@ -87,11 +112,11 @@ body {
   100% { background-position: right; }
 }
 
+
 .image {
   margin-right: 50px;
 }
 
-Let’s add some basic style to  product name and description.
 .description {
   padding-top: 10px;
   margin-right: 60px;
@@ -114,6 +139,9 @@ Let’s add some basic style to  product name and description.
   color: #86939E;
 }
 
+.image>img{
+  width: 95px;
+}
 
 .quantity {
   padding-top: 20px;
@@ -571,4 +599,49 @@ color: black;
 
 .dropned:hover .dropned-content {
   display: block;
+}
+/*Footer starter her*/
+@media only screen and (min-width: 600px) {
+.hele_footer {
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-decoration: none;
+  font-weight: normal;
+  padding: 60px 100px;
+}
+}
+
+th>a {
+  text-decoration: none;
+  color: white;
+}
+
+td>a {
+  text-decoration: none;
+  color: white;
+}
+
+@media only screen and (min-width: 600px) {
+.sosbilder {
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+  margin: 15px;
+}
+}
+
+thead {
+  text-decoration: underline;
+  font-size: 22px;
+}
+
+tbody {
+  /* styler tekst. */
+  font-style: normal;
+  font-size: 18px;
+  font-family: monospace;
+  font-weight: lighter;
+  text-transform: lowercase;
 }

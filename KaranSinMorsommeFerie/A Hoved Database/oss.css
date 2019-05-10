@@ -87,10 +87,14 @@
     font-weight: 100;
     font-size: 30px;
     margin: 10px 0px 20px;
-    padding: 20px;
+    padding-top: 80px;
     text-decoration: underline;
     font-weight: bold;
     text-align:center;
+  }
+
+  h2{
+    font-size: 30px;
   }
 
   #clockdiv {
@@ -107,6 +111,20 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .hver_for_seg_ansatte{
+    grid-row: span 1;
+    grid-column: span 1;
+    border-style: solid;
+    border-width: 1px;
+    margin: 20px;
+  }
+
+
+  .ansatte>.hver_for_seg_ansatte>img{
+    width: 200px;
+    height: 300px;
+    padding-left: 125px;
+  }
 
   .hele_footer {
     background-color: black;
@@ -140,10 +158,11 @@ h1 {
 }
 
 .tilbake_knapp {
-  margin-top: 20px;
-  margin-left: 50px;
+  margin-top: 10px;
+  margin-left: 20px;
   padding: 10px;
   font-size: 20px;
+  background-color: #fff2ea;
 }
 
 
@@ -402,7 +421,7 @@ h3{
   }
 
 .les_mer{
-  background-color: white;
+  background-color: #fff2ea;
   margin: 50px;
   font-size: 20px;
 }
@@ -412,10 +431,12 @@ text-align: center;
 padding: 0px 20px;
 }
 
+@media only screen and (min-width: 600px) {
 h2{
   text-align: center;
   font-size: 55px;
   margin: 20px;
+}
 }
 
 #myBtn{
@@ -461,7 +482,6 @@ font-size: 18px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-}
 
 .hver_for_seg_ansatte{
   grid-row: span 1;
@@ -471,10 +491,12 @@ font-size: 18px;
   margin: 20px;
 }
 
+
 .ansatte>.hver_for_seg_ansatte>img{
   width: 200px;
   height: 300px;
   padding-left: 100px;
+}
 }
 
 h2{

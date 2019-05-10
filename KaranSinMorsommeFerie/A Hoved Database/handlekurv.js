@@ -2,7 +2,6 @@ $('.like-btn').on('click', function() {
    $(this).toggleClass('is-active');
 });
 
-
 $('.minus-btn').on('click', function(e) {
     e.preventDefault();
     var $this = $(this);

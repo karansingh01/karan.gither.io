@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <title>SISAKA-gensere</title>
   <link rel="stylesheet" href="klær.css">
-<script src="main.js">
-</script>
+  <script src="main.js">
+  </script>
 
   <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
   <script>
@@ -22,10 +22,10 @@
     firebase.initializeApp(config);
   </script>
 
-
 </head>
 
 <body>
+
   <header>
 
     <section class="header_øverst">
@@ -36,7 +36,6 @@
       </section>
 
       <section class="usynlig">
-
       </section>
 
       <!-- kode for logoen -->
@@ -44,50 +43,34 @@
         <a href="index.html"><img src="bilder_klær_riktig/ny_logo.png" alt="logo" class="logo"></a>
       </section>
 
-
       <section class="usynlig1">
       </section>
 
-
-
       <!-- kode for logg inn, ønskeliste og handlekurv knappene er under her  -->
-      <section class="lenke logginn">
-
-
+      <section class="lenke">
         <a href="logginn.html"><img src="bilder_klær_riktig/innlogging.svg" alt="bilde" class="iconbilde"> </a>
-
         <a href="logginn.html"><br>LOGG INN</a>
-
       </section>
 
 
-      <section class="lenke logginn">
-
+      <section class="lenke">
         <a href="ønskeliste.html"><img src="bilder_klær_riktig/ønskeliste.png" alt="bilde" class="iconbilde"> </a>
-
         <a href="ønskeliste.html">ØNSKELISTE</a>
-
       </section>
 
-      <section class="lenke logginn">
-
+      <section class="lenke">
         <a href="handlekurv.html"><img src="bilder_klær_riktig/kurv1.png" alt="bilde" class="iconbilde"> </a>
-
         <a href=handlekurv.html><br>KURV</a>
-
       </section>
 
     </section>
     <!-- slutt på kode for handlekurv, ønskeliste og logg inn -->
-
     <!-- kode for søkefeltet -->
     <section class="søkemotor">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <input type="text" placeholder="Søk etter klær eller merker...">
       <button type="submit"><i class="fa fa-search"></i></button>
     </section>
-
-
 
     <!-- kode for navigasjonbarene starter under her-->
     <nav class="navigation">
@@ -100,10 +83,8 @@
           <a href="bukser.html">Bukser</a>
           <a href="skjorter.html">skjorter</a>
           <a href="jakker.html">jakker</a>
-
         </section>
       </section>
-
 
       <section class="dropned">
         <a href="sport.html" class="dropknapp">Sport</a>
@@ -112,7 +93,6 @@
       <section class="dropned">
         <a href="tilbehor.html" class="dropknapp">Tilbehør</a>
       </section>
-
 
       <section class="dropned">
         <a href="sko.html" class="dropknapp">Sko</a>
@@ -126,12 +106,10 @@
         <a href="salg.html" class="dropknapp">Salg</a>
       </section>
 
-
     </nav>
 
   </header>
   <!-- slutt på kode for header-->
-
 
   <!-- kode for alt over main for sortering -->
   <section class="klær_hoved">
@@ -188,16 +166,10 @@
         </div>
       </div>
 
-
     </div>
-
-
-
 
     <!-- kode for å sortere i tabellen-->
     <section class="tabell_full">
-
-
       <ul class="tabell_halv">
         <li>
           <section class="klær_tekst">
@@ -208,8 +180,6 @@
         <li><a href="jakker.html" class="tabell_ord">Jakker</a></li>
         <li><a href="gensere.html" class="tabell_ord_valgt">Gensere</a></li>
         <li><a href="bukser.html" class="tabell_ord">Bukser </a></li>
-
-
       </ul>
     </section>
 
@@ -224,7 +194,6 @@
 
       <!--usynlig del i linje 2-->
       <section class="usynlig_linje2_valg">
-
       </section>
 
       <!-- sorterings knapp i linje 2-->
@@ -237,14 +206,10 @@
           <a onclick="nyheter_klaer()">Nyheter</a>
           <a onclick="billigste_klaer()">billigste</a>
           <a onclick="dyreste_klaer()">dyreste</a>
-
-
         </div>
       </div>
 
-
     </section>
-
 
     <main>
 
@@ -378,10 +343,6 @@
     const gensere = db.ref("varer/gensere");
 
 
-
-
-
-
     function visVare(snapshot) {
       //Javascript-funksjon som skriver varene ut på nettsiden i main-elementet
       let varer = snapshot.val();
@@ -390,14 +351,13 @@
       let parentParent = snapshot.ref.parent.parent.key;
       let ref = parent + "/" + key;
       let prisTekst = ``;
-      if(varer.Salg === true){
+      if (varer.Salg === true) {
         prisTekst = `<p class="pris_varer_salg">Pris: ${varer.pris} kr</p>`;
-      }
-      else{
+      } else {
         prisTekst = `<p class="pris_varer">Pris: ${varer.pris} kr</p>`
       }
 
-        console.log(snapshot.val())
+      console.log(snapshot.val())
 
       main.innerHTML +=
         `
@@ -409,7 +369,7 @@
         </a>
         </article>
       `;
-      }
+    }
 
 
 
@@ -454,9 +414,9 @@
     function merke_klaer() {
       main.innerHTML = ``; // sletter innholdet i main.
       gensere
-        .orderByChild("merke1")
-        .equalTo("Ralph Lauren")
-        .on("child_added", visVare);
+        .orderByChild("merke1") // sorterer etter merke1 fra json filen
+        .equalTo("Ralph Lauren") // merke 1 skal være lik Ralph Lauren
+        .on("child_added", visVare); // viser frem det spesifikke vi vil vise på den måten vi har valgt i visVare
     }
 
     function merke2_klaer() {
@@ -501,31 +461,31 @@
     }
 
 
-        function anledning_fritid() {
-          main.innerHTML = ``;;
-          gensere
-            .orderByChild("anledning")
-            .equalTo("fritid")
-            .on("child_added", visVare);
-        }
+    function anledning_fritid() {
+      main.innerHTML = ``;;
+      gensere
+        .orderByChild("anledning")
+        .equalTo("fritid")
+        .on("child_added", visVare);
+    }
 
 
-        function anledning_formel() {
-          main.innerHTML = ``;
-          gensere
-            .orderByChild("anledning")
-            .equalTo("formel")
-            .on("child_added", visVare);
+    function anledning_formel() {
+      main.innerHTML = ``;
+      gensere
+        .orderByChild("anledning")
+        .equalTo("formel")
+        .on("child_added", visVare);
 
-        }
+    }
 
-        function anledning_casual() {
-          main.innerHTML = ``;
-          gensere
-            .orderByChild("anledning")
-            .equalTo("casual")
-            .on("child_added", visVare);
-        }
+    function anledning_casual() {
+      main.innerHTML = ``;
+      gensere
+        .orderByChild("anledning")
+        .equalTo("casual")
+        .on("child_added", visVare);
+    }
 
 
     function pris_1000() {
@@ -565,6 +525,7 @@
         .equalTo("blå")
         .on("child_added", visVare);
     }
+
     function farge_klaer_hvit() {
       main.innerHTML = ``;
       gensere

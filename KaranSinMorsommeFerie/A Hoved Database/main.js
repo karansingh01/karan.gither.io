@@ -107,7 +107,9 @@ function filterFunction5() {
     }
   }
 }
-// Her slutter sortering av forskjellige ting innenfor varer
+// Her slutter sortering innenfor varer
+
+// her er for knapper på om oss for å vise mer på siden om oss
 function openForm() {
   document.getElementById("myForm").style.display = "block";
 }

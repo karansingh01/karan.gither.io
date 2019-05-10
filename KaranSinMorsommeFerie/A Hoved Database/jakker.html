@@ -37,7 +37,6 @@
       </section>
 
       <section class="usynlig">
-
       </section>
 
       <!-- kode for logoen -->
@@ -49,33 +48,21 @@
       <section class="usynlig1">
       </section>
 
-
-
       <!-- kode for logg inn, ønskeliste og handlekurv knappene er under her  -->
       <section class="lenke logginn">
-
-
         <a href="logginn.html"><img src="bilder_klær_riktig/innlogging.svg" alt="bilde" class="iconbilde"> </a>
-
         <a href="logginn.html"><br>LOGG INN</a>
-
       </section>
 
 
       <section class="lenke logginn">
-
         <a href="ønskeliste.html"><img src="bilder_klær_riktig/ønskeliste.png" alt="bilde" class="iconbilde"> </a>
-
         <a href="ønskeliste.html">ØNSKELISTE</a>
-
       </section>
 
       <section class="lenke logginn">
-
         <a href="handlekurv.html"><img src="bilder_klær_riktig/kurv1.png" alt="bilde" class="iconbilde"> </a>
-
         <a href=handlekurv.html><br>KURV</a>
-
       </section>
 
     </section>
@@ -88,8 +75,6 @@
       <button type="submit"><i class="fa fa-search"></i></button>
     </section>
 
-
-
     <!-- kode for navigasjonbarene starter under her-->
     <nav class="navigation">
 
@@ -101,7 +86,6 @@
           <a href="bukser.html">Bukser</a>
           <a href="skjorter.html">skjorter</a>
           <a href="jakker.html">jakker</a>
-
         </section>
       </section>
 
@@ -113,7 +97,6 @@
       <section class="dropned">
         <a href="tilbehor.html" class="dropknapp">Tilbehør</a>
       </section>
-
 
       <section class="dropned">
         <a href="sko.html" class="dropknapp">Sko</a>
@@ -127,9 +110,7 @@
         <a href="salg.html" class="dropknapp">Salg</a>
       </section>
 
-
     </nav>
-
   </header>
   <!-- slutt på kode for header-->
 
@@ -189,15 +170,11 @@
         </div>
       </div>
 
-
     </div>
-
-
 
 
     <!-- kode for å sortere i tabellen-->
     <section class="tabell_full">
-
 
       <ul class="tabell_halv">
         <li>
@@ -209,9 +186,7 @@
         <li><a href="jakker.html" class="tabell_ord_valgt">Jakker</a></li>
         <li><a href="gensere.html" class="tabell_ord">Gensere</a></li>
         <li><a href="bukser.html" class="tabell_ord">Bukser </a></li>
-
-
-      </ul>
+     </ul>
     </section>
 
     <!-- kode i linjen under den første linjen med sortering. for å sortere etter bærkraftig og flerer forskjellige ting under knappen sorter-->
@@ -225,7 +200,6 @@
 
       <!--usynlig del i linje 2-->
       <section class="usynlig_linje2_valg">
-
       </section>
 
       <!-- sorterings knapp i linje 2-->
@@ -238,14 +212,10 @@
           <a onclick="nyheter_klaer()">Nyheter</a>
           <a onclick="billigste_klaer()">billigste</a>
           <a onclick="dyreste_klaer()">dyreste</a>
-
-
         </div>
       </div>
 
-
     </section>
-
 
     <main>
 
@@ -285,7 +255,6 @@
               <td><a href="oss.html">FÅ NYHETSBREV</a></td>
             </tr>
           </tbody>
-
         </table>
       </section>
 
@@ -313,9 +282,7 @@
               <td><a href="tilbehor.html">tilbehør</a></td>
             </tr>
           </tbody>
-
         </table>
-
       </section>
 
       <!-- kode for linje 3 i footer -->
@@ -337,11 +304,8 @@
             <tr>
               <td><a href="oss.html">historikk</a></td>
             </tr>
-
           </tbody>
-
         </table>
-
       </section>
 
 
@@ -360,9 +324,7 @@
               <td><a href="http://www.twitter.com"><img src="bilder_klær_riktig/twit.png" class="sosbilder"></a></td>
               <td><a href="http://www.instagram.com"><img src="bilder_klær_riktig/insta.jpg" class="sosbilder"></a></td>
             </tr>
-
           </tbody>
-
         </table>
       </section>
 
@@ -376,7 +338,8 @@
     const main = document.querySelector("main"); // Variabel som referer til mian-elementet
     //Skriver referanser til database under her:
     const db = firebase.database();
-    const jakker = db.ref("varer/jakker");
+    const jakker = db.ref("varer/jakker");//Referere til dataene som ligger under varer/jakker.
+
 
 
     function visVare(snapshot) {
@@ -444,7 +407,7 @@
       main.innerHTML = ``; // sletter innholdet i main.
       jakker
         .orderByChild("modell")
-        .on("child_added", visVare);
+        .on("child_added", visVare); // viser frem det spesifikke vi vil vise på den måten vi har valgt i visVare
     }
 
 
@@ -452,8 +415,8 @@
     function merke_klaer() {
       main.innerHTML = ``; // sletter innholdet i main.
       jakker
-        .orderByChild("merke1")
-        .equalTo("Ralph Lauren")
+        .orderByChild("merke1") // sorterer etter merke1 fra json filen
+        .equalTo("Ralph Lauren") // merke 1 skal være lik Ralph Lauren
         .on("child_added", visVare);
     }
 

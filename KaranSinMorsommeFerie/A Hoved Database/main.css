@@ -615,6 +615,7 @@ img {
 .vare>a {
   /* styler tekst. */
   color: black;
+  text-decoration: none;
 }
 
 .vare:hover {

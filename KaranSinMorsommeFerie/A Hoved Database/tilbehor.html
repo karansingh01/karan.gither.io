@@ -28,7 +28,7 @@
 
 <body>
   <header>
-
+    <!-- seksjon for den delen over søkemotoren -->
     <section class="header_øverst">
 
       <!-- kode for den lange hvite linjen øverst -->
@@ -37,7 +37,6 @@
       </section>
 
       <section class="usynlig">
-
       </section>
 
       <!-- kode for logoen -->
@@ -45,37 +44,24 @@
         <a href="index.html"><img src="bilder_klær_riktig/ny_logo.png" alt="logo" class="logo"></a>
       </section>
 
-
       <section class="usynlig1">
       </section>
 
-
-
       <!-- kode for logg inn, ønskeliste og handlekurv knappene er under her  -->
-      <section class="lenke logginn">
-
-
+      <section class="lenke">
         <a href="logginn.html"><img src="bilder_klær_riktig/innlogging.svg" alt="bilde" class="iconbilde"> </a>
-
         <a href="logginn.html"><br>LOGG INN</a>
-
       </section>
 
-
-      <section class="lenke logginn">
-
+      <!-- kode for  ønskeliste knappen er under her  -->
+      <section class="lenke">
         <a href="ønskeliste.html"><img src="bilder_klær_riktig/ønskeliste.png" alt="bilde" class="iconbilde"> </a>
-
         <a href="ønskeliste.html">ØNSKELISTE</a>
-
       </section>
-
-      <section class="lenke logginn">
-
+      <!-- kode for Handlekurv knappen er under her  -->
+      <section class="lenke">
         <a href="handlekurv.html"><img src="bilder_klær_riktig/kurv1.png" alt="bilde" class="iconbilde"> </a>
-
         <a href=handlekurv.html><br>KURV</a>
-
       </section>
 
     </section>
@@ -88,12 +74,10 @@
       <button type="submit"><i class="fa fa-search"></i></button>
     </section>
 
-
-
     <!-- kode for navigasjonbarene starter under her-->
     <nav class="navigation">
 
-      <!-- kode for dropned for navigasjons baren-->
+      <!-- kode for dropned for klær i navigasjons baren-->
       <section class="dropned">
         <a href="klær.html" class="dropknapp">Klær</a>
         <section class="dropned-content">
@@ -101,11 +85,8 @@
           <a href="bukser.html">Bukser</a>
           <a href="skjorter.html">skjorter</a>
           <a href="jakker.html">jakker</a>
-
         </section>
       </section>
-
-      <!-- kode for knapper som ikke har dropdown i navigasjons baren-->
 
       <section class="dropned">
         <a href="sport.html" class="dropknapp">Sport</a>
@@ -128,12 +109,10 @@
         <a href="salg.html" class="dropknapp">Salg</a>
       </section>
 
-
     </nav>
 
   </header>
   <!-- slutt på kode for header-->
-
 
   <!-- kode for alt over main for sortering -->
   <section class="klær_hoved">
@@ -194,12 +173,8 @@
 
     </div>
 
-
-
-
     <!-- kode for å sortere i tabellen-->
     <section class="tabell_full">
-
 
       <ul class="tabell_halv">
         <li>
@@ -221,7 +196,6 @@
 
       <!--usynlig del i linje 2-->
       <section class="usynlig_linje2_valg">
-
       </section>
 
       <!-- sorterings knapp i linje 2-->
@@ -234,17 +208,12 @@
           <a onclick="nyheter_klaer()">Nyheter</a>
           <a onclick="billigste_klaer()">billigste</a>
           <a onclick="dyreste_klaer()">dyreste</a>
-
-
         </div>
       </div>
 
-
     </section>
 
-
     <main>
-
     </main>
 
   </section>
@@ -281,7 +250,6 @@
               <td><a href="oss.html">FÅ NYHETSBREV</a></td>
             </tr>
           </tbody>
-
         </table>
       </section>
 
@@ -309,9 +277,7 @@
               <td><a href="tilbehor.html">tilbehør</a></td>
             </tr>
           </tbody>
-
         </table>
-
       </section>
 
       <!-- kode for linje 3 i footer -->
@@ -333,11 +299,8 @@
             <tr>
               <td><a href="oss.html">historikk</a></td>
             </tr>
-
           </tbody>
-
         </table>
-
       </section>
 
 
@@ -356,12 +319,9 @@
               <td><a href="http://www.twitter.com"><img src="bilder_klær_riktig/twit.png" class="sosbilder"></a></td>
               <td><a href="http://www.instagram.com"><img src="bilder_klær_riktig/insta.jpg" class="sosbilder"></a></td>
             </tr>
-
           </tbody>
-
         </table>
       </section>
-
 
 
     </section>
@@ -372,9 +332,7 @@
     const main = document.querySelector("main"); // Variabel som referer til mian-elementet
     //Skriver referanser til database under her:
     const db = firebase.database();
-    const tilbehor = db.ref("varer/tilbehor");
-
-
+    const tilbehor = db.ref("varer/tilbehor");//Referere til dataene som ligger under varer/ilbehor
 
 
 
@@ -387,14 +345,13 @@
       let parentParent = snapshot.ref.parent.parent.key;
       let ref = parent + "/" + key;
       let prisTekst = ``;
-      if(varer.Salg === true){
+      if (varer.Salg === true) {
         prisTekst = `<p class="pris_varer_salg">Pris: ${varer.pris} kr</p>`;
-      }
-      else{
+      } else {
         prisTekst = `<p class="pris_varer">Pris: ${varer.pris} kr</p>`
       }
 
-        console.log(snapshot.val())
+      console.log(snapshot.val())
 
       main.innerHTML +=
         `
@@ -406,7 +363,7 @@
         </a>
         </article>
       `;
-      }
+    }
 
 
 
@@ -444,7 +401,8 @@
       main.innerHTML = ``; // sletter innholdet i main.
       tilbehor
         .orderByChild("modell")
-        .on("child_added", visVare);
+        .on("child_added", visVare);// viser frem det spesifikke vi vil vise på den måten vi har valgt i visVare
+
     }
 
 
@@ -452,9 +410,9 @@
     function merke_klaer() {
       main.innerHTML = ``; // sletter innholdet i main.
       tilbehor
-        .orderByChild("merke1")
-        .equalTo("Ralph Lauren")
-        .on("child_added", visVare);
+        .orderByChild("merke1")// sorterer etter merke1 fra databasen
+        .equalTo("Ralph Lauren") // merke 1 skal være lik Ralph Lauren
+        .on("child_added", visVare);// viser frem det spesifikke vi vil vise på den måten vi har valgt i visVare
     }
 
     function merke2_klaer() {
@@ -462,7 +420,7 @@
       tilbehor
         .orderByChild("merke1")
         .equalTo("HUGO BOSS")
-        .on("child_added", visVare);
+        .on("child_added", visVare);// viser frem det spesifikke vi vil vise på den måten vi har valgt i visVare
     }
 
     function merke4_klaer() {
@@ -515,6 +473,7 @@
         .equalTo("caps")
         .on("child_added", visVare);
     }
+
     function type_belte() {
       main.innerHTML = ``;
       tilbehor
@@ -522,6 +481,7 @@
         .equalTo("belte")
         .on("child_added", visVare);
     }
+
     function type_lommebok() {
       main.innerHTML = ``;
       tilbehor

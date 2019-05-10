@@ -30,7 +30,6 @@
 <body>
   <header>
 
-
     <section class="header_øverst">
 
       <!-- kode for den lange hvite linjen øverst -->
@@ -39,7 +38,6 @@
       </section>
 
       <section class="usynlig">
-
       </section>
 
       <!-- kode for logoen -->
@@ -50,35 +48,22 @@
       <section class="usynlig1">
       </section>
 
-
       <!-- kode for logg inn, og handlekurv knappene er under her  -->
-      <section class="lenke logginn">
-
-
+      <section class="lenke ">
         <a href="logginn.html"><img src="bilder_klær_riktig/innlogging.svg" alt="bilde" class="iconbilde"> </a>
-
         <a href="logginn.html"><br>LOGG INN</a>
-
       </section>
 
 
       <!-- kode for  ønskeliste og knappene er under her  -->
-      <section class="lenke logginn ønskeliste">
-
+      <section class="lenke  ønskeliste">
         <a href="ønskeliste.html"><img src="bilder_klær_riktig/ønskeliste.png" alt="bilde" class="iconbilde"> </a>
-
         <a href="ønskeliste.html">ØNSKELISTE</a>
-
       </section>
 
-      <section class="lenke logginn handlekurv">
-
-
+      <section class="lenke  handlekurv">
         <a href="handlekurv.html"><img src="bilder_klær_riktig/kurv1.png" alt="bilde" class="iconbilde"> </a>
-
         <a href=handlekurv.html><br>KURV</a>
-
-
       </section>
 
     </section>
@@ -92,8 +77,6 @@
       <button type="submit"><i class="fa fa-search"></i></button>
     </section>
 
-
-
     <!-- kode for navigasjonbarene starter under her-->
     <nav class="navigation">
 
@@ -105,7 +88,6 @@
           <a href="bukser.html">Bukser</a>
           <a href="skjorter.html">skjorter</a>
           <a href="jakker.html">jakker</a>
-
         </section>
       </section>
 
@@ -113,13 +95,11 @@
       <!-- kode for knapper som ikke har dropdown i navigasjons baren-->
       <section class="dropned">
         <a href="sport.html" class="dropknapp">Sport</a>
-
       </section>
 
       <section class="dropned">
         <a href="tilbehor.html" class="dropknapp">Tilbehør</a>
       </section>
-
 
       <section class="dropned">
         <a href="sko.html" class="dropknapp">Sko</a>
@@ -127,17 +107,14 @@
 
       <section class="dropned">
         <a href="nyheter.html" class="dropknapp">Nyheter</a>
-
       </section>
 
       <section class="dropned">
         <a href="salg.html" class="dropknapp">Salg</a>
-
       </section>
 
-
     </nav>
-    <!-- kode for navigasjons varen er slutt  -->
+    <!-- kode for navigasjons baren er slutt  -->
 
   </header>
   <!-- slutt på kode for header-->
@@ -171,7 +148,7 @@
   <section class="nyheter_forside">
 
     <section class="nyheter_valg_forside">
-      <button  onclick="nyheter_alle()">Alle</button>
+      <button onclick="nyheter_alle()">Alle</button>
     </section>
 
     <section class="nyheter_valg_forside">
@@ -193,15 +170,11 @@
   </section>
   <!-- slutt på kode for knapper for å sortere etter nyheter -->
 
-
   <main>
-
     <!-- main element som er tom for at data fra databasen kan legges her  -->
-
   </main>
 
   <!-- kode for både footer og videon i footer starter under her -->
-
   <section class="footer_og_video">
     <video autoplay muted loop id="myVideo">
       <source src="bilder_klær_riktig/Pexels Videos 5168.mp4" type="video/mp4">
@@ -320,48 +293,47 @@
         </section>
 
 
-        </section>
+  </section>
 
 
-      </footer>
-      <!-- slutt på kode for innholdet i footer -->
+  </footer>
+  <!-- slutt på kode for innholdet i footer -->
 
 
-      <!-- javascript starter under her -->
+  <!-- javascript starter under her -->
 
-      <script>
-        const main = document.querySelector("main"); // Variabel som referer til mian-elementet
-        //Skriv referanser til database under her:
-        const db = firebase.database();
-        const bukser = db.ref("varer/bukser");
-        const skjorter = db.ref("varer/skjorter");
-        const gensere = db.ref("varer/gensere");
-        const sport = db.ref("varer/sport");
-        const jakker = db.ref("varer/jakker");
-        const sko = db.ref("varer/sko");
-        const tilbehor = db.ref("varer/tilbehor");
+  <script>
+    const main = document.querySelector("main"); // Variabel som referer til mian-elementet
+    //Skriv referanser til database under her:
+    const db = firebase.database();
+    const bukser = db.ref("varer/bukser"); //Referere til dataene som ligger under varer/bukser.
+    const skjorter = db.ref("varer/skjorter");
+    const gensere = db.ref("varer/gensere");
+    const sport = db.ref("varer/sport");
+    const jakker = db.ref("varer/jakker");
+    const sko = db.ref("varer/sko");
+    const tilbehor = db.ref("varer/tilbehor");
 
 
 
-        function visVare(snapshot) {
-          //Javascript-funksjon som skriver varene ut på nettsiden i main-elementet
-          let varer = snapshot.val();
-          let key = snapshot.key;
-          let parent = snapshot.ref.parent.key;
-          let parentParent = snapshot.ref.parent.parent.key;
-          let ref = parent + "/" + key;
-          let prisTekst = ``;
-          if(varer.Salg === true){
-            prisTekst = `<p class="pris_varer_salg">Pris: ${varer.pris} kr</p>`;
-          }
-          else{
-            prisTekst = `<p class="pris_varer">Pris: ${varer.pris} kr</p>`
-          }
+    function visVare(snapshot) {
+      //Javascript-funksjon som skriver varene ut på nettsiden i main-elementet
+      let varer = snapshot.val();
+      let key = snapshot.key;
+      let parent = snapshot.ref.parent.key;
+      let parentParent = snapshot.ref.parent.parent.key;
+      let ref = parent + "/" + key;
+      let prisTekst = ``;
+      if (varer.Salg === true) {
+        prisTekst = `<p class="pris_varer_salg">Pris: ${varer.pris} kr</p>`;
+      } else {
+        prisTekst = `<p class="pris_varer">Pris: ${varer.pris} kr</p>`
+      }
 
-            console.log(snapshot.val())
+      console.log(snapshot.val())
 
-          main.innerHTML +=
-            `
+      main.innerHTML +=
+        `
             <article class="vare">
           <a href="klesplagg.html?id=${key}&parent=${parent}">
             <section class="bilde">  <img src="${varer.bilde1}" alt=""> </section>
@@ -370,96 +342,96 @@
             </a>
             </article>
           `;
-          }
+    }
 
-        function nyheter_alle() {
-          // Funksjoner til spørringene
-          main.innerHTML = ""; // sletter innholdet i main.
-          gensere
-            .orderByChild("Nyheter")
-            .equalTo(true)
-            .on("child_added", visVare);
-          jakker
-            .orderByChild("Nyheter")
-            .equalTo(true)
-            .on("child_added", visVare);
-          bukser
-            .orderByChild("Nyheter")
-            .equalTo(true)
-            .on("child_added", visVare);
-          skjorter
-            .orderByChild("Nyheter")
-            .equalTo(true)
-            .on("child_added", visVare);
-          sko
-            .orderByChild("Nyheter")
-            .equalTo(true)
-            .on("child_added", visVare);
-          tilbehor
-            .orderByChild("Nyheter")
-            .equalTo(true)
-            .on("child_added", visVare);
-          sport
-            .orderByChild("Nyheter")
-            .equalTo(true)
-            .on("child_added", visVare);
+    function nyheter_alle() {
+      // Funksjoner til spørringene
+      main.innerHTML = ""; // sletter innholdet i main.
+      gensere
+        .orderByChild("Nyheter") // sorterer etter Nyheter fra json filen
+        .equalTo(true) // sorterer etter om NYheter er lik true
+        .on("child_added", visVare); // viser frem det spesifikke vi vil vise på den måten vi har valgt i visVare
+      jakker
+        .orderByChild("Nyheter")
+        .equalTo(true)
+        .on("child_added", visVare);
+      bukser
+        .orderByChild("Nyheter")
+        .equalTo(true)
+        .on("child_added", visVare);
+      skjorter
+        .orderByChild("Nyheter")
+        .equalTo(true)
+        .on("child_added", visVare);
+      sko
+        .orderByChild("Nyheter")
+        .equalTo(true)
+        .on("child_added", visVare);
+      tilbehor
+        .orderByChild("Nyheter")
+        .equalTo(true)
+        .on("child_added", visVare);
+      sport
+        .orderByChild("Nyheter")
+        .equalTo(true)
+        .on("child_added", visVare);
 
-        }
-
-
-        function nyheter_klaer() {
-          // Funksjoner til spørringene
-          main.innerHTML = ""; // sletter innholdet i main.
-
-          bukser
-            .orderByChild("Nyheter")
-            .equalTo(true)
-            .on("child_added", visVare);
-          skjorter
-            .orderByChild("Nyheter")
-            .equalTo(true)
-            .on("child_added", visVare);
-            gensere
-              .orderByChild("Nyheter")
-              .equalTo(true)
-              .on("child_added", visVare);
-            jakker
-              .orderByChild("Nyheter")
-              .equalTo(true)
-              .on("child_added", visVare);
-
-        }
-
-        function nyheter_sko() {
-          main.innerHTML = ``;
-          sko
-            .orderByChild("Nyheter")
-            .equalTo(true)
-            .on("child_added", visVare);
-        }
+    }
 
 
-        function nyheter_tilbehor() {
-          main.innerHTML = ``;
-          tilbehor
-            .orderByChild("Nyheter")
-            .equalTo(true)
-            .on("child_added", visVare);
-        }
+    function nyheter_klaer() {
+      // Funksjoner til spørringene
+      main.innerHTML = ""; // sletter innholdet i main.
 
-        function nyheter_sport() {
-          main.innerHTML = ``;
-          sport
-            .orderByChild("Nyheter")
-            .equalTo(true)
-            .on("child_added", visVare);
-        }
+      bukser
+        .orderByChild("Nyheter")
+        .equalTo(true)
+        .on("child_added", visVare);
+      skjorter
+        .orderByChild("Nyheter")
+        .equalTo(true)
+        .on("child_added", visVare);
+      gensere
+        .orderByChild("Nyheter")
+        .equalTo(true)
+        .on("child_added", visVare);
+      jakker
+        .orderByChild("Nyheter")
+        .equalTo(true)
+        .on("child_added", visVare);
+
+    }
+
+    function nyheter_sko() {
+      main.innerHTML = ``;
+      sko
+        .orderByChild("Nyheter")
+        .equalTo(true)
+        .on("child_added", visVare);
+    }
+
+
+    function nyheter_tilbehor() {
+      main.innerHTML = ``;
+      tilbehor
+        .orderByChild("Nyheter")
+        .equalTo(true)
+        .on("child_added", visVare);
+    }
+
+    function nyheter_sport() {
+      main.innerHTML = ``;
+      sport
+        .orderByChild("Nyheter")
+        .equalTo(true)
+        .on("child_added", visVare);
+    }
 
 
 
 
-        nyheter_alle(); // Funksjon som kjøres når siden lastes
-      </script>
+    nyheter_alle(); // Funksjon som kjøres når siden lastes
+  </script>
 
 
 

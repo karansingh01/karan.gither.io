@@ -391,6 +391,7 @@ img {
   margin-left: 50px;
   padding: 10px;
   font-size: 20px;
+  background-color: #dbdde0;
 }
 
 /*Main*/
@@ -427,9 +428,9 @@ img {
 }
 
 .bilde_liten2:hover{
-    -moz-transform: scale(5);
-    -webkit-transform: scale(3);
-    transform: scale(2.1);
+    -moz-transform: scale(3);
+    -webkit-transform: scale(4);
+    transform: scale(2.0);
     transform-origin: bottom center;
     -webkit-transition: all 0.4s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
@@ -490,7 +491,7 @@ img {
 .handlekurv_knapp {
   border-radius: 3px;
   border-color: black;
-  margin: 90px;
+  margin: 75px;
   width: 400px;
   padding: 20px;
   font-size: 20px;
@@ -499,7 +500,7 @@ img {
 }
 }
 
-button:focus {
+.handlekurv_knapp:focus {
   background-color: green;
 }
 
@@ -558,8 +559,8 @@ grid-column: span 1;
 }
 
 .lignende_info{
-  margin-top:40px;
-  padding-top: 0px;
+  margin-top: 0px;
+  padding-top: 50px;
 }
 .link_lignende>.navn_varer{
 font-size: 16px;
