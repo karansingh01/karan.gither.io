@@ -1,0 +1,416 @@
+/*css for hele body når den er større enn 600px starter under her*/
+@media only screen and (min-width: 600px) {
+  body {
+    /*gjør slik at det ikke er noe avstand mellom body og det som er utenfor*/
+    margin: 0px;
+    top: 0px;
+    /*gir body en bakgrunnsfarge*/
+    background-color: #dbdde0;
+  }
+}
+
+/*css for forskjellige deler når nettsiden er under 600px starter under her*/
+@media only screen and (max-width: 600px) {
+  body {
+    /* Lager en grid. */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /*bakgrunnsfarge og beholder plassering*/
+    background-color: #dbdde0;
+    margin: 0px;
+    top: 0px;
+  }
+
+  footer{
+    display: block;
+  }
+  video{
+    display: none;
+  }
+
+  .content{
+  }
+
+  .hele_footer {
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-decoration: none;
+    font-weight: normal;
+    padding: 20px 40px;
+  }
+
+  .sosial_footer {
+    display: none;
+  }
+
+  .sosbilder {
+    /* skjuler*/
+    display: none;
+  }
+}
+
+
+header {
+  /* bakgrunnbilde til header*/
+  background-image: url(A Hoved Database/bilder_klær_riktig/om_meg.jpg);
+}
+
+/*css for hele delen over søkemotoren av header når den er større enn 600px starter under her*/
+@media only screen and (min-width: 600px) {
+  .header_øverst {
+    text-align: center;
+    /* Lager en grid. */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* styler tekst*/
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+/*css for vanlig koding som ikke har noen begrenset størrelse starter under her*/
+/*css for den hvite linjen øverst starter under her*/
+
+
+
+.header_øverst>.usynlig {
+  /* viser hvor stor plass til den usynlige delen*/
+  grid-column: span 1;
+}
+
+@media only screen and (min-width: 600px) {
+  .logo{
+    grid-column: span 7;
+  }
+  .logo>.overskrift {
+    font-size: 59px;
+    /* endrer plassering*/
+    padding-top: 65px;
+    padding-right: 0px;
+    padding-left: 110px;
+    padding-bottom: 15px;
+    grid-column: span 7;
+  }
+}
+
+
+.header_øverst>.usynlig {
+  grid-column: span 1;
+}
+
+.følg_meg{
+  margin-top: 150px;
+  font-size: 24px;
+  grid-column: span 2;
+}
+
+
+/* Style all font awesome icons */
+.fa {
+  margin-top: 130px;
+  padding: 21px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 90%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+/* Style the tab buttons */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+/* Change background color of buttons on hover */
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Set default styles for tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+/* Style each tab content individually */
+#London {background-color:red;}
+#Paris {background-color:green;}
+#Tokyo {background-color:blue;}
+#Oslo {background-color:orange;}
+
+.tekst_om{
+  margin-bottom: 50px;
+}
+
+h2>a{
+  border-style: solid;
+  border-width: 5px;
+  padding: 20px 90px;
+  background-color: grey;
+  text-decoration: none;
+  color: white;
+}
+
+h2>a:hover{
+  color: black;
+transition: all ease-in-out 350ms;
+}
+
+H2>a::before {
+  /* styler tekst og endrer plasseing og bakgrunnsfarge*/
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  /* funksjoner for å skalere elementer og overgangs tid*/
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+H2>a:hover::before {
+  /* funksjoner for å skalere elementer*/
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+
+/*css for main større enn 600px starter under her*/
+@media only screen and (min-width: 600px) {
+  main {
+    /* Lager en grid i main */
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    /* endrer plassering og bakgrunn */
+    margin: 30px 50px;
+    background-color: #fff2ea;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 40px;
+  }
+}
+
+.main_hoved{
+  /* styler tekst. */
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+
+}
+
+.side_main{
+  grid-column: span 2;
+}
+
+  .tabell_full {
+    float: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    list-style: none;
+    border-style: solid;
+    border-radius: 15px;
+    margin-right: 40px;
+  }
+
+  .klær_tekst {
+    color: black;
+    text-decoration: none;
+    padding-left: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  /* Teksten øverst i tabellen som viser hva du er inne på og innenfor a*/
+  .klær_tekst>a {
+    color: black;
+    text-decoration: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+.tabell_full{
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+  .tabell_ord {
+    float: left;
+    text-decoration: none;
+    padding-left: 0px;
+    margin-top: 18px;
+    font-weight: normal;
+    text-transform: lowercase;
+    font-size: 24px;
+    font-style: normal;
+    font-family: monospace;
+    color: black;
+    cursor: pointer;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  /* Make sure that padding behaves as expected */
+  * {box-sizing:border-box}
+
+  /* Container for skill bars */
+  .container {
+    width: 100%; /* Full width */
+    background-color: #ddd; /* Grey background */
+  }
+
+  .skills {
+    text-align: right; /* Right-align text */
+    padding: 10px; /* Add some padding */
+    color: white; /* White text color */
+  }
+
+  .html {width: 60%; background-color: #4CAF50;} /* Green */
+  .css {width: 40%; background-color: #2196F3;} /* Blue */
+  .js {width: 7%; background-color: #f44336;} /* Red */
+
+
+
+.main_hoved{
+  grid-column: span 6;
+}
+
+.det_jeg_har_lært{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.HTML , .CSS , .JS{
+  border-style: solid;
+  border-color: darkgrey;
+  border-width: 5px;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 20px;
+}
+
+
+.mine_sider_overskrift{
+  font-size: 40px;
+
+}
+.mine_sider{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.nettside{
+  border-style: dashed;
+  border-width: 2px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.nettside:hover{
+  opacity:0.7;
+}
+
+.nettside>a{
+  color: black;
+  text-decoration: none;
+}
+img{
+  width: 250px;
+  height: 300px;
+  margin: 10px;
+}
+
+/*Footer starter her*/
+@media only screen and (min-width: 600px) {
+  .hele_footer {
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-decoration: none;
+    font-weight: normal;
+    padding: 60px 100px;
+    margin: 0px;
+  }
+}
+
+th>a {
+  text-decoration: none;
+  color: white;
+}
+
+td>a {
+  text-decoration: none;
+  color: white;
+}
+
+@media only screen and (min-width: 600px) {
+  .sosbilder {
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    margin: 15px;
+  }
+}
+
+thead {
+  text-decoration: underline;
+  font-size: 22px;
+}
+
+tbody {
+  /* styler tekst. */
+  font-style: normal;
+  font-size: 18px;
+  font-family: monospace;
+  font-weight: lighter;
+  text-transform: lowercase;
+}
