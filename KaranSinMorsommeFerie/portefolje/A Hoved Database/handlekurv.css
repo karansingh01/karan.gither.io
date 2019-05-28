@@ -83,14 +83,14 @@ display: none;
 .delete-btn {
   width: 18px;
   height: 17px;
-    background: url('bilder_klær_riktig/twitter-heart.png');
+    background: url('bilder_klar_riktig/twitter-heart.png');
 }
 
 .like-btn {
   position: absolute;
   top: 9px;
   left: 15px;
-  background: url('A Hoved Database/bilder_klær_riktig/heart.jpg')
+  background: url('A Hoved Database/bilder_klar_riktig/heart.jpg')
   no-repeat center;
   width: 60px;
   height: 60px;
@@ -347,7 +347,7 @@ display: none;
 
 header{
   /* bakgrunnbilde til header*/
-  background-image: url(bilder_klær_riktig/bg-1.jpg);
+  background-image: url(bilder_klar_riktig/bg-1.jpg);
 
 
 }

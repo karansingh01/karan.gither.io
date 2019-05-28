@@ -1,25 +1,5 @@
-/*css for hele body når den er større enn 600px starter under her*/
-@media only screen and (min-width: 600px) {
-  body {
-    /*gjør slik at det ikke er noe avstand mellom body og det som er utenfor*/
-    margin: 0px;
-    top: 0px;
-    /*gir body en bakgrunnsfarge*/
-    background-color: #dbdde0;
-  }
-}
-
 /*css for forskjellige deler når nettsiden er under 600px starter under her*/
 @media only screen and (max-width: 600px) {
-  body {
-    /* Lager en grid. */
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    /*bakgrunnsfarge og beholder plassering*/
-    background-color: #dbdde0;
-    margin: 0px;
-    top: 0px;
-  }
 
   /*css for .lang er den hvite linjen øverst på siden starter under her*/
   .lang {
@@ -69,9 +49,8 @@
   /*css for navigasjon baren er under her  starter under her*/
   .navigation {
     /* Lager en grid. */
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-row: span 1;
-    grid-column: span 6;
     /*holder plasseringen sin og tekst ligger sentralt*/
     margin-left: 0px;
     padding-left: 0px;
@@ -84,48 +63,45 @@
     display: none;
   }
 
-  /*css for slideshow reklamen starter under her*/
-  .slider {
-    /*holder plasseringen sin og plasseres over hele .slider*/
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-  }
-
-  /*css for sko og skjorte reklamen starter under her*/
-  .under_nav {
-    /* skjuler*/
-    display: none;
-  }
-
-  .shoes_get {
-    /* skjuler*/
-    display: none;
-  }
-
-  .shirts_get {
-    /* skjuler*/
-    display: none;
-  }
-
-  .nyheter_forside_overskrift {
-    /*endre plassering og gir den en bredde i prosent*/
-    width: 100%;
-    margin: 0px;
-
-
-  }
-
-  .nyheter_forside {
-    /*holder plasseringen sin*/
-    margin: 0px;
-    padding: 0px;
-    /*styler tekst til midten og gir .nyheter_forside 100% i bredde så den dekker hele*/
-    width: 100%;
-    text-align: center;
+  .klær_hoved {
     /* Lager en grid. */
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-row: span 1;
+    grid-column: span 6;
+    /*holder plasseringen sin og tekst ligger sentralt*/
+    margin-left: 0px;
+    padding-left: 0px;
+    text-align: center;
+    width: auto;
+  }
+
+  .tabell_full {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    list-style: none;
+  }
+
+  .tabell_ord {
+    text-decoration: none;
+    padding-left: 0px;
+    margin-top: 18px;
+    font-weight: normal;
+    text-transform: lowercase;
+    font-size: 24px;
+    font-style: normal;
+    font-family: monospace;
+    color: black;
+    cursor: pointer;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .linje2_valg {
+    /* skjuler*/
+    display: none;
   }
 
   main {
@@ -135,27 +111,18 @@
     /* gjør så main ikke har noe ekstra margin utenfor eller paddin inni*/
     margin: 0px;
     padding: 0px;
+
   }
 
-  /*css for varene under nyheter i main starter under her under width 600*/
+  /*css for varene under nyheter i main starter under her*/
   main>.vare {
     /*holder plasseringen sin*/
     margin: 0px;
-    padding:20px 0px;
+    padding: 20px 0px;
     /* 100% i bredde*/
     width: 100%;
     /* styler tekst til å være i midten*/
     text-align: center;
-  }
-
-  footer{
-    display: block;
-  }
-  video{
-    display: none;
-  }
-
-  .content{
   }
 
   .hele_footer {
@@ -178,9 +145,15 @@
   }
 }
 
+/*kode som ikke har en max størrelse på 600px starter her*/
+body {
+  /*gjør slik at det ikke er noe avstand mellom body og det som er utenfor*/
+  margin: 0px;
+  top: 0px;
+  /*gir body en bakgrunnsfarge*/
+  background-color: #dbdde0
+}
 
-
-/*css for vanlig koding som ikke har en max størrelse starter under her*/
 header {
   /* bakgrunnbilde til header*/
   background-image: url(bilder_klar_riktig/bg-1.jpg);
@@ -201,10 +174,10 @@ header {
   }
 }
 
-
+/*css for vanlig koding som ikke har noen begrenset størrelse starter under her*/
 /*css for den hvite linjen øverst starter under her*/
 .header_øverst>.lang {
-  /*endrer plasseing*/
+  /*gjør slik at .lang går over 12 grids bortover*/
   grid-column: span 12;
   /*gir bakgrunnfsrge hvit*/
   background-color: white;
@@ -222,17 +195,16 @@ mark {
 }
 
 .header_øverst>.usynlig {
-  /* endrer plasseing til den usynlige delen*/
+  /* viser hvor stor plass til den usynlige delen*/
   grid-column: span 3;
 }
 
-/*css for logo starter under her*/
 @media only screen and (min-width: 600px) {
   .logo {
     /* styler høyden og bredden til logo*/
     width: 150px;
     height: 120px;
-    /* endrer plasseing til logo*/
+    /* endrer plassering*/
     padding-top: 15px;
     padding-right: 0px;
     padding-left: 130px;
@@ -241,9 +213,8 @@ mark {
   }
 }
 
-/* den delen av header over søkfeltet og inneholder handlekurv, ønskeliste og logg inn knapp og logo */
 .header_øverst>.lenke {
-  /* styler tekst og endrer plasseing*/
+  /* styler tekst og endrer plassering*/
   font-size: 13px;
   margin: 10px;
   border-radius: 5px;
@@ -251,19 +222,16 @@ mark {
 }
 
 .header_øverst>.usynlig1 {
-  /*endrer plasseing*/
   grid-column: span 2;
 }
 
-/*teksten under logg inn, handlekurv og ønskeliste knappen i den delen av header over søkfelter sine handlekurv, ønskeliste og logg inn knapp */
 .header_øverst>.lenke {
-  /* styler tekst og endrer plasseing*/
   align-self: center;
   text-decoration: none;
   margin-top: 50px;
 }
 
-/* Når man hoverer over a på teksten under logg inn, handlekurv og ønskeliste knappen i den delen av header over søkfelter sine handlekurv, ønskeliste og logg inn knapp */
+/* logg inn, handlekurv og ønskeliste innen for øvrste del av header*/
 .header_øverst>.lenke>a {
   /* styler tekst*/
   color: black;
@@ -278,6 +246,7 @@ mark {
   transition: all ease-in-out 350ms;
 }
 
+/* bilder til ønskeliste, logginn og handlekurv*/
 .iconbilde {
   /* endrer størrelse*/
   width: 30px;
@@ -308,6 +277,7 @@ mark {
   font-size: 17px;
   border: 1px solid grey;
   border-left: none;
+  /* Prevent double borders */
   cursor: pointer;
 }
 
@@ -401,12 +371,12 @@ mark {
 
 @media only screen and (min-width: 600px) {
   .dropned-content {
+    /* skjuler*/
+    display: none;
     position: absolute;
     background-color: #b8d0ce;
     /* skygge*/
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    /* skjuler*/
-    display: none;
   }
 }
 
@@ -432,76 +402,11 @@ mark {
   display: block;
 }
 
-/*css for reklame for sko og skjorte starter under her*/
-.under_nav {
-  text-align: center;
-  /* Lager en grid. */
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /* styling til text*/
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.shoes_get {
-  background-image: url(bilder_klar_riktig/reklame_1.jpg);
-  /* endrer plasseing*/
-  padding: 140px;
-  margin-top: 40px;
-}
-
-.shoes_get>a, .shirts_get>a {
-  /* styler tekst og endrer plasseing til a */
-  color: black;
-  text-decoration: none;
-  font-size: 30px;
-  text-align: center;
-  border-radius: 2px;
-  border-style: double;
-  border-color: black;
-  padding: 20px 0px;
-}
-
-.shirts_get {
-  background-image: url(bilder_klar_riktig/reklame_genser3.jpg);
-  padding: 140px;
-  margin-top: 40px;
-}
-
-.shoes_get:hover {
-  /* overganges tid og størrelse endring */
-  transition-duration: 500ms;
-  opacity: 0.7;
-  filter: alpha(opacity=50);
-}
-
-.shoes_get>a:hover {
-  transition-duration: 500ms;
-  color: #2F2F2E;
-  border-style: solid;
-  background-color: white;
-}
-
-.shirts_get:hover {
-  /* overganges tid og størrelse endring */
-  transition-duration: 500ms;
-  opacity: 0.7;
-  filter: alpha(opacity=50);
-}
-
-.shirts_get>a:hover {
-  transition-duration: 500ms;
-  color: #2F2F2E;
-  background-color: white;
-  border-style: solid;
-}
-
 img {
-  width: 250px;
+  width: 210px;
 }
 
+/*Main*/
 /*css for main større enn 600px starter under her*/
 @media only screen and (min-width: 600px) {
   main {
@@ -523,97 +428,228 @@ img {
   }
 }
 
-/*css for slideshow reklamen over 600px starter under her*/
 @media only screen and (min-width: 600px) {
-  .slider {
-    width: 824px;
-    margin: 2em auto;
-  }
-}
-
-.slider-wrapper {
-  width: 100%;
-  height: 400px;
-  position: relative;
-}
-
-.slide {
-  float: left;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 3s linear;
-}
-
-.slider-wrapper>.slide:first-child {
-  opacity: 1;
-}
-
-/*css for oveskriften over nyheter starter under her*/
-.nyheter_forside_overskrift {
-  /* styler tekst. */
-  font-size: 60px;
-  text-align: center;
-  padding-top: 20px;
-}
-
-/*css for varer som er nyheter i main over 600px starter under her*/
-@media only screen and (min-width: 600px) {
-  .nyheter_forside {
+  .valg_klar1, #valg_klar1 {
     /* Lager en grid. */
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-column: span 1;
-    grid-row: span 6;
-    /* endrer plassering */
-    padding: 0px 290px;
-    margin-left: 120px;
-    /* styler tekst. */
+    background-color: #fff2ea;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0px 50px;
+    padding: 25px;
     text-align: center;
+    cursor: pointer;
   }
 }
 
-/*css for knappene for å velge hva slags nye varer som skal vises starter under her*/
-.nyheter_valg_forside>button {
-  border-style: none;
-  background-color: #dbdde0;
+/* Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
-.nyheter_forside>.nyheter_valg_forside>button:focus {
-  /* styler tekst. */
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+/* The search field */
+#myInput {
+  border-box: box-sizing;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+/* The search field when it gets focus/clicked on */
+#myInput:focus {
+  outline: 3px solid #ddd;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  display: inline-block;
+  width: 200px;
+  padding: 20px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  /* skjuler*/
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content>a {
   color: black;
-  background-color: white;
-  cursor: alias;
-}
-
-.nyheter_forside>.nyheter_valg_forside>button {
-  /* styler tekst. */
+  padding: 12px 16px;
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: bold;
-  color: grey;
-  padding: 10px;
-  cursor: alias;
+  display: block;
 }
 
-.nyheter_forside>.nyheter_valg_forside>button:hover {
-  color: black;
-  transition: all ease-in-out 350ms;
+/* Change color of dropdown links on hover */
+.dropdown-content>a:hover {
+  background-color: #f1f1f1
 }
 
-/*css for varer inni main som er større enn 600px starter under her*/
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
+/* overskrift */
+.h1_over {
+  padding: 15px;
+  text-align: center;
+}
+
+/* All sortering over main */
 @media only screen and (min-width: 600px) {
-  .vare {
-    padding: 15px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    margin: 3px;
+  .klær_hoved {
+    /* Lager en grid. */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 10px 50px;
+    background-color: #fff2ea;
   }
+}
+
+/* hele tabellen på siden */
+.tabell_full {
+  grid-row: span 4;
+  grid-column: span 0.8;
+}
+
+/*Teksten øverst i tabellen som viser hva du er inne på */
+.klær_tekst {
+  color: black;
+  text-decoration: none;
+  padding-left: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* Teksten øverst i tabellen som viser hva du er inne på og innenfor a*/
+.klær_tekst>a {
+  color: black;
+  text-decoration: none;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* Halvparten av tabellen*/
+@media only screen and (min-width: 600px) {
+  .tabell_halv {
+    list-style-type: none;
+    text-align: left;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5px;
+    padding-top: 50px;
+  }
+}
+
+/* Ordene i tabellen*/
+.tabell_ord_valgt {
+  text-decoration: underline;
+  padding-left: 30px;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  font-weight: normal;
+  text-transform: lowercase;
+  font-size: 30px;
+  font-style: normal;
+  font-family: monospace;
+  color: black;
+  cursor: pointer;
+}
+@media only screen and (min-width: 600px) {
+.tabell_ord {
+  text-decoration: none;
+  padding-left: 30px;
+  margin-top: 18px;
+  font-weight: normal;
+  text-transform: lowercase;
+  font-size: 24px;
+  font-style: normal;
+  font-family: monospace;
+  color: black;
+  cursor: pointer;
+}
+}
+
+/* styling av Ordene i tabellen når man tar musen over ordene*/
+.tabell_ord:hover {
+  text-decoration: underline;
+  color: grey;
+  cursor: pointer;
+}
+
+/* linje nummer 2 med sortering som inneholder bærekraftig avkrysning og sorterings knapp*/
+@media only screen and (min-width: 600px) {
+  .linje2_valg, #linje2_valg {
+    /* Lager en grid. */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: #fff2ea;
+    margin: 0px 50px;
+    padding: 0px 25px;
+  }
+}
+
+/* styling sv bærekraftig knapp */
+.Bærekraftig {
+  margin-left: 50px;
+  padding-top: 15px;
+}
+
+/* usynlig del i linje 2*/
+.usynlig_linje2_valg {
+  grid-column: span 2;
+}
+
+/*tekst ved siden av knapp for sortering */
+.sorter_etter {
+  padding-top: 0px;
+  padding-left: 53px;
+  color: grey;
+}
+
+/* Knappen i linje to for å sortere etter forskjellige ting */
+.sortering_hele {
+  margin-bottom: 55px;
+  display: inline-block;
+}
+
+/* varene som ligger i main som jeg får fra js */
+.vare {
+  padding: 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  margin: 3px;
 }
 
 .vare>a {
-  /* styler tekst. */
+  /* farge til tekst. */
   color: black;
   text-decoration: none;
 }
@@ -635,84 +671,66 @@ img {
 .bilde:hover {
   -moz-transform: scale(1.2);
   -webkit-transform: scale(1.2);
-  transform: scale(1.079);
+  transform: scale(1.1);
 }
 
 .navn_varer {
-  /* styler tekst. */
   font-size: 16px;
 }
 
 .pris_varer {
-  /* styler tekst. */
   font-size: 18px;
 }
-.pris_varer_salg{
-color: red;
-font-size: 18px;
+
+.pris_varer_salg {
+  color: red;
+  font-size: 18px;
 }
-/*css for reklame video og footer starter under her*/
-#myVideo {
-  margin-left: 300px;
-  height: 30%;
-  width: 60%;
-}
-@media only screen and (min-width: 600px) {
-.footer_og_video {
-  position: absolute;
-}
-}
-@media only screen and (min-width: 600px) {
-.content {
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 97.4%;
-  padding: 20px;
-}
+
+.reklame2>a>img {
+  width: 100%;
+  height: 300px;
+  transition: 0.8s;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /*Footer starter her*/
 @media only screen and (min-width: 600px) {
-.hele_footer {
-  /* Lager en grid. */
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  /* styler tekst. */
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: normal;
-  padding: 170px 100px;
-  color: white;
-}
+  .hele_footer {
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-decoration: none;
+    font-weight: normal;
+    padding: 60px 100px;
+  }
 }
 
 th>a {
-  /* styler tekst. */
   text-decoration: none;
   color: white;
 }
 
 td>a {
-  /* styler tekst. */
   text-decoration: none;
   color: white;
 }
 
 @media only screen and (min-width: 600px) {
-.sosbilder {
-  width: 40px;
-  height: 40px;
-  border-radius: 15px;
-  margin: 15px;
-}
+  .sosbilder {
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    margin: 15px;
+  }
 }
 
 thead {
-  /* styler tekst. */
   text-decoration: underline;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 tbody {
@@ -723,5 +741,3 @@ tbody {
   font-weight: lighter;
   text-transform: lowercase;
 }
-
-/*css for reklame video og footer slutter her*/

@@ -9,48 +9,6 @@
   }
 }
 
-/*css for forskjellige deler når nettsiden er under 600px starter under her*/
-@media only screen and (max-width: 600px) {
-  body {
-    /* Lager en grid. */
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    /*bakgrunnsfarge og beholder plassering*/
-    background-color: #dbdde0;
-    margin: 0px;
-    top: 0px;
-  }
-
-  footer{
-    display: block;
-  }
-  video{
-    display: none;
-  }
-
-  .content{
-  }
-
-  .hele_footer {
-    background-color: black;
-    color: white;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    text-decoration: none;
-    font-weight: normal;
-    padding: 20px 40px;
-  }
-
-  .sosial_footer {
-    display: none;
-  }
-
-  .sosbilder {
-    /* skjuler*/
-    display: none;
-  }
-}
-
 
 header {
   /* bakgrunnbilde til header*/
@@ -114,10 +72,11 @@ header {
   margin-top: 130px;
   padding: 21px;
   font-size: 30px;
-  width: 30px;
+  width: 70px;
   text-align: center;
   text-decoration: none;
   border-radius: 90%;
+  float: left;
 }
 
 /* Add a hover effect if you want */
@@ -140,6 +99,12 @@ header {
 }
 
 
+img:hover{
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.1);
+}
+
 /* Style the tab buttons */
 .tablink {
   background-color: #555;
@@ -150,7 +115,7 @@ header {
   cursor: pointer;
   padding: 14px 16px;
   font-size: 17px;
-  width: 25%;
+  width: 20%;
 }
 
 /* Change background color of buttons on hover */
@@ -171,6 +136,7 @@ header {
 #Paris {background-color:green;}
 #Tokyo {background-color:blue;}
 #Oslo {background-color:orange;}
+#signaler {background-color:pink;}
 
 .tekst_om{
   margin-bottom: 50px;
@@ -188,30 +154,6 @@ h2>a{
 h2>a:hover{
   color: black;
 transition: all ease-in-out 350ms;
-}
-
-H2>a::before {
-  /* styler tekst og endrer plasseing og bakgrunnsfarge*/
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  bottom: 0;
-  left: 0;
-  background-color: #000;
-  /* funksjoner for å skalere elementer og overgangs tid*/
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.4s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-}
-
-H2>a:hover::before {
-  /* funksjoner for å skalere elementer*/
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
 }
 
 
@@ -253,6 +195,8 @@ H2>a:hover::before {
     border-style: solid;
     border-radius: 15px;
     margin-right: 40px;
+    position: -webkit-sticky;
+    position: sticky;
   }
 
   .klær_tekst {
@@ -409,8 +353,8 @@ thead {
 tbody {
   /* styler tekst. */
   font-style: normal;
-  font-size: 18px;
+  margin-top: 20px;
+  font-size: 28px;
   font-family: monospace;
   font-weight: lighter;
-  text-transform: lowercase;
 }
