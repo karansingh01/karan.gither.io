@@ -46,6 +46,7 @@ header {
   }
   .logo>.overskrift {
     font-size: 59px;
+    color: white;
     /* endrer plassering*/
     padding-top: 65px;
     padding-right: 0px;
@@ -96,6 +97,12 @@ header {
 .fa-twitter {
   background: #55ACEE;
   color: white;
+}
+
+header{
+  background-image: url(bilder/header_bak.png);
+    background-repeat: no-repeat;
+    height: 300px;
 }
 
 
@@ -161,9 +168,6 @@ transition: all ease-in-out 350ms;
 /*css for main større enn 600px starter under her*/
 @media only screen and (min-width: 600px) {
   main {
-    /* Lager en grid i main */
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
     /* endrer plassering og bakgrunn */
     margin: 30px 50px;
     background-color: #fff2ea;
@@ -182,59 +186,15 @@ transition: all ease-in-out 350ms;
 
 }
 
-.side_main{
-  grid-column: span 2;
+.hva_jeg_lært{
+padding-top: 60px;
 }
-
-  .tabell_full {
-    float: left;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    list-style: none;
-    border-style: solid;
-    border-radius: 15px;
-    margin-right: 40px;
-    position: -webkit-sticky;
-    position: sticky;
-  }
-
-  .klær_tekst {
-    color: black;
-    text-decoration: none;
-    padding-left: 10px;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    cursor: pointer;
-  }
-
   /* Teksten øverst i tabellen som viser hva du er inne på og innenfor a*/
   .klær_tekst>a {
     color: black;
     text-decoration: none;
     margin-bottom: 20px;
     margin-top: 20px;
-    cursor: pointer;
-  }
-
-.tabell_full{
-  position: -webkit-sticky;
-  position: sticky;
-}
-
-  .tabell_ord {
-    float: left;
-    text-decoration: none;
-    padding-left: 0px;
-    margin-top: 18px;
-    font-weight: normal;
-    text-transform: lowercase;
-    font-size: 24px;
-    font-style: normal;
-    font-family: monospace;
-    color: black;
     cursor: pointer;
   }
 

@@ -149,7 +149,7 @@ body {
 }
 header {
   /*bakgrunnbilde i header*/
-  background-image: url(bilder_klær_riktig/bg-1.jpg);
+  background-image: url(bilder_klar_riktig/bg-1.jpg);
 }
 /* den delen av header over søkfelter sine handlekurv, ønskeliste og logg inn knapp */
 @media only screen and (min-width: 600px) {
