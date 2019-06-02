@@ -52,6 +52,7 @@
     /* endrer plassering*/
     padding-right: 0px;
     padding-left: 110px;
+    margin-top: 0px;
     grid-column: span 7;
   }
 }
