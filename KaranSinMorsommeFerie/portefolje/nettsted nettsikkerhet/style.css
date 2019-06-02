@@ -5,16 +5,22 @@ body{
 }
 
 /*body end*/
+body{
+  margin: 0px;
+}
 
 /*Header start*/
 header{
+  text-align: center;
   color: black;
+  background-color: lightgrey;
+  padding-top: 40px;
 }
 Header>a{
   text-decoration: none;
   text-align: center;
   color: black;
-  font-size: 55px;
+  font-size: 65px;
 }
 /*navbar start*/
 nav{
@@ -28,13 +34,16 @@ nav>div>a{
   color: black;
 }
 nav>div>a:hover{
-  font-size: 30px;
+  font-size: 25px;
+  color: grey;
+  text-decoration: underline;
 }
 /*navbar end*/
 /*Header end*/
 
 /*main start*/
 #bokser{
+  text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;

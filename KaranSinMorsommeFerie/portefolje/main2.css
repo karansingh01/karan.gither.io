@@ -10,10 +10,6 @@
 }
 
 
-header {
-  /* bakgrunnbilde til header*/
-  background-image: url(A Hoved Database/bilder_klær_riktig/om_meg.jpg);
-}
 
 /*css for hele delen over søkemotoren av header når den er større enn 600px starter under her*/
 @media only screen and (min-width: 600px) {
@@ -27,6 +23,7 @@ header {
     text-transform: uppercase;
     font-size: 20px;
     font-weight: bold;
+    margin: 0px;
   }
 }
 
@@ -40,6 +37,11 @@ header {
   grid-column: span 1;
 }
 
+.header_over_mitt_navn{
+  color: white;
+    padding-top: 61px;
+}
+
 @media only screen and (min-width: 600px) {
   .logo{
     grid-column: span 7;
@@ -48,10 +50,8 @@ header {
     font-size: 59px;
     color: white;
     /* endrer plassering*/
-    padding-top: 65px;
     padding-right: 0px;
     padding-left: 110px;
-    padding-bottom: 15px;
     grid-column: span 7;
   }
 }
@@ -138,6 +138,26 @@ img:hover{
   text-align: center;
 }
 
+
+h1{
+  font-size: 40px;
+}
+.hele_tab{
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.bilde_tabcontent{
+  grid-column: span 1;
+  margin: 0px;
+}
+
+.resten_tab_content{
+
+  padding-top: 30px;
+  grid-column: span 8;
+}
+
 /* Style each tab content individually */
 #London {background-color:red;}
 #Paris {background-color:green;}
@@ -169,10 +189,8 @@ transition: all ease-in-out 350ms;
 @media only screen and (min-width: 600px) {
   main {
     /* endrer plassering og bakgrunn */
-    margin: 30px 50px;
+    margin: 0px 0px;
     background-color: #fff2ea;
-    padding-left: 50px;
-    padding-right: 50px;
     padding-top: 40px;
   }
 }
@@ -185,6 +203,27 @@ transition: all ease-in-out 350ms;
   text-align: center;
 }
 
+
+.fakta_om_meg{
+  margin:20px 300px;
+  color: #7D7D7D;
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+.overskrift_om{
+  padding-top: 50px;
+  margin:0px;
+  color: #B53355;
+}
+.overskrift_navn{
+margin:0px;
+font-size: 50px;
+}
+
+.alt_lært{
+  background-color: #f7edf0;
+}
 .hva_jeg_lært{
 padding-top: 60px;
 }
@@ -240,9 +279,19 @@ padding-top: 60px;
   margin: 20px;
 }
 
+.mine_nettsider{
+  background-color: #f2e1e7;
+  margin: 0px;
+  padding: 0px 150px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
 
 .mine_sider_overskrift{
   font-size: 40px;
+  padding-top: 20px;
 
 }
 .mine_sider{
@@ -312,8 +361,13 @@ thead {
 tbody {
   /* styler tekst. */
   font-style: normal;
-  margin-top: 20px;
-  font-size: 28px;
+  font-size: 20px;
   font-family: monospace;
   font-weight: lighter;
+}
+.om_oss_footer{
+  padding-top:30px;
+}
+.sosial_footer{
+  padding-top: 20px;
 }
