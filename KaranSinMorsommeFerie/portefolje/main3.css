@@ -23,7 +23,6 @@
     text-transform: uppercase;
     font-size: 20px;
     font-weight: bold;
-    margin: 0px;
   }
 }
 
@@ -102,6 +101,7 @@
 header{
   background-image: url(bilder/header_bak.png);
     background-repeat: no-repeat;
+    height: 300px;
 }
 
 
@@ -110,6 +110,7 @@ img:hover{
   -webkit-transform: scale(1.2);
   transform: scale(1.1);
 }
+
 
 /* Style the tab buttons */
 .tablink {
@@ -137,32 +138,18 @@ img:hover{
   text-align: center;
 }
 
-
-h1{
-  font-size: 40px;
-}
-.hele_tab{
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-}
-
-.bilde_tabcontent{
-  grid-column: span 1;
-  margin: 0px;
-}
-
-.resten_tab_content{
-
-  padding-top: 30px;
-  grid-column: span 8;
-}
-
 /* Style each tab content individually */
 #London {background-color:red;}
 #Paris {background-color:green;}
 #Tokyo {background-color:blue;}
 #Oslo {background-color:orange;}
 #signaler {background-color:pink;}
+
+
+
+h1{
+  font-size: 40px;
+}
 
 .tekst_om{
   margin-bottom: 50px;
