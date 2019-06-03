@@ -1,3 +1,7 @@
+html{
+   scroll-behavior: smooth;
+}
+
 /*css for hele body når den er større enn 600px starter under her*/
 @media only screen and (min-width: 600px) {
   body {
@@ -10,67 +14,79 @@
 }
 
 
-header {
-  /* bakgrunnbilde til header*/
-  background-image: url(A Hoved Database/bilder_klær_riktig/om_meg.jpg);
-}
 
 /*css for hele delen over søkemotoren av header når den er større enn 600px starter under her*/
 @media only screen and (min-width: 600px) {
   .header_øverst {
     text-align: center;
-    /* Lager en grid. */
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
     /* styler tekst*/
     text-decoration: none;
     text-transform: uppercase;
     font-size: 20px;
     font-weight: bold;
+    margin: 0px;
+    height: 755px;
   }
 }
 
-/*css for vanlig koding som ikke har noen begrenset størrelse starter under her*/
-/*css for den hvite linjen øverst starter under her*/
 
 
+.knapp_header>a{
+color: white;
+border-style: solid;
+border-color: white;
+border-width: 5px;
+padding: 12px 28px;
+font-style: monospace;
+text-decoration: none;
+}
 
-.header_øverst>.usynlig {
-  /* viser hvor stor plass til den usynlige delen*/
-  grid-column: span 1;
+.knapp_header>a:hover{
+transition: all 0.4s ease-in-out;
+border-color: #022c70;
+}
+
+.logo{
+  padding-top: 80px;
+  text-align: center;
+}
+
+
+.header_over_mitt_navn{
+  color: white;
+    padding-top: 40px;
 }
 
 @media only screen and (min-width: 600px) {
-  .logo{
-    grid-column: span 7;
-  }
   .logo>.overskrift {
-    font-size: 59px;
+    font-size: 89px;
     color: white;
     /* endrer plassering*/
-    padding-top: 65px;
-    padding-right: 0px;
-    padding-left: 110px;
-    padding-bottom: 15px;
+    margin-top: 0px;
     grid-column: span 7;
   }
 }
 
 
-.header_øverst>.usynlig {
-  grid-column: span 1;
+
+.hele_følg_meg{
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
 }
 
+.usynlig_følg-meg{
+grid-column: span 11;
+}
 .følg_meg{
-  margin-top: 150px;
-  font-size: 24px;
   grid-column: span 2;
+  padding-top: 60px;
+  font-size: 24px;
 }
 
 
 /* Style all font awesome icons */
 .fa {
-  margin-top: 130px;
+  margin-top: 45px;
   padding: 21px;
   font-size: 30px;
   width: 70px;
@@ -78,6 +94,7 @@ header {
   text-decoration: none;
   border-radius: 90%;
   float: left;
+  position:
 }
 
 /* Add a hover effect if you want */
@@ -99,10 +116,16 @@ header {
   color: white;
 }
 
+.fa-linkedin{
+  background: #3B5998;
+  color: white;
+}
+
 header{
-  background-image: url(bilder/header_bak.png);
+  background-image: url(bilder/astronomy-beautiful-clouds-355465.jpg);
     background-repeat: no-repeat;
-    height: 300px;
+    background-size: 100%;
+    height: 100%;
 }
 
 
@@ -120,7 +143,8 @@ img:hover{
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
+  padding: 24px 16px;
+  margin-top: 0px;
   font-size: 17px;
   width: 20%;
 }
@@ -136,6 +160,25 @@ img:hover{
   display: none;
   padding: 50px;
   text-align: center;
+}
+
+
+h1{
+  font-size: 40px;
+}
+.hele_tab{
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.bilde_tabcontent{
+  grid-column: span 1;
+  margin: 0px;
+}
+
+.resten_tab_content{
+  padding-top: 30px;
+  grid-column: span 8;
 }
 
 /* Style each tab content individually */
@@ -169,10 +212,8 @@ transition: all ease-in-out 350ms;
 @media only screen and (min-width: 600px) {
   main {
     /* endrer plassering og bakgrunn */
-    margin: 30px 50px;
+    margin: 0px 0px;
     background-color: #fff2ea;
-    padding-left: 50px;
-    padding-right: 50px;
     padding-top: 40px;
   }
 }
@@ -185,6 +226,27 @@ transition: all ease-in-out 350ms;
   text-align: center;
 }
 
+
+.fakta_om_meg{
+  margin:20px 300px;
+  color: #7D7D7D;
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+.overskrift_om{
+  padding-top: 50px;
+  margin:0px;
+  color: #B53355;
+}
+.overskrift_navn{
+margin:0px;
+font-size: 50px;
+}
+
+.alt_lært{
+  background-color: #f7edf0;
+}
 .hva_jeg_lært{
 padding-top: 60px;
 }
@@ -216,8 +278,8 @@ padding-top: 60px;
     color: white; /* White text color */
   }
 
-  .html {width: 60%; background-color: #4CAF50;} /* Green */
-  .css {width: 40%; background-color: #2196F3;} /* Blue */
+  .html {width: 70%; background-color: #4CAF50;} /* Green */
+  .css {width: 60%; background-color: #2196F3;} /* Blue */
   .js {width: 7%; background-color: #f44336;} /* Red */
 
 
@@ -240,9 +302,19 @@ padding-top: 60px;
   margin: 20px;
 }
 
+.mine_nettsider{
+  background-color: #f2e1e7;
+  margin: 0px;
+  padding: 0px 150px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
 
 .mine_sider_overskrift{
   font-size: 40px;
+  padding-top: 20px;
 
 }
 .mine_sider{
@@ -312,8 +384,13 @@ thead {
 tbody {
   /* styler tekst. */
   font-style: normal;
-  margin-top: 20px;
-  font-size: 28px;
+  font-size: 20px;
   font-family: monospace;
   font-weight: lighter;
+}
+.om_oss_footer{
+  padding-top:30px;
+}
+.sosial_footer{
+  padding-top: 20px;
 }
