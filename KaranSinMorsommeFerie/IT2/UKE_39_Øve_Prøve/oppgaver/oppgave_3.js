@@ -17,8 +17,8 @@ Tips:
 */
 
 /*
-let bredde = prompt("skriv inn bredde til rektangelet");
-let høyde = prompt("Skriv inn høyde til rektangelet");
+let bredde = prompt("skriv inn bredde til rektangelet"); glwmete number
+let høyde = prompt("Skriv inn høyde til rektangelet"); glemt e numbr
 
 alert("Arealet av rektangelet er " + (bredde*høyde));
 
@@ -35,4 +35,7 @@ if (form === "rektangel") {
 else if (form==="sirkel") {
   let radius = Number(prompt("skriv radius"));
 alert("Arealet av sirkelen er " + (Math.PI * radius*radius));
+}
+else {
+  prompt("rektangel eller sirkel, siste sjanse");
 }

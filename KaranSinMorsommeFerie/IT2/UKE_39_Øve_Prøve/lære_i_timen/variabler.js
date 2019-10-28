@@ -25,8 +25,8 @@ let tekst2 = "42" // også string
 let tall3 = Number(tekst2);
 console.log(tall3);
 
-lett bool1 = true; // Datatypen Boolean
-lett bool2 = False; // Datatypen boolean. viktig med stor for bokstav.
+let bool1 = true; // Datatypen Boolean
+let bool2 = False; // Datatypen boolean. viktig med stor for bokstav.
 
 
 // indekserte varibaler/data typer,  måååå lære seg dette!!!!!! viktig for å få bra på eksamen.

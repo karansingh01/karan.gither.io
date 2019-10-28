@@ -23,7 +23,7 @@ figur.y = figur.y + figur.yFart;
 
 if(figur.y > height){
   textSize(40)
-  text("JAtt gange", width/2.3,height/2)
+  text("Jatt gang", width/2.3,height/2)
   noLoop();
 
 

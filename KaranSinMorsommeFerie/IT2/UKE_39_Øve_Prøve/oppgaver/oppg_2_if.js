@@ -39,14 +39,14 @@ else {
 }*/
 
 // oppave 2.4
-
+/*
 let tall = Number(prompt("Skriv ett tall"))
 if (tall > 5 && tall < 15) {
   console.log("tallet er mer enn 5 og mindre enn 15");
 } else {
   console.log("Tallet ikke mellom 5 og 15, men " + tall);
 }
-
+*/
 
 // oppgave 2.5
 
