@@ -31,7 +31,7 @@ let bildeNr = 0;
 btn1.onclick = nesteBilde;
 
 function nesteBilde(){
-  if (bildeNr> feriebilder.length-1) {
+  if (bildeNr>= feriebilder.length-1) {
 bildeNr = 0;
   }
   else {
