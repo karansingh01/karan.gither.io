@@ -37,7 +37,6 @@ function sorterAAtilA(a, b) {
 
 
 
-
 // nu´y forklaring
 
 /*
@@ -61,11 +60,6 @@ for (var person of personer) {
   document.write(person.navn + " er " + person.alder + " år gammel.");
 }
 */
-
-
-
-
-
 
 
 

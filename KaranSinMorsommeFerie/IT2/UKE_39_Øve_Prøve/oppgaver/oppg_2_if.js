@@ -1,6 +1,6 @@
 // oppgave 2.1
 /*
-lett tall = number(prompt("Skriv ett tall"))
+let tall = Number(prompt("Skriv ett tall"))
 
 if (tall === 10){
   console.log("Tallet er 10");
@@ -8,8 +8,8 @@ if (tall === 10){
 else {
   console.log("tallet er ikke 10");
 }
-*/
 
+*/
 
 // oppgave 2.2
 
@@ -50,10 +50,11 @@ if (tall > 5 && tall < 15) {
 
 // oppgave 2.5
 
-
+/*
 let navn = (prompt("Skriv ett navn"))
 if (navn === "Per") {
   console.log("Navnet er Per");
 } else {
   console.log("Navnet er ikke Per");
 }
+*/

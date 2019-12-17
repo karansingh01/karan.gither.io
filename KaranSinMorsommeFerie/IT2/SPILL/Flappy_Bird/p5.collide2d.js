@@ -6,10 +6,10 @@
 
 
 
+
 // dette programme gjør det enklere å oppdager kollisjon med hindringene
 
-// det er herifra jeg får funksjonen coliderectCircle som jeg bruker
-
+// det er herifra jeg får funksjonen coliderectCircle som jeg bruker i fly.js
 
 
 
@@ -17,7 +17,6 @@
 
 
 console.log("### p5.collide ###")
-
 
 p5.prototype._collideDebug = false;
 
