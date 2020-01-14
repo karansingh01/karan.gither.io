@@ -31,11 +31,11 @@ if(alder < 4){
   resultat.innerHTML = `Barn på tilsammen ${alder} år kommmer inn gratis!`
 
 }
-else if (alder>4 & alder<18) {
+else if (alder<18) {
   resultat.innerHTML = `med alderen ${alder} år må man betale barnebillet !`
 
 }
-else if (alder>18) {
+else{
   resultat.innerHTML = `med alderen ${alder} år må man betale voksenbillet !`
 }
 
